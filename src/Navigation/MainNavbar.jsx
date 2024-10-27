@@ -1,20 +1,40 @@
-import React from 'react'
-import styles from './MainNavbar.module.css'
-import CategoryButton from './CategoryButton'
+import React, { useEffect, useRef, useState } from "react";
+import styles from "./MainNavbar.module.css";
+import FoodData from "../FoodData.js";
+import { useCategoryContext } from "../App.jsx";
 
 export default function MainNavbar() {
- 
-    const listOfMenuItems = ["Featured", "Burgers", "Pasta", "Salads", "Sides", "Desserts", "Drinks"]
+  const buttonRefs = useRef([]);
+  const listOfMenuItems = FoodData.map((item) => item[0]);
+  const [maxWidth, setMaxWidth] = useState(0);
+  const { currentCategory, setCurrentCategory } = useCategoryContext();
 
-    return (
+  useEffect(() => {
+    const widths = buttonRefs.current.map((ref) => ref.offsetWidth);
+    if (widths.length == listOfMenuItems.length) {
+      setMaxWidth(Math.max(...widths));
+    }
+  }, [listOfMenuItems]);
+
+  return (
     <div className={styles.root}>
-        <div className={styles.foodList}>
-        {
-            listOfMenuItems.map((item, i)=>{
-                return <CategoryButton key={i} foodName={item} />
-            })
-        }
-        </div>
+      <div className={styles.foodList}>
+        {listOfMenuItems.map((item, i) => {
+          return (
+            <button
+              key={i}
+              ref={(el) => (buttonRefs.current[i] = el)}
+              style={maxWidth ? { width: maxWidth } : {}}
+              onClick={() => setCurrentCategory(item)}
+              className={`${styles.button} ${
+                currentCategory === item ? styles.active : ""
+              }`}
+            >
+              {item}
+            </button>
+          );
+        })}
+      </div>
     </div>
-  )
+  );
 }

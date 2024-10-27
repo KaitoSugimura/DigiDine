@@ -1,43 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import MainNavbar from './Navigation/MainNavbar';
+import "./Reset.css";
+import styles from "./App.module.css";
+import MainNavbar from "./Navigation/MainNavbar";
+import FoodCard from "./Main/FoodCard";
+import FoodData from "./FoodData";
+import { useState } from "react";
+import { createContext, useContext } from "react";
+
+const CategoryContext = createContext();
+
+export const useCategoryContext = () => useContext(CategoryContext);
 
 function App() {
+  const foodItems = FoodData.reduce(
+    (acc, item) => ({ ...acc, [item[0]]: item[1] }),
+    {}
+  );
 
-  const width = 1024;
-  const height = 768;
-
+  const [currentCategory, setCurrentCategory] = useState("Featured");
 
   return (
-    <div style={{
-      width: "100vw",
-      height: "100vh",
-      overflow: "auto"
-    }}>
-    <div style={{
-      width: width,
-      height: height,
-      border: "1px solid black",
-      position: "relative",
-      margin: "auto"
-    }}>
-      <div>
-
-
-        <div style={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          right: 0
-        }}>
-          <MainNavbar/>
+    <CategoryContext.Provider value={{ currentCategory, setCurrentCategory }}>
+      <div className={styles.root}>
+        <div className={styles.app}>
+          <div>
+            <div>
+              <h1>{currentCategory}</h1>
+            </div>
+            <div className={styles.cardGrid}>
+              {foodItems[currentCategory].map((item, i) => (
+                <FoodCard key={i} {...item} />
+              ))}
+            </div>
+            <div className={styles.navBar}>
+              <MainNavbar />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    </div>
-  )
+    </CategoryContext.Provider>
+  );
 }
 
-export default App
+export default App;
