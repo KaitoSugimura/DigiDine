@@ -82,34 +82,88 @@ export default [
     "Chicken",
     [
       {
-        title: "McChicken",
-        price: 4.19,
-        calories: 400,
-        image: "NoImage.png",
+        title: "Raw Chicken",
+        price: 50.00,
+        calories: 200,
+        image: "Chicken/raw-chicken.png"
       },
       {
-        title: "Buttermilk Crispy Chicken",
-        price: 5.19,
-        calories: 570,
-        image: "NoImage.png",
+        title: "Raw Chicken",
+        price: 50.00,
+        calories: 200,
+        image: "Chicken/Firecracker-McCrispy-With-Bacon.jpg"
       },
       {
-        title: "Artisan Grilled Chicken",
-        price: 5.19,
-        calories: 380,
-        image: "NoImage.png",
+        title: "Raw Chicken",
+        price: 50.00,
+        calories: 200,
+        image: "Chicken/Firecracker-McCrispy.jpg"
       },
       {
-        title: "Spicy McChicken",
-        price: 4.19,
-        calories: 430,
-        image: "NoImage.png",
+        title: "Raw Chicken",
+        price: 50.00,
+        calories: 200,
+        image: "Chicken/Grilled-Chicken-Sandwich.jpg"
       },
       {
-        title: "Nuggets",
-        price: 4.19,
-        calories: 190,
-        image: "NoImage.png",
+        title: "Raw Chicken",
+        price: 50.00,
+        calories: 200,
+        image: "Chicken/Junior-Chicken.jpg"
+      },
+      {
+        title: "Raw Chicken",
+        price: 50.00,
+        calories: 200,
+        image: "Chicken/McChicken.jpg"
+      },
+      {
+        title: "Raw Chicken",
+        price: 50.00,
+        calories: 200,
+        image: "Chicken/McCrispy-Bacon-Deluxe.jpg"
+      },
+      {
+        title: "Raw Chicken",
+        price: 50.00,
+        calories: 200,
+        image: "Chicken/McCrispy.jpg"
+      },
+      {
+        title: "Raw Chicken",
+        price: 50.00,
+        calories: 200,
+        image: "Chicken/Sipcy-McCrispy.jpg"
+      },
+      {
+        title: "Raw Chicken",
+        price: 50.00,
+        calories: 200,
+        image: "Chicken/Spicy-Bacon-Deluxe-Grilled-Chicken-Sandwich.jpg"
+      },
+      {
+        title: "Raw Chicken",
+        price: 50.00,
+        calories: 200,
+        image: "Chicken/Spicy-Grilled-Chicken-Sandwich.jpg"
+      },
+      {
+        title: "Raw Chicken",
+        price: 50.00,
+        calories: 200,
+        image: "Chicken/Spicy-Habanero-McChicken.jpg"
+      },
+      {
+        title: "Raw Chicken",
+        price: 50.00,
+        calories: 200,
+        image: "Chicken/Spicy-McCrispy-Bacon-Delux.jpg"
+      },
+      {
+        title: "Raw Chicken",
+        price: 50.00,
+        calories: 200,
+        image: "Chicken/Sweet-Chili-Junior-Chicken.jpg"
       },
     ],
   ],
