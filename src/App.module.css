@@ -1,63 +1,22 @@
 .root {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: auto;
-  background-color: #1b2530;
-
-  color: black;
-}
-
-.app {
-  width: 1024px;
-  height: 768px;
-  border: 20px solid black;
-  position: relative;
-  border-radius: 10px;
-  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
-  background: white;
-  margin: auto;
-}
-
-.topNav{
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: #e5e8eb;
-}
-
-.navBar {
-
-}
-
-.rootGrid{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    background-color: #1b2530;
   
-}
-
-.mainGrid{
-  display: flex;
-  flex-grow: 1;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding: 10px;
-}
-
-.cardGrid {
-  gap: 20px;
-  display: grid;
-  flex-grow: 1;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-template-rows: 1fr 1fr;
-  padding: 20px;
-}
-
-.orderButton{
-  background-color: #ccd7e3;
-  border: 1px solid black
-}
+    color: black;
+  }
+  
+  .app {
+    width: 1024px;
+    height: 640px;
+    border: 20px solid black;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    margin: auto;
+  }

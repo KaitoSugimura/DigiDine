@@ -13,12 +13,14 @@
   gap: 12px;
 }
 
-.active {
-  background-color: #b7e6ff;
-  color: black;
-}
 
 .button {
   color: black;
   background-color: white;
+}
+
+
+.active {
+  background-color: #b7e6ff;
+  color: black;
 }

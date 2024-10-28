@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./MainNavbar.module.css";
 import FoodData from "../FoodData.js";
-import { useCategoryContext } from "../App.jsx";
+import { useCategoryContext } from "../MainScreen.jsx";
 
 export default function MainNavbar() {
   const buttonRefs = useRef([]);
@@ -16,6 +16,8 @@ export default function MainNavbar() {
     }
   }, [listOfMenuItems]);
 
+  
+
   return (
     <div className={styles.root}>
       <div className={styles.foodList}>
@@ -27,7 +29,7 @@ export default function MainNavbar() {
               style={maxWidth ? { width: maxWidth } : {}}
               onClick={() => setCurrentCategory(item)}
               className={`${styles.button} ${
-                currentCategory === item ? styles.active : ""
+                currentCategory == item ? styles.active : ""
               }`}
             >
               {item}
