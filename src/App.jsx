@@ -28,7 +28,7 @@ function App() {
             </div>
             <div className={styles.cardGrid}>
               {foodItems[currentCategory].map((item, i) => (
-                <FoodCard key={i} {...item} />
+                <FoodCard key={currentCategory + i} {...item} />
               ))}
             </div>
             <div className={styles.navBar}>

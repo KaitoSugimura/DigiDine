@@ -1,3 +1,14 @@
+@keyframes fadeInPop {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .cardRoot {
   display: flex;
   flex-direction: column;
@@ -7,6 +18,64 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
+  position: relative;
+  animation: fadeInPop 0.3s ease-out;
+  opacity: 0; /* Start hidden */
+  animation-fill-mode: forwards; /* Keep the final state of the animation */
+}
+
+.cardRoot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.cardRoot:nth-child(2) {
+  animation-delay: 0.05s;
+}
+
+.cardRoot:nth-child(3) {
+  animation-delay: 0.1s;
+}
+
+.cardRoot:nth-child(4) {
+  animation-delay: 0.15s;
+}
+
+.cardRoot:nth-child(5) {
+  animation-delay: 0.2s;
+}
+
+.cardRoot:nth-child(6) {
+  animation-delay: 0.25s;
+}
+
+.cardRoot:nth-child(7) {
+  animation-delay: 0.3s;
+}
+
+.cardRoot:nth-child(8) {
+  animation-delay: 0.35s;
+}
+
+.cardRoot:nth-child(9) {
+  animation-delay: 0.4s;
+}
+
+.cardRoot:nth-child(10) {
+  animation-delay: 0.45s;
+}
+
+.cardRoot:nth-child(11) {
+  animation-delay: 0.5s;
+}
+
+.cardRoot:nth-child(12) {
+  animation-delay: 0.55s;
+}
+
+.imageParent {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
 
   position: relative;
 }
@@ -15,7 +84,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
+
+  position: absolute; /* Position the image absolutely within the parent */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the image */
 }
 
 .content {
