@@ -3,7 +3,7 @@ import styles from "./App.module.css";
 import MainNavbar from "./Navigation/MainNavbar";
 import FoodCard from "./Main/FoodCard";
 import FoodData from "./FoodData";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { createContext, useContext } from "react";
 
 const CategoryContext = createContext();
@@ -17,6 +17,7 @@ function App() {
   );
 
   const [currentCategory, _setCurrentCategory] = useState("Featured");
+  const orderRef = useRef(null);
 
   const [orderList, setOrderList] = useState([]);
 
@@ -78,8 +79,11 @@ function App() {
       <div className={styles.root}>
         <div className={styles.app}>
           <div className={styles.rootGrid}>
-            <div>
+            <div className={styles.topNav}>
               <h1>{currentCategory}</h1>
+              <button className={styles.orderButton} ref={orderRef}>
+                Order
+              </button>
             </div>
             <div className={styles.mainGrid}>
               <button 
@@ -93,7 +97,7 @@ function App() {
               {foodItems[currentCategory].map((item, i) => {
                 if(i >= pageNo*8 && i < (pageNo*8 + 8)){
                   return (
-                    <FoodCard key={currentCategory + i} {...item} />
+                    <FoodCard key={currentCategory + i} {...item} top={orderRef.current?.getBoundingClientRect().top} left={orderRef.current?.getBoundingClientRect().left}/>
                   )
                 }
               })}
