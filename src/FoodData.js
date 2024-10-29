@@ -3,9 +3,9 @@ export default [
     "Featured",
     [
       {
-        title: "Burger",
+        title: "Raw Chicken",
         price: 5.99,
-        image: "NoImage.png",
+        image: "Chicken/raw-chicken.png",
       },
       {
         title: "Pasta",
@@ -29,7 +29,7 @@ export default [
         image: "Burgers/big-arch.jfif",
       },
       {
-        title: "cheeseburger-deluxe",
+        title: "Cheeseburger Deluxe",
         price: 5.99,
         calories: 340,
         image: "Burgers/cheeseburger-deluxe.jfif",
@@ -41,13 +41,13 @@ export default [
         image: "Burgers/quarter-pounder-with-cheese.jfif",
       },
       {
-        title: "Double Quarter Pounder with Cheese",
+        title: "Double Quarter Pounder With Cheese",
         price: 7.99,
         calories: 740,
         image: "Burgers/double-quarter-pounder-with-cheese.jfif",
       },
       {
-        title: "McDouble",
+        title: "WcDouble",
         price: 2.19,
         calories: 390,
         image: "Burgers/mcdouble.jfif",
@@ -71,7 +71,7 @@ export default [
         image: "Burgers/double-cheeseburger.jfif",
       },
       {
-        title: "Big Mac",
+        title: "Big Wac",
         price: 5.99,
         calories: 540,
         image: "Burgers/big-mac.jfif",
@@ -88,82 +88,82 @@ export default [
         image: "Chicken/raw-chicken.png"
       },
       {
-        title: "Raw Chicken",
-        price: 50.00,
+        title: "Firecracker Bacon WcCrispy",
+        price: 6.99,
         calories: 200,
         image: "Chicken/Firecracker-McCrispy-With-Bacon.jpg"
       },
       {
-        title: "Raw Chicken",
-        price: 50.00,
+        title: "Firecracker WcCrispy",
+        price: 5.99,
         calories: 200,
         image: "Chicken/Firecracker-McCrispy.jpg"
       },
       {
-        title: "Raw Chicken",
-        price: 50.00,
+        title: "Grilled Chicken",
+        price: 3.99,
         calories: 200,
         image: "Chicken/Grilled-Chicken-Sandwich.jpg"
       },
       {
-        title: "Raw Chicken",
-        price: 50.00,
+        title: "Junior Chicken",
+        price: 2.99,
         calories: 200,
         image: "Chicken/Junior-Chicken.jpg"
       },
       {
-        title: "Raw Chicken",
-        price: 50.00,
+        title: "WcChicken",
+        price: 2.99,
         calories: 200,
         image: "Chicken/McChicken.jpg"
       },
       {
-        title: "Raw Chicken",
-        price: 50.00,
-        calories: 200,
-        image: "Chicken/McCrispy-Bacon-Deluxe.jpg"
-      },
-      {
-        title: "Raw Chicken",
-        price: 50.00,
+        title: "WcCrispy",
+        price: 2.99,
         calories: 200,
         image: "Chicken/McCrispy.jpg"
       },
       {
-        title: "Raw Chicken",
-        price: 50.00,
+        title: "WcCrispy Bacon Deluxe",
+        price: 3.99,
         calories: 200,
-        image: "Chicken/Sipcy-McCrispy.jpg"
+        image: "Chicken/McCrispy-Bacon-Deluxe.jpg"
       },
       {
-        title: "Raw Chicken",
-        price: 50.00,
+        title: "Sweet Chili Junior Chicken",
+        price: 3.99,
+        calories: 200,
+        image: "Chicken/Sweet-Chili-Junior-Chicken.jpg"
+      },
+      {
+        title: "WcCrispy 🌶️",
+        price: 2.99,
+        calories: 200,
+        image: "Chicken/Spicy-McCrispy.jpg"
+      },
+      {
+        title: "Bacon Grilled Chicken 🌶️",
+        price: 4.99,
         calories: 200,
         image: "Chicken/Spicy-Bacon-Deluxe-Grilled-Chicken-Sandwich.jpg"
       },
       {
-        title: "Raw Chicken",
-        price: 50.00,
+        title: "Grilled Chicken 🌶️",
+        price: 3.99,
         calories: 200,
         image: "Chicken/Spicy-Grilled-Chicken-Sandwich.jpg"
       },
       {
-        title: "Raw Chicken",
-        price: 50.00,
+        title: "Habanero WcChicken 🌶️",
+        price: 3.99,
         calories: 200,
         image: "Chicken/Spicy-Habanero-McChicken.jpg"
       },
       {
-        title: "Raw Chicken",
-        price: 50.00,
+        title: "WcCrispy Bacon Deluxe 🌶️", 
+        price: 5.99,
         calories: 200,
         image: "Chicken/Spicy-McCrispy-Bacon-Delux.jpg"
-      },
-      {
-        title: "Raw Chicken",
-        price: 50.00,
-        calories: 200,
-        image: "Chicken/Sweet-Chili-Junior-Chicken.jpg"
       },
     ],
   ],
@@ -171,19 +171,14 @@ export default [
     "Pasta",
     [
       {
-        title: "Spaghetti",
-        price: 8.99,
-        image: "NoImage.png",
-      },
-      {
-        title: "Fettuccine Alfredo",
+        title: "West Side Wario's Carbonara",
         price: 9.99,
-        image: "NoImage.png",
+        image: "Pasta/Marios-pasta.jpg",
       },
       {
-        title: "Penne",
+        title: "Classic Jorimee Pasta",
         price: 7.99,
-        image: "NoImage.png",
+        image: "Pasta/jolibee-pasta.jpg",
       },
     ],
   ],
@@ -191,54 +186,69 @@ export default [
     "Salads",
     [
       {
-        title: "Caesar Salad",
-        price: 5.99,
-        image: "NoImage.png",
+        title: "CFK Macaroni Salad",
+        price: 3.99,
+        image: "Salads/kfc-salad.png",
       },
       {
-        title: "Greek Salad",
+        title: "WcDonald Classic Salad",
         price: 6.99,
-        image: "NoImage.png",
+        image: "Salads/Mcdonald-salad.png",
       },
       {
-        title: "Cobb Salad",
-        price: 7.99,
-        image: "NoImage.png",
+        title: "West Side Wario's Salad",
+        price: 5.99,
+        image: "Salads/Marios-salad.jpg",
       },
+      {
+        title: "Bendy's Caesar Salad",
+        price: 6.99,
+        image: "Salads/wendys-caesar.png",
+      },
+      {
+        title: "Bendy's Tacos Caesar Salad",
+        price: 7.99,
+        image: "Salads/wendys-taco-salad.png",
+      }
     ],
   ],
   [
     "Sides",
     [
       {
-        title: "Fries",
+        title: "WcDonald's Fries",
+        price: 1.99,
+        image: "Sides/wcdonald-fries.jpg",
+      },
+      {
+        title: "W&A Onion Rings",
         price: 2.99,
-        image: "NoImage.png",
+        image: "Sides/onion-rings.png",
       },
       {
-        title: "Onion Rings",
-        price: 3.99,
-        image: "NoImage.png",
+        title: "Big Caesers Rational Bread",
+        price: 2.99,
+        image: "Sides/crazy-bread.jpg",
       },
       {
-        title: "Mozzarella Sticks",
-        price: 4.99,
-        image: "NoImage.png",
-      },
+        title: "Bendy's Poutine",
+        price: 5.99,
+        image: "Sides/wendys-poutine.png",
+      }
     ],
   ],
   [
     "Desserts",
     [
       {
-        title: "Ice Cream",
-        price: 3.99,
-        image: "NoImage.png",
+        title: "WcDonald's Vanilla Ice Cream",
+        price: 1.99,
+        image: "Dessert/mcdonalds-vanilla-icecream.jpg",
       },
       {
-        title: "Cake",
-        price: 4.99,
-        image: "NoImage.png",
+        title: "Fairy King Oreo Blizzard",
+        price: 3.99,
+        image: "Dessert/OreoBlizzard.jpg",
       },
       {
         title: "Pie",
@@ -251,20 +261,70 @@ export default [
     "Drinks",
     [
       {
-        title: "Soda",
-        price: 1.99,
-        image: "NoImage.png",
+        title: "Worlds Most Expensive Water",
+        price: 100000,
+        image: "Drink/expensive-water.png",
       },
       {
-        title: "Water",
-        price: 0.99,
-        image: "NoImage.png",
+        title: "Regular Water",
+        price: 0,
+        image: "Drink/water.jpg",
       },
       {
-        title: "Juice",
+        title: "Oi Ocha",
         price: 2.99,
-        image: "NoImage.png",
+        image: "Drink/oiocha.png",
       },
+      {
+        title: "Kirin Milk Tea",
+        price: 2.99,
+        image: "Drink/kirinmilktea.png",
+      },
+      {
+        title: "Royal Milk Tea",
+        price: 2.99,
+        image: "Drink/royalmilktea.png",
+      },
+      {
+        title: "Boss Cafe Au Lait",
+        price: 2.99,
+        image: "Drink/bosscafeaulait.png",
+      },
+      {
+        title: "Boss Black Coffee",
+        price: 2.99,
+        image: "Drink/bossblack.png",
+      },
+      {
+        title: "Coke",
+        price: 2.99,
+        image: "Drink/Coke.png",
+      },
+      {
+        title: "Pepsi",
+        price: 2.99,
+        image: "Drink/Pepsi.jpg",
+      },
+      {
+        title: "Diet Coke",
+        price: 2.99,
+        image: "Drink/diet-coke.jpg",
+      },
+      {
+        title: "Diet Pepsi",
+        price: 2.99,
+        image: "Drink/diet-pepsi.jpg",
+      },
+      {
+        title: "Orange Crush",
+        price: 2.99,
+        image: "Drink/orange-crush.png",
+      },
+      {
+        title: "Grape Crush",
+        price: 2.99,
+        image: "Drink/grape-crush.png",
+      }
     ],
   ],
 ];
