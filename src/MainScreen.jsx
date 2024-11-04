@@ -4,6 +4,7 @@ import FoodCard from "./Main/FoodCard";
 import FoodData from "./FoodData";
 import { useRef, useState } from "react";
 import { createContext, useContext } from "react";
+import { useOrderContext, useScreenContext } from "./App";
 
 const CategoryContext = createContext();
 
@@ -15,10 +16,12 @@ function MainScreen() {
     {}
   );
 
+const {setScreen} = useScreenContext();
+
   const [currentCategory, _setCurrentCategory] = useState("Featured");
   const orderRef = useRef(null);
 
-  const [orderList, setOrderList] = useState([]);
+  const {orderList} = useOrderContext();
 
   const [pageNo, setPageNo] = useState(0);
 
@@ -42,44 +45,10 @@ function MainScreen() {
     })
   }
 
-  const addOrder = (name)=>{
-    setOrderList((prev)=>{
-      let done = false;
-      prev.forEach((item, i)=>{
-        if(item[0] == name){
-          item[1]++;
-          done = true;
-        }
-      });
-      if(!done){
-        prev.push([name, 1]);
-      }
-      return [...prev];
-    })
-  }
-
   
 
   return (
-    <CategoryContext.Provider value={{ currentCategory, setCurrentCategory, orderList, addOrder }}>
-      {/* Delte later */}
-      <div style={{
-              position: "fixed",
-              top: 0,
-              right: 0,
-              backgroundColor: "white",
-              zIndex: 10000,
-              padding: 10
-            }}>
-              {orderList.map((item, i) => (
-                <p key={i}>
-                  {item[0]} x{item[1]}
-                </p>
-              ))}
-            </div>
-
-
-
+    <CategoryContext.Provider value={{ currentCategory, setCurrentCategory }}>
           <div className={styles.rootGrid}>
             <div className={styles.topNav}>
               <button className={styles.sideButtons} onClick={()=>{
@@ -89,8 +58,10 @@ function MainScreen() {
               }} style={{
                 opacity: viewDetails ? 1 : 0
               }}>{"<"}</button>
-              <h1>{currentCategory}</h1>
-              <button className={styles.orderButton} ref={orderRef}>
+              <h1 className={styles.title}>{viewDetails? viewDetails:currentCategory}</h1>
+              <button className={styles.orderButton} ref={orderRef} onClick={()=>{
+                setScreen("order");
+              }}>
                 Order
                 <div className={styles.orderAmount}>
                   {
@@ -102,7 +73,8 @@ function MainScreen() {
               </button>
             </div>
             {
-            viewDetails? <div className={styles.mainGrid}>{viewDetails} details</div>:
+            viewDetails? 
+            <div className={styles.mainGrid}>{viewDetails} details</div>:
               
      
             <div className={styles.mainGrid}>

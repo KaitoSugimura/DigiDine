@@ -1,12 +1,12 @@
 import React, { useRef, useState } from "react";
 import styles from "./FoodCard.module.css";
-import { useCategoryContext } from "../MainScreen";
+import { useOrderContext } from "../App";
 
 let index = 1000;
 
 export default function FoodCard({ image, title, price, top, left, setViewDetails }) {
 
-  const { addOrder } = useCategoryContext();
+  const { addOrder } = useOrderContext();
 
   const imageRef = useRef(null);
 
