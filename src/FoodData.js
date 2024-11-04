@@ -4,7 +4,7 @@ export default [
     [
       {
         title: "Raw Chicken",
-        price: 5.99,
+        price: 50.00,
         calories: 200,
         image: "Chicken/rawChicken.jpg",
         detail:
@@ -56,7 +56,7 @@ export default [
           "A quarter pound* of 100% Canadian beef and two slices of melty processed cheese on a toasted sesame seed bun.",
       },
       {
-        title: "Double Quarter Pounder With Cheese",
+        title: "Double Quarter Pounder",
         price: 7.99,
         calories: 740,
         image: "Burgers/double-quarter-pounder-with-cheese.jfif",
