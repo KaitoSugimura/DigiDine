@@ -10,15 +10,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
 }
-
 
 .button {
   color: black;
   background-color: white;
 }
-
 
 .active {
   background-color: #b7e6ff;

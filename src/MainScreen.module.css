@@ -1,53 +1,64 @@
-
-
-.topNav{
+.bottomNav {
   display: flex;
   justify-content: space-between;
   padding: 10px;
   background-color: #e5e8eb;
 }
 
-.navBar {
+.mainRoot {
+  height: 100%;
+  width: 100%;
 
+  display: flex;
+}
+
+.rootGrid {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  flex: 1;
+}
+
+.sideOrderBar {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+.navBar {
 }
 
 .title {
-  font-size: 36px;
+  font-size: 24px;
   font-weight: bold;
 }
 
-.rootGrid{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  
-}
-
-.mainGrid{
+.mainGrid {
   display: flex;
   flex-grow: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 10px;
 }
 
 .cardGrid {
   gap: 20px;
   display: grid;
-  flex-grow: 1;
+
+  width: 100%;
+  height: 100%;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-template-rows: 1fr 1fr;
   padding: 20px;
   z-index: 0;
 }
 
-.orderButton{
+.orderButton {
   background-color: #ccd7e3;
   border: 1px solid black;
 }
 
-.orderAmount{
+.orderAmount {
   position: absolute;
   top: 0;
   right: 0;
@@ -62,18 +73,16 @@
   color: white;
 }
 
-.sideButtons{
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+.sideButtons {
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   background-color: rgb(195, 231, 237);
   color: black;
   z-index: 10;
 }
-
-
-
-
-
-
 
 .sideButtons:disabled {
   background-color: #e5e8eb;
@@ -82,4 +91,48 @@
   cursor: not-allowed;
 
   animation: none;
+}
+
+.orderList {
+  flex-grow: 1;
+
+  display: flex;
+
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+
+  background-color: grey;
+
+  overflow-y: auto;
+}
+
+/* show scrollbar */
+.orderList::-webkit-scrollbar {
+  width: 10px;
+}
+
+.orderList::-webkit-scrollbar-thumb {
+  background-color: #e5e8eb;
+  border-radius: 10px;
+}
+
+.orderItem {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.orderItemImage {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.bottomButton {
 }
