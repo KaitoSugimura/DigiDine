@@ -1,29 +1,36 @@
-.bottomNav {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: #e5e8eb;
-}
-
 .mainRoot {
-  height: 100%;
   width: 100%;
+  height: 100%;
 
-  display: flex;
+  display: grid;
+  background-color: #f3f3f3;
+
+  grid-template-columns: 1fr 270px;
 }
+
+/* .mainRootLeft {
+  flex: 1;
+}
+
+.mainRootRight {
+  width: 270px;
+} */
 
 .rootGrid {
   display: flex;
   flex-direction: column;
-
+  width: 100%;
   height: 100%;
-  flex: 1;
 }
 
 .sideOrderBar {
+  width: 100%;
+  height: 100%;
+
   display: flex;
   flex-direction: column;
-  width: 250px;
+
+  border-left: 1px solid #232323;
 }
 
 .navBar {
@@ -49,7 +56,7 @@
   height: 100%;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-template-rows: 1fr 1fr;
-  padding: 20px;
+  padding: 20px 30px;
   z-index: 0;
 }
 
@@ -135,4 +142,12 @@
 }
 
 .bottomButton {
+}
+
+.orderCont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
 }

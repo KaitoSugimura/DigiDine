@@ -42,7 +42,7 @@ h6 {
 }
 /* 8. Improve line wrapping */
 p {
-  text-wrap: pretty;
+  text-wrap: wrap;
 }
 h1,
 h2,

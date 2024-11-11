@@ -4,7 +4,7 @@ export default [
     [
       {
         title: "Raw Chicken",
-        price: 50.00,
+        price: 50.0,
         calories: 200,
         image: "Chicken/rawChicken.jpg",
         detail:

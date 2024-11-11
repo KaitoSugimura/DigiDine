@@ -99,8 +99,13 @@ export default function FoodCard({
           />
         </div>
         <div className={styles.content}>
-          <h3>{title}</h3>
-          <p>${price}</p>
+          <h3 className={styles.contentTitle}>{title}</h3>
+          <div className={styles.priceCont}>
+            <p className={styles.contentPrice}>${price}</p>
+            <span
+              className={styles.TaxIncludedSpan}
+            >{`(Tax included)`}</span>{" "}
+          </div>
           <button
             className={styles.addButton}
             onClick={(event) => {
