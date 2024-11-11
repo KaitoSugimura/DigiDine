@@ -35,19 +35,21 @@ export default function App() {
   };
 
   const addOrder = (name, image, price) => {
+    let isNew = true;
     setOrderList((prev) => {
-      let done = false;
       prev.forEach((item, i) => {
         if (item[0] == name) {
           item[1]++;
-          done = true;
+          isNew = false;
         }
       });
-      if (!done) {
+      if (isNew) {
         prev.push([name, 1, image, price]);
       }
       return [...prev];
     });
+
+    return isNew;
   };
 
   const removeOrder = (name) => {

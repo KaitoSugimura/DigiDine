@@ -2,19 +2,31 @@
   width: 100%;
   height: 100%;
 
-  display: grid;
+  display: flex;
   background-color: #f3f3f3;
-
-  grid-template-columns: 1fr 270px;
 }
 
-/* .mainRootLeft {
-  flex: 1;
+.mainRootLeft {
+  height: 100%;
+  flex-grow: 1;
 }
 
 .mainRootRight {
+  height: 100%;
   width: 270px;
-} */
+}
+
+.customRoot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: #f3f3f3;
+
+  z-index: 100000;
+}
 
 .rootGrid {
   display: flex;
@@ -102,19 +114,19 @@
 
 .orderList {
   flex-grow: 1;
+  height: 100%;
 
   display: flex;
-
   flex-direction: column;
-  gap: 10px;
-  padding: 10px;
-
-  background-color: grey;
 
   overflow-y: auto;
+
+  padding: 10px;
+  gap: 10px;
+
+  background-color: grey;
 }
 
-/* show scrollbar */
 .orderList::-webkit-scrollbar {
   width: 10px;
 }

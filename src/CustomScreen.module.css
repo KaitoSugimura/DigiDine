@@ -1,0 +1,154 @@
+.root {
+  display: flex;
+  height: 100%;
+  padding: 24px;
+}
+
+.leftSide {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+
+  padding: 0px 24px;
+}
+
+.rightSide {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* .imageCont {
+  width: 100%;
+  padding-top: 56.25%;
+  position: relative;
+  object-fit: cover;
+
+  border: 1px solid #181818;
+  border-radius: 12px;
+}
+
+.imageCont image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+.imageCont {
+  width: 100%;
+  height: 0;
+  padding-bottom: 72%;
+
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 1px solid #181818;
+  border-radius: 12px;
+}
+
+.customList {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.cancelButton {
+  width: 200px;
+  height: 60px;
+
+  border: 1px solid #181818;
+  background-color: #4f4f4f;
+  border-radius: 8px;
+  color: white;
+  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.addButton {
+  flex-grow: 1;
+
+  border: 1px solid #181818;
+  background-color: #6f94bc;
+  border-radius: 8px;
+  color: white;
+  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cancelButton:active {
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  background-color: #3f3f3f;
+}
+.addButton:active {
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  background-color: #688bb0;
+}
+
+.description {
+  flex-grow: 1;
+}
+
+.sliderCont {
+  width: 160px;
+  height: 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #181818;
+  border-radius: 24px;
+
+  font-size: 24px;
+}
+
+.sliderButtonLeft,
+.sliderButtonRight {
+  height: 100%;
+  padding: 0px 24px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.sliderButtonLeft:active {
+  background: linear-gradient(90deg, #d0dbe6 40%, #00000000);
+}
+
+.sliderButtonRight:active {
+  background: linear-gradient(90deg, #00000000, #d0dbe6 40%);
+}
+
+.sliderButtonLeft {
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+}
+
+.sliderButtonRight {
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+}

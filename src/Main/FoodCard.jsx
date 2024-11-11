@@ -109,7 +109,7 @@ export default function FoodCard({
           <button
             className={styles.addButton}
             onClick={(event) => {
-              addOrder(title, image, price);
+              const isNew = addOrder(title, image, price);
               handleTogglePosition();
               event.stopPropagation();
             }}
