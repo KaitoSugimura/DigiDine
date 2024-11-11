@@ -13,6 +13,36 @@ export default function CustomScreen({
   );
 
   const [amountToAdd, setAmountToAdd] = React.useState(1);
+  const [customizations, setCustomizations] = React.useState(
+    foodItem.customizations.map((custom) =>
+      custom.map((item) => {
+        return {
+          title: item,
+          selected: "Reg",
+        };
+      })
+    )
+  );
+
+  const createCustomButton = (custom, i, index, type) => {
+    return (
+      <button
+        key={type}
+        className={`${styles.customButton} ${
+          custom.selected == type ? styles.selected : ""
+        }`}
+        onClick={() => {
+          setCustomizations((prev) => {
+            prev[i][index].selected = type;
+            console.log(prev, index);
+            return [...prev];
+          });
+        }}
+      >
+        {type}
+      </button>
+    );
+  };
 
   return (
     <div className={styles.root}>
@@ -47,13 +77,44 @@ export default function CustomScreen({
           </button>
         </div>
         <div className={styles.priceCont}>
-          <p>Total: </p>
-          <p>${foodItem.price * amountToAdd}</p>
-          <span>{' (Tax included)'}</span>
+          <p className={styles.priceTotal}>Total: </p>
+          <p className={styles.priceActual}>
+            ${parseFloat((foodItem.price * amountToAdd).toFixed(2))}
+          </p>
+          <span className={styles.priceTaxInc}>{" (Tax included)"}</span>
         </div>
       </div>
       <div className={styles.rightSide}>
-        <div className={styles.customList}></div>
+        <div className={styles.customList}>
+          {customizations ? (
+            customizations.map((custom, i) => {
+              return (
+                <div key={i} className={styles.customItem}>
+                  <h3 className={styles.customItemTitle}>
+                    {i == 0 ? "What's on it" : "Add-Ons"}
+                  </h3>
+                  <div key={i} className={styles.customItemList}>
+                    {custom.map((item, index) => (
+                      <div key={index} className={styles.itemCont}>
+                        <p className={styles.itemTitle}>{item.title}</p>
+                        <div className={styles.customCont}>
+                          {createCustomButton(item, i, index, "None")}
+                          {createCustomButton(item, i, index, "Lite")}
+                          {createCustomButton(item, i, index, "Reg")}
+                          {createCustomButton(item, i, index, "Extra")}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })
+          ) : (
+            <div>
+              <p>No customizations available</p>
+            </div>
+          )}
+        </div>
         <div className={styles.actionButtons}>
           <button className={styles.cancelButton} onClick={cancel}>
             Cancel

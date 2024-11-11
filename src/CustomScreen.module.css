@@ -10,6 +10,7 @@
   flex-direction: column;
 
   padding: 0px 24px;
+  gap: 8px;
 }
 
 .rightSide {
@@ -59,12 +60,6 @@
   border-radius: 12px;
 }
 
-.customList {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
 .actionButtons {
   display: flex;
   justify-content: space-between;
@@ -109,6 +104,8 @@
 
 .description {
   flex-grow: 1;
+  color: #5a4504;
+  font-size: 14px;
 }
 
 .sliderCont {
@@ -123,6 +120,8 @@
   border-radius: 24px;
 
   font-size: 24px;
+  align-self: center;
+  margin-bottom: 12px;
 }
 
 .sliderButtonLeft,
@@ -151,4 +150,90 @@
 .sliderButtonRight {
   border-top-right-radius: 24px;
   border-bottom-right-radius: 24px;
+}
+
+.priceCont {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+
+  gap: 4px;
+
+  align-self: center;
+  margin-bottom: 8px;
+}
+
+.priceTotal {
+  font-size: 24px;
+  color: #121212;
+}
+
+.priceActual {
+  font-size: 24px;
+  /* font-weight: bold; */
+  color: #121212;
+}
+
+.priceTaxInc {
+  font-size: 12px;
+  font-weight: light;
+  color: #121212;
+  margin-bottom: 6px;
+}
+
+.customList {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  overflow: auto;
+
+  background-color: #dddddd;
+  padding: 10px;
+  border-radius: 8px;
+
+  margin-bottom: 24px;
+}
+
+.customItemTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #121212;
+  margin-bottom: 8px;
+}
+
+.customItemList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.itemCont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+
+  border-bottom: 1px solid #181818;
+  padding: 4px;
+}
+
+.customCont {
+  display: flex;
+  gap: 4px;
+}
+
+.customButton {
+  width: 60px;
+  height: 32px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+}
+
+.selected {
+  background-color: #6f94bc;
+  color: white;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+  position: relative;
 }

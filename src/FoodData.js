@@ -17,6 +17,18 @@ export default [
         image: "Pasta/jolibee-pasta.jpg",
         detail:
           "Spaghetti noodles in a sweet Filipino style spaghetti sauce with ground beef, hot dog slices, and shredded cheese.",
+        customizations: [
+          // Whats on it
+          [
+            "Spaghetti sauce",
+            "Spaghetti noodles",
+            "Cheese",
+            "Hot dog slices",
+            "Ground beef",
+          ],
+          // Add-ons
+          ["Meatballs", "Hotdog", "Bacon", "Parmesan cheese", "Chilli flakes"],
+        ],
       },
       {
         title: "Bendy's Tacos Caesar Salad",
@@ -239,6 +251,18 @@ export default [
         image: "Pasta/jolibee-pasta.jpg",
         detail:
           "Spaghetti noodles in a sweet Filipino style spaghetti sauce with ground beef, hot dog slices, and shredded cheese.",
+        customizations: [
+          // Whats on it
+          [
+            "Spaghetti sauce",
+            "Spaghetti noodles",
+            "Cheese",
+            "Hot dog slices",
+            "Ground beef",
+          ],
+          // Add-ons
+          ["Meatballs", "Hotdog", "Bacon", "Parmesan cheese", "Chilli flakes"],
+        ],
       },
     ],
   ],
