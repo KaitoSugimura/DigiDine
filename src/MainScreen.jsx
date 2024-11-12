@@ -7,6 +7,8 @@ import { createContext, useContext } from "react";
 import { useOrderContext, useScreenContext } from "./App";
 import BottomNavbar from "./Navigation/BottomNavbar";
 import CustomScreen from "./CustomScreen";
+import OrderFoodCard from "./Main/OrderFoodCard";
+import OrderListComp from "./Main/orderListComp";
 
 const CategoryContext = createContext();
 
@@ -61,13 +63,14 @@ function MainScreen() {
           <div className={styles.customRoot}>
             <CustomScreen
               currentCategory={currentCategory}
-              title={viewDetails}
+              title={viewDetails.name}
               foodItems={foodItems}
-              cancel={() => {
+              close={() => {
                 if (viewDetails) {
                   setViewDetails(undefined);
                 }
               }}
+              edit={viewDetails.edit}
             />
           </div>
         )}
@@ -89,7 +92,9 @@ function MainScreen() {
                           {...item}
                           top={orderRef.current?.getBoundingClientRect().top}
                           left={orderRef.current?.getBoundingClientRect().left}
-                          setViewDetails={setViewDetails}
+                          setViewDetails={(item) => {
+                            setViewDetails({ name: item, edit: undefined });
+                          }}
                         />
                       );
                     }
@@ -109,8 +114,14 @@ function MainScreen() {
           <div className={styles.mainRootRight}>
             <div className={styles.sideOrderBar}>
               <div className={styles.orderCont}>
-                <h1>Order</h1>
+                <div className={styles.orderTextCont}>
+                  <p className={styles.orderText}>Order</p>
+                  <p
+                    className={styles.orderLength}
+                  >{`(${orderList.length})`}</p>
+                </div>
                 <button
+                  className={styles.callStaffButton}
                   onClick={() => {
                     CallStaffAudio.currentTime = 0;
                     CallStaffAudio.play();
@@ -119,48 +130,41 @@ function MainScreen() {
                   Call Staff
                 </button>
               </div>
-
-              <div className={styles.orderList}>
-                {orderList
-                  .slice()
-                  .reverse()
-                  .map((item, i) => {
-                    return (
-                      <div key={i} className={styles.orderItem}>
-                        <img
-                          src={item[2]}
-                          alt={item[0]}
-                          className={styles.orderItemImage}
-                        />
-                        <div>
-                          <p>{item[0]}</p>
-                          <p>x{item[1]}</p>
-                          <p>${item[3]}</p>
-                          <button>Edit</button>
-                        </div>
-                      </div>
-                    );
-                  })}
+              <div className={styles.orderListComp}>
+                <OrderListComp />
               </div>
 
-              <div className={styles.bottomButton}>
-                <button
-                  className={styles.deleteButton}
-                  onClick={() => {
-                    resetOrder();
-                  }}
-                >
-                  Restart
-                </button>
-                <button
-                  className={styles.orderButton}
-                  ref={orderRef}
-                  onClick={() => {
-                    setScreen("order");
-                  }}
-                >
-                  Order
-                </button>
+              <div className={styles.bottomCont}>
+                <div className={styles.priceCont}>
+                  <p className={styles.totalText}>Total:</p>
+                  <p className={styles.totalPrice}>
+                    $
+                    {orderList.reduce(
+                      (acc, item) => acc + item.price * item.amount,
+                      0
+                    )}
+                  </p>
+                  <span className={styles.taxInc}>{"(Tax included)"}</span>
+                </div>
+                <div className={styles.bottomButton}>
+                  <button
+                    className={styles.restartButton}
+                    onClick={() => {
+                      resetOrder();
+                    }}
+                  >
+                    Restart
+                  </button>
+                  <button
+                    className={styles.orderButton}
+                    ref={orderRef}
+                    onClick={() => {
+                      setScreen("order");
+                    }}
+                  >
+                    Order
+                  </button>
+                </div>
               </div>
             </div>
           </div>

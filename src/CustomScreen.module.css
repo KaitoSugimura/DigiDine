@@ -19,25 +19,6 @@
   flex-direction: column;
 }
 
-/* .imageCont {
-  width: 100%;
-  padding-top: 56.25%;
-  position: relative;
-  object-fit: cover;
-
-  border: 1px solid #181818;
-  border-radius: 12px;
-}
-
-.imageCont image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */
-
 .imageCont {
   width: 100%;
   height: 0;

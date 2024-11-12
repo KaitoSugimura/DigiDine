@@ -1,28 +1,44 @@
 import React from "react";
 import styles from "./CustomScreen.module.css";
+import { useOrderContext } from "./App";
 
 export default function CustomScreen({
   title,
   currentCategory,
   foodItems,
-  cancel,
+  close,
+  edit,
 }) {
   // get current food item with the same name as title
   const foodItem = foodItems[currentCategory].find(
     (item) => item.title === title
   );
 
-  const [amountToAdd, setAmountToAdd] = React.useState(1);
+  const { addOrder, editOrder } = useOrderContext();
+  const [amountToAdd, setAmountToAdd] = React.useState(edit ? edit.amount : 1);
+  const [price, setPrice] = React.useState(edit ? edit.price : foodItem.price);
   const [customizations, setCustomizations] = React.useState(
-    foodItem.customizations.map((custom) =>
-      custom.map((item) => {
-        return {
-          title: item,
-          selected: "Reg",
-        };
-      })
-    )
+    (() => {
+      if (edit?.customizations) {
+        return edit.customizations.map((custom) =>
+          custom.map((item) => ({
+            ...item,
+          }))
+        );
+      } else if (foodItem.customizations) {
+        return foodItem.customizations.map((custom) =>
+          custom.map((item) => ({
+            title: item,
+            selected: "Reg",
+          }))
+        );
+      } else {
+        return null;
+      }
+    })()
   );
+
+  console.log(customizations);
 
   const createCustomButton = (custom, i, index, type) => {
     return (
@@ -34,7 +50,6 @@ export default function CustomScreen({
         onClick={() => {
           setCustomizations((prev) => {
             prev[i][index].selected = type;
-            console.log(prev, index);
             return [...prev];
           });
         }}
@@ -116,10 +131,35 @@ export default function CustomScreen({
           )}
         </div>
         <div className={styles.actionButtons}>
-          <button className={styles.cancelButton} onClick={cancel}>
+          <button className={styles.cancelButton} onClick={close}>
             Cancel
           </button>
-          <button className={styles.addButton}>Add to order</button>
+          <button
+            className={styles.addButton}
+            onClick={() => {
+              console.log("AAAAAAAAAAAAAAAA");
+              if (edit) {
+                editOrder({
+                  id: edit.id,
+                  image: foodItem.image,
+                  price,
+                  amount: amountToAdd,
+                  customizations,
+                });
+              } else {
+                addOrder({
+                  name: title,
+                  image: foodItem.image,
+                  price,
+                  amount: amountToAdd,
+                  customizations,
+                });
+              }
+              close();
+            }}
+          >
+            Add to order
+          </button>
         </div>
       </div>
     </div>

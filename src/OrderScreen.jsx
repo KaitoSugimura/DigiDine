@@ -1,49 +1,62 @@
-import React from 'react'
-import { useOrderContext, useScreenContext } from './App';
+import React from "react";
+import { useOrderContext, useScreenContext } from "./App";
 import styles from "./OrderScreen.module.css";
 
 export default function OrderScreen() {
-    const {setScreen}=useScreenContext();
-    const {orderList, removeOrder, addOrder, deleteOrder} = useOrderContext();
+  const { setScreen } = useScreenContext();
+  const { orderList, decrementOrder, addOrder, deleteOrder } =
+    useOrderContext();
 
   return (
-    <div><button 
-    className={styles.backButton}
-    onClick={()=>{
-        setScreen("main");
-    }}>
-      {"<"}
-    </button>
-    <div >
-              {orderList.map((item, i) => (
-                <div key={i}>
-                <button onClick={()=>{
-                    removeOrder(item[0]);
-                }
-                }>-</button>
-                <p >
-                  {item[0]} x{item[1]}
-                </p>
+    <div>
+      <button
+        className={styles.backButton}
+        onClick={() => {
+          setScreen("main");
+        }}
+      >
+        {"<"}
+      </button>
+      <div>
+        {orderList.map((item, i) => (
+          <div key={i}>
+            <button
+              onClick={() => {
+                decrementOrder(item.name);
+              }}
+            >
+              -
+            </button>
+            <p>
+              {item.name} x{item.amount}
+            </p>
 
-                <button onClick={()=>{
-                    addOrder(item[0]);
-                }
-                }>+</button>
-                <button onClick={()=>{
-                    deleteOrder(item[0]);
-                }
-                }>Delete</button>
-                </div>
-              ))}
-            </div>
+            <button
+              onClick={() => {
+                addOrder(item.name);
+              }}
+            >
+              +
+            </button>
+            <button
+              onClick={() => {
+                deleteOrder(item.name);
+              }}
+            >
+              Delete
+            </button>
+          </div>
+        ))}
+      </div>
 
-            <button 
-    className={styles.backButton}
-    onClick={()=>{
-        setScreen("orderConfirmed");
-    }}>
-      {"Confirm order"}
-    </button>
+      <button
+        className={styles.backButton}
+        onClick={() => {
+          setScreen("orderConfirmed");
+        }}
+      >
+        {"Confirm order"}
+      </button>
     </div>
-  )
+  );
 }
