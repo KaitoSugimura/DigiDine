@@ -9,6 +9,12 @@ export default [
         image: "Chicken/rawChicken.jpg",
         detail:
           "Simply just raw chicken. No seasoning, no cooking, just raw chicken.",
+        customizations: [
+          [
+            { title: "Salt", price: 10 },
+            { title: "Pepper", price: 10 },
+          ]
+        ]
       },
       {
         title: "Classic Jorimee Pasta",
@@ -46,6 +52,19 @@ export default [
         image: "Salads/wendys-taco-salad.png",
         detail:
           "Our classic Bendy's Caesar Salad with a mix of taco seasoned beef, shredded cheddar cheese, and tortilla strips.",
+        customizations: [
+          [
+            { title: "Romaine lettuce", price: 0},
+            { title: "Tortilla strips", price: 0.20},
+            { title: "Taco seasoned beef", price: 0},
+            { title: "Shredded cheddar cheese", price: 0.25},
+            { title: "Caesar dressing", price: 0},
+          ],
+          [
+            { title: "Bacon bits", price: 0.25},
+            { title: "Croutons", price: 0.25},
+          ]
+        ]
       },
     ],
   ],
@@ -59,6 +78,22 @@ export default [
         image: "Burgers/big-arch.jfif",
         detail:
           "Two quarter pound* 100% Canadian beef patties, layered with three slices of white processed cheese, and topped with crispy onions, slivered onions, pickles, lettuce and delicious Big Arch sauce, served on a toasted sesame and poppy seed bun.",
+        customizations: [
+          [
+            { title: "White processed cheese", price: 0.20},
+            { title: "Crispy onions", price: 0.20},
+            { title: "Slivered onions", price: 0.20},
+            { title: "Pickles", price: 0.20},
+            { title: "Lettuce", price: 0.20},
+            { title: "Big Arch sauce", price: 0},
+            { title: "Toasted bun", price: 0},
+          ],
+          [
+            { title: "Bacon", price: 0.50},
+            { title: "Tomato", price: 0.25},
+            { title: "American cheese", price: 0.20},
+          ]
+        ]
       },
       {
         title: "Cheeseburger Deluxe",
@@ -67,6 +102,23 @@ export default [
         image: "Burgers/cheeseburger-deluxe.jfif",
         detail:
           "Your favourite cheeseburger is now made deluxe! A slice of processed cheddar cheese on a juicy, 100% Canadian beef patty with pickles and onions, ketchup, mustard, mayo style sauce, tomato, and shredded lettuce on a toasted bun.",
+        customizations: [
+          [
+            { title: "American cheese", price: 0.20},
+            { title: "Pickles", price: 0.20},
+            { title: "Onions", price: 0.20},
+            { title: "Ketchup", price: 0},
+            { title: "Mustard", price: 0},
+            { title: "Mayo style sauce", price: 0},
+            { title: "Tomato", price: 0.20},
+            { title: "Lettuce", price: 0.20},
+            { title: "Toasted bun", price: 0},
+          ],
+          [
+            { title: "Bacon", price: 0.50},
+            { title: "White processed cheese", price: 0.20},
+          ]
+        ]
       },
       {
         title: "Quarter Pounder with Cheese",
@@ -75,6 +127,22 @@ export default [
         image: "Burgers/quarter-pounder-with-cheese.jfif",
         detail:
           "A quarter pound* of 100% Canadian beef and two slices of melty processed cheese on a toasted sesame seed bun.",
+        customizations: [
+          [
+            { title: "American cheese", price: 0.20},
+            { title: "Pickles", price: 0.20},
+            { title: "Onions", price: 0.20},
+            { title: "Ketchup", price: 0},
+            { title: "Mustard", price: 0},
+            { title: "Toasted bun", price: 0},
+          ],
+          [
+            { title: "White processed cheese", price: 0.20},
+            { title: "Lettuce", price: 0.20},
+            { title: "Tomato", price: 0.20},
+            { title: "Bacon", price: 0.50},
+          ]
+        ]
       },
       {
         title: "Double Quarter Pounder",
@@ -83,6 +151,24 @@ export default [
         image: "Burgers/double-quarter-pounder-with-cheese.jfif",
         detail:
           "Two quarter pound* 100% Canadian beef patties. Layered with two slices of melty cheese, slivered onions and pickles on sesame seed bun.",
+        customizations: [
+          [
+
+            { title: "American cheese", price: 0.20},
+            { title: "Pickles", price: 0.20},
+            { title: "Onions", price: 0.20},
+            { title: "Ketchup", price: 0},
+            { title: "Mustard", price: 0},
+            { title: "Toasted bun", price: 0},
+          ],
+          // Add-ons
+          [
+            { title: "White processed cheese", price: 0.20},
+            { title: "Lettuce", price: 0.20},
+            { title: "Tomato", price: 0.20},
+            { title: "Bacon", price: 0.50},
+          ]
+        ]
       },
       {
         title: "WcDouble",
@@ -91,6 +177,21 @@ export default [
         image: "Burgers/mcdouble.jfif",
         detail:
           "A slice of melted processed cheese between two 100% Canadian beef patties, topped with pickles, onions, ketchup and mustard on a toasted bun.",
+        customizations: [
+          [
+            { title: "American cheese", price: 0.20},
+            { title: "Pickles", price: 0.20},
+            { title: "Onions", price: 0.20},
+            { title: "Ketchup", price: 0},
+            { title: "Mustard", price: 0},
+            { title: "Toasted bun", price: 0},
+          ],
+          [
+            { title: "Lettuce", price: 0.20},
+            { title: "Tomato", price: 0.20},
+            { title: "White processed cheese", price: 0.20},
+          ]
+        ]
       },
       {
         title: "Cheeseburger",
@@ -99,6 +200,21 @@ export default [
         image: "Burgers/cheeseburger.jfif",
         detail:
           "A slice of melted processed cheese on a juicy, 100% Canadian beef patty with tangy pickles and onions, ketchup and mustard on a freshly-toasted bun.",
+        customizations: [
+          [
+            { title: "American cheese", price: 0.20},
+            { title: "Pickles", price: 0.20},
+            { title: "Onions", price: 0.20},
+            { title: "Ketchup", price: 0},
+            { title: "Mustard", price: 0},
+            { title: "Toasted bun", price: 0},
+          ],
+          [
+            { title: "Lettuce", price: 0.20},
+            { title: "Tomato", price: 0.20},
+            { title: "White processed cheese", price: 0.20},
+          ]
+        ]
       },
       {
         title: "Hamburger",
@@ -107,14 +223,42 @@ export default [
         image: "Burgers/hamburger.jfif",
         detail:
           "The comforting taste of the juicy and delicious 100% Canadian beef burger, topped with tangy pickles, ketchup, mustard and the sweet bite of onion, all on a freshly toasted bun. Just like you remember.",
+        customizations: [
+          [
+            { title: "Pickles", price: 0.20},
+            { title: "Onions", price: 0.20},
+            { title: "Ketchup", price: 0},
+            { title: "Mustard", price: 0},
+            { title: "Toasted bun", price: 0},
+          ],
+          [
+            { title: "White processed cheese", price: 0.20},
+            { title: "American cheese", price: 0.20},
+          ]
+        ]
       },
       {
         title: "Double Cheeseburger",
-        price: 2.19,
+        price: 2.89,
         calories: 440,
         image: "Burgers/double-cheeseburger.jfif",
         detail:
           "We make it like we always have: two slices of processed cheese with two 100% Canadian beef patties, pickles, onions, ketchup and mustard on a freshly toasted bun.",
+        customizations: [
+          [
+            { title: "American cheese", price: 0.20},
+            { title: "Pickles", price: 0.20},
+            { title: "Onions", price: 0.20},
+            { title: "Ketchup", price: 0},
+            { title: "Mustard", price: 0},
+            { title: "Toasted bun", price: 0},
+          ],
+          [
+            { title: "Lettuce", price: 0.20},
+            { title: "Tomato", price: 0.20},
+            { title: "White processed cheese", price: 0.20},
+          ]
+        ]
       },
       {
         title: "Big Wac",
@@ -123,6 +267,20 @@ export default [
         image: "Burgers/big-mac.jfif",
         detail:
           "Nothing compares to two 100% Canadian beef patties, special sauce, crisp lettuce, processed cheese, pickles and onions on a toasted sesame seed bun.",
+        customizations: [
+          [
+            { title: "American cheese", price: 0.20},
+            { title: "Pickles", price: 0.20},
+            { title: "Onions", price: 0.20},
+            { title: "Lettuce", price: 0.20},
+            { title: "Toasted bun", price: 0},
+          ],
+          [
+            { title: "White processed cheese", price: 0.20},
+            { title: "Tomato", price: 0.20},
+            { title: "Bacon", price: 0.50},
+          ]
+        ]
       },
     ],
   ],
@@ -135,22 +293,12 @@ export default [
         calories: 200,
         image: "Chicken/rawChicken.jpg",
         detail: "Just raw chicken. No seasoning, no cooking, just raw chicken.",
-      },
-      {
-        title: "Firecracker Bacon WcCrispy",
-        price: 6.99,
-        calories: 350,
-        image: "Chicken/Firecracker-McCrispy-With-Bacon.jpg",
-        detail:
-          "Crispy chicken sandwich topped with a creamy sweet and spicy sauce, hickory-smoked bacon and crispy jalapenos. Made with tender and juicy 100% Canadian-raised seasoned chicken and served on a soft potato bun, it has a taste that’s unmistakably McDonald’s.",
-      },
-      {
-        title: "Firecracker WcCrispy",
-        price: 5.99,
-        calories: 425,
-        image: "Chicken/Firecracker-McCrispy.jpg",
-        detail:
-          "Crispy chicken sandwich topped with a creamy sweet and spicy sauce and crispy jalapenos. Made with tender and juicy 100% Canadian-raised seasoned chicken and served on a soft potato bun, it has a taste that’s unmistakably WcDonald’s",
+        customizations: [
+          [
+            { title: "Salt", price: 10 },
+            { title: "Pepper", price: 10 },
+          ]
+        ]
       },
       {
         title: "Grilled Chicken",
@@ -158,7 +306,19 @@ export default [
         calories: 390,
         image: "Chicken/Grilled-Chicken-Sandwich.jpg",
         detail:
-          "Made with tender and juicy 100% Canadian-raised grilled seasoned chicken. Topped with shredded lettuce, creamy mayo-style sauce and served on a soft potato bun for that WcD’s flavour you crave.",
+        "Made with tender and juicy 100% Canadian-raised grilled seasoned chicken. Topped with shredded lettuce, creamy mayo-style sauce and served on a soft potato bun for that WcD’s flavour you crave.",
+        customizations: [
+          [
+            { title: "Lettuce", price: 0.20},
+            { title: "Mayo-style sauce", price: 0},
+            { title: "Toasted Potato bun", price: 0},
+          ],
+          [
+            { title: "Mayo" , price: 0.20},
+            { title: "Tomato", price: 0.20},
+            { title: "Bacon", price: 0.50},
+          ]
+        ]
       },
       {
         title: "Junior Chicken",
@@ -166,7 +326,16 @@ export default [
         calories: 200,
         image: "Chicken/Junior-Chicken.jpg",
         detail:
-          "You don’t need to compromise with the great taste of a Junior Chicken sandwich, made with chicken raised on Canadian farms, at a price you can always feel good about.",
+        "You don’t need to compromise with the great taste of a Junior Chicken sandwich, made with chicken raised on Canadian farms, at a price you can always feel good about.",
+        customizations: [
+          [
+            { title: "Lettuce", price: 0.20},
+          ],
+          [
+            { title: "Mayo", price: 0.20},
+            { title: "Tomato", price: 0.20},
+          ]
+        ]
       },
       {
         title: "WcChicken",
@@ -174,7 +343,19 @@ export default [
         calories: 220,
         image: "Chicken/McChicken.jpg",
         detail:
-          "Breaded seasoned chicken and crisp lettuce, topped with our Mayo-Style Sauce. Some ingredients are just meant to be together.",
+        "Breaded seasoned chicken and crisp lettuce, topped with our Mayo-Style Sauce. Some ingredients are just meant to be together.",
+        customizations: [
+          [
+            { title: "Lettuce", price: 0.20},
+            { title: "Mayo-style sauce", price: 0},
+            { title: "Toasted Potato bun", price: 0},
+          ],
+          [
+            { title: "Mayo", price: 0.20},
+            { title: "Tomato", price: 0.20},
+            { title: "Bacon", price: 0.50},
+          ]
+        ]
       },
       {
         title: "WcCrispy",
@@ -182,15 +363,19 @@ export default [
         calories: 220,
         image: "Chicken/McCrispy.jpg",
         detail:
-          "The WcCrispy is a crispy chicken sandwich made with tender and juicy 100% Canadian-raised seasoned chicken. It’s topped with shredded lettuce and creamy mayo-style sauce and served on a soft potato bun for a taste that’s so WcDonald’s.",
-      },
-      {
-        title: "WcCrispy Bacon Deluxe",
-        price: 3.99,
-        calories: 300,
-        image: "Chicken/McCrispy-Bacon-Deluxe.jpg",
-        detail:
-          "Bacon and a slice of fresh tomato take the WcCrispy to the next level. Made with crispy, tender and juicy 100% Canadian-raised seasoned chicken, then topped with shredded lettuce, creamy mayo-style sauce and served on a soft potato bun for a taste that’s so WcDonald’s.",
+        "The WcCrispy is a crispy chicken sandwich made with tender and juicy 100% Canadian-raised seasoned chicken. It’s topped with shredded lettuce and creamy mayo-style sauce and served on a soft potato bun for a taste that’s so WcDonald’s.",
+        customizations: [
+          [
+            { title: "Lettuce", price: 0.20},
+            { title: "Mayo-style sauce", price: 0},
+            { title: "Toasted Potato bun", price: 0},
+          ],
+          [
+            { title: "Mayo", price: 0.20},
+            { title: "Tomato", price: 0.20},
+            { title: "Bacon", price: 0.50},
+          ]
+        ]
       },
       {
         title: "Sweet Chili Junior Chicken",
@@ -198,7 +383,43 @@ export default [
         calories: 350,
         image: "Chicken/Sweet-Chili-Junior-Chicken.jpg",
         detail:
-          "Your tastebuds will be singing a whole new tune with a remixed Sweet Chili Junior Chicken made with Canadian-raised crispy seasoned chicken, topped with crunchy shredded lettuce, tangy sweet chili sauce and mayo-style sauce, all on a toasty bun.",
+        "Your tastebuds will be singing a whole new tune with a remixed Sweet Chili Junior Chicken made with Canadian-raised crispy seasoned chicken, topped with crunchy shredded lettuce, tangy sweet chili sauce and mayo-style sauce, all on a toasty bun.",
+        customizations: [
+          [
+            { title: "Lettuce", price: 0.20},
+            { title: "Sweet chili sauce", price: 0},
+            { title: "Mayo-style sauce", price: 0},
+            { title: "Toasted Potato bun", price: 0},
+          ],
+          [
+            { title: "Ketchup", price: 0},
+            { title: "Mustard", price: 0},
+            { title: "Mayo", price: 0.20},
+            { title: "Tomato", price: 0.20},
+            { title: "Bacon", price: 0.50},
+          ]
+        ]
+      },
+      {
+        title: "Firecracker WcCrispy 🌶️",
+        price: 6.99,
+        calories: 350,
+        image: "Chicken/Firecracker-McCrispy.jpg",
+        detail:
+          "Crispy chicken sandwich topped with a creamy sweet and spicy sauce, hickory-smoked bacon and crispy jalapenos. Made with tender and juicy 100% Canadian-raised seasoned chicken and served on a soft potato bun, it has a taste that’s unmistakably McDonald’s.",
+        customizations: [
+          [
+            { title: "Crispy jalapenos", price: 0.20},
+            { title: "Lettuce", price: 0.20},
+            { title: "Sweet and spicy sauce", price: 0},
+            { title: "Toasted Potato bun", price: 0},
+          ],
+          [
+            { title: "Smoked Bacon", price: 0.50},
+            { title: "Tomato", price: 0.20},
+            { title: "Hot sauce", price: 0.20},
+          ]
+        ]
       },
       {
         title: "WcCrispy 🌶️",
@@ -206,7 +427,19 @@ export default [
         calories: 250,
         image: "Chicken/Spicy-McCrispy.jpg",
         detail:
-          "The Spicy WcCrispy is a crispy chicken sandwich topped with our signature habanero sauce. Made with tender and juicy 100% Canadian-raised seasoned chicken and served on a soft potato bun, it has a taste that’s unmistakably WcDonald’s.",
+        "The Spicy WcCrispy is a crispy chicken sandwich topped with our signature habanero sauce. Made with tender and juicy 100% Canadian-raised seasoned chicken and served on a soft potato bun, it has a taste that’s unmistakably WcDonald’s.",
+        customizations: [ 
+          [
+            { title: "Lettuce", price: 0.20},
+            { title: "Habanero sauce", price: 0},
+            { title: "Toasted Potato bun", price: 0},
+          ],
+          [
+            { title: "Mayo", price: 0.20},
+            { title: "Tomato", price: 0.20},
+            { title: "Bacon", price: 0.50},
+          ]
+        ] 
       },
       {
         title: "Bacon Grilled Chicken 🌶️",
@@ -214,7 +447,15 @@ export default [
         calories: 400,
         image: "Chicken/Spicy-Bacon-Deluxe-Grilled-Chicken-Sandwich.jpg",
         detail:
-          "The Spicy Bacon Deluxe Grilled Chicken Sandwich is big on everything, including heat. Made with 100% Canadian-raised grilled seasoned chicken on a soft potato bun, topped with shredded lettuce, hickory-smoked bacon, tomato and our spicy Habanero sauce, this sandwich kicks juicy and tender up to the next level.",
+          "Made with 100% Canadian-raised grilled seasoned chicken on a soft potato bun, topped with shredded lettuce, hickory-smoked bacon, tomato and our spicy Habanero sauce, this sandwich kicks juicy and tender up to the next level.",
+        customizations: [
+          [
+            { title: "Lettuce", price: 0.20},
+            { title: "Habanero sauce", price: 0},
+            { title: "Smoked Bacon", price: 0.50},
+            { title: "Toasted Potato bun", price: 0},
+          ]
+        ]
       },
       {
         title: "Grilled Chicken 🌶️",
@@ -223,6 +464,17 @@ export default [
         image: "Chicken/Spicy-Grilled-Chicken-Sandwich.jpg",
         detail:
           "Made with tender and juicy 100% Canadian-raised grilled seasoned chicken, and topped with shredded lettuce and our signature Habanero sauce, it’s a spicy-lovers dream served on a soft potato bun. ",
+        customizations: [
+          [
+            { title: "Lettuce", price: 0.20},
+            { title: "Habanero sauce", price: 0},
+            { title: "Toasted Potato bun", price: 0},
+          ],
+          [
+            { title: "Mayo", price: 0.20},
+            { title: "Tomato", price: 0.20},
+          ]
+        ]
       },
       {
         title: "Habanero WcChicken 🌶️",
@@ -231,14 +483,18 @@ export default [
         image: "Chicken/Spicy-Habanero-McChicken.jpg",
         detail:
           "Our classic WcChicken packed with a punch! This spicy Habanero WcChicken is topped with our creamy Habanero sauce. Perfectly breaded seasoned chicken, crisp shredded lettuce, all on a freshly toasted sesame bun. Some ingredients are just meant to be together.",
-      },
-      {
-        title: "WcCrispy Bacon Deluxe 🌶️",
-        price: 5.99,
-        calories: 350,
-        image: "Chicken/Spicy-McCrispy-Bacon-Delux.jpg",
-        detail:
-          "The Spicy Bacon Deluxe WcCrispy is big on everything, including heat. With our southern-style fried chicken patty on a soft potato bun, topped with shredded lettuce, hickory-smoked bacon, tomato and our spicy Habanero sauce, this sandwich kicks crispy, juicy and tender up to the next level.",
+        customizations: [
+          [
+            { title: "Lettuce", price: 0.20},
+            { title: "Habanero sauce", price: 0},
+            { title: "Toasted Potato bun", price: 0},
+          ],
+          [
+            { title: "Mayo", price: 0.20},
+            { title: "Tomato", price: 0.20},
+            { title: "Bacon", price: 0.50},
+          ]
+        ]
       },
     ],
   ],
@@ -252,6 +508,21 @@ export default [
         image: "Pasta/Marios-pasta.jpg",
         detail:
           "Spaghetti noodles in a creamy Alfredo sauce with bacon, roasted garlic, Italian seasoning and Parmesan cheese.",
+        customizations: [
+          // Whats on it
+          [
+            { title: "Alfredo sauce", price: 0},
+            { title: "Bacon", price: 0.5},
+            { title: "Roasted garlic", price: 0.25},
+            { title: "Italian seasoning", price: 0.1},
+            { title: "Parmesan cheese", price: 0.25},
+          ],
+          // Add-ons
+          [
+            { title: "Meatballs", price: 0.5},
+            { title: "Chilli flakes", price: 0.1},
+          ]
+        ]
       },
       {
         title: "Classic Jorimee Pasta",
@@ -261,8 +532,6 @@ export default [
         detail:
           "Spaghetti noodles in a sweet Filipino style spaghetti sauce with ground beef, hot dog slices, and shredded cheese.",
         customizations: [
-          // Whats on it
-          // Prices here only take effect when user presses extra
           [
             { title: "Spaghetti sauce", price: 0 },
             { title: "Spaghetti noodles", price: 1 },
@@ -270,10 +539,6 @@ export default [
             { title: "Hot dog slices", price: 0.5 },
             { title: "Ground beef", price: 0.5 },
           ],
-          // Add-ons
-          // Prices here effect ALL amounts
-          // Each price stacks, for example if the price is 0.1, then
-          // its 0.1 for lite, 0.2 for reg, and 0.3 for extra
           [
             { title: "Meatballs", price: 0.5 },
             { title: "Bacon", price: 0.25 },
@@ -294,6 +559,21 @@ export default [
         image: "Salads/kfc-salad.png",
         detail:
           "Macaroni noodles in a creamy dressing with shredded carrots, celery, and onions.",
+        customizations: [
+          [
+            { title: "Macaroni noodles", price: 0.25},
+            { title: "Creamy dressing", price: 0},
+            { title: "Shredded carrots", price: 0.25},
+            { title: "Celery", price: 0.25},
+            { title: "Onions", price: 0.25},
+          ],
+          [
+            { title: "Bacon bits", price: 0.25},
+            { title: "Peas", price: 0.25},
+            { title: "Pepper", price: 0},
+            { title: "Salt", price: 0},
+          ]
+        ]
       },
       {
         title: "WcDonald Classic Salad",
@@ -302,6 +582,22 @@ export default [
         image: "Salads/Mcdonald-salad.png",
         detail:
           "A blend of premium lettuces, grape tomatoes, shaved carrots, real cheddar cheese, and slices of crispy chicken strips on top.",
+        customizations: [
+          [
+            { title: "Lettuce", price: 0},
+            { title: "Grape tomatoes", price: 0},
+            { title: "Shaved carrots", price: 0},
+            { title: "Cheddar cheese", price: 0},
+            { title: "Crispy chicken strips", price: 0},
+          ],
+          [
+            { title: "Bacon bits", price: 0.25},
+            { title: "Croutons", price: 0.25},
+            { title: "Caesar dressing", price: 0},
+            { title: "Ranch dressing", price: 0},
+            { title: "Italian dressing", price: 0},
+          ]
+        ]
       },
       {
         title: "West Side Wario's Salad",
@@ -310,6 +606,19 @@ export default [
         image: "Salads/Marios-salad.jpg",
         detail:
           "A house style salad with mixed greens, grape tomatoes, cucumbers, and onions.",
+        customizations: [
+          [
+            { title: "Mixed greens", price: 0},
+            { title: "Grape tomatoes", price: 0},
+            { title: "Cucumbers", price: 0},
+            { title: "Onions", price: 0},
+          ],
+          [
+            { title: "Bacon bits", price: 0.25},
+            { title: "Croutons", price: 0.25},
+            { title: "Cheddar cheese", price: 0.25},
+          ]
+        ]
       },
       {
         title: "Bendy's Caesar Salad",
@@ -318,6 +627,17 @@ export default [
         image: "Salads/wendys-caesar.png",
         detail:
           "A classic caesar salad with romaine lettuce and big crispy croutons.",
+        customizations: [
+          [
+            { title: "Romaine lettuce", price: 0},
+            { title: "Croutons", price: 0.25},
+            { title: "Caesar dressing", price: 0},
+          ],
+          [
+            { title: "Bacon bits", price: 0.25},
+            { title: "Parmesan cheese", price: 0.25},
+          ]
+        ]
       },
       {
         title: "Bendy's Tacos Caesar Salad",
@@ -326,6 +646,19 @@ export default [
         image: "Salads/wendys-taco-salad.png",
         detail:
           "Our classic Bendy's Caesar Salad with a mix of taco seasoned beef, shredded cheddar cheese, and tortilla strips.",
+        customizations: [
+          [
+            { title: "Romaine lettuce", price: 0},
+            { title: "Tortilla strips", price: 0.20},
+            { title: "Taco seasoned beef", price: 0},
+            { title: "Shredded cheddar cheese", price: 0.25},
+            { title: "Caesar dressing", price: 0},
+          ],
+          [
+            { title: "Bacon bits", price: 0.25},
+            { title: "Croutons", price: 0.25},
+          ]
+        ]
       },
     ],
   ],
@@ -339,6 +672,17 @@ export default [
         image: "Sides/wcdonald-fries.jpg",
         detail:
           "Our World Famous Fries are crispy and golden on the outside and fluffy on the inside.",
+        customizations: [
+          [
+            { title: "Salt", price: 0},
+          ],
+          [
+            { title: "Pepper", price: 0},
+            { title: "Ketchup", price: 0},
+            { title: "Mayo", price: 0},
+            { title: "Gravy", price: 0},
+          ]
+        ]
       },
       {
         title: "W&A Onion Rings",
@@ -346,6 +690,16 @@ export default [
         calories: 150,
         image: "Sides/onion-rings.png",
         detail: "Thick-cut, battered and breaded onion rings.",
+        customizations: [
+          [
+            { title: "Salt", price: 0},
+            { title: "Onion ring dipping sauce", price: 0},
+          ],
+          [
+            { title: "Pepper", price: 0},
+            { title: "Ketchup", price: 0},
+          ]
+        ]
       },
       {
         title: "Big Caesers Rational Bread",
@@ -354,6 +708,12 @@ export default [
         image: "Sides/crazy-bread.jpg",
         detail:
           "Freshly baked breadsticks topped with garlic butter and Parmesan cheese.",
+        customizations: [
+          [
+            { title: "Garlic butter", price: 0},
+            { title: "Parmesan cheese", price: 0},
+          ],
+        ]
       },
       {
         title: "Bendy's Poutine",
@@ -361,6 +721,17 @@ export default [
         calories: 670,
         image: "Sides/wendys-poutine.png",
         detail: "Our classic poutine with cheese curds and gravy.",
+        customizations: [
+          [
+            { title: "Cheese curds", price: 0},
+            { title: "Gravy", price: 0},
+          ],
+          [
+            { title: "Bacon bits", price: 0.25},
+            { title: "Pepper", price: 0},
+            { title: "Salt", price: 0},
+          ]
+        ]
       },
       {
         title: "Chicken or Beef",
@@ -391,11 +762,11 @@ export default [
           "Our classic Blizzard made with Oreo cookie pieces and vanilla soft serve.",
       },
       {
-        title: "Pie",
-        price: 5.99,
-        calories: 200,
-        image: "NoImage.png",
-        detail: "A classic apple pie.",
+        title: "Peach Mango Pie",
+        price: 3.49,
+        calories: 270,
+        image: "Dessert/peachmangopie.webp",
+        detail: "Sweet and flaky Peach Mango Pie made with real Philippine Mangoes",
       },
     ],
   ],
