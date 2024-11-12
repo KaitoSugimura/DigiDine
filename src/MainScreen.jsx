@@ -10,6 +10,7 @@ import CustomScreen from "./CustomScreen";
 import OrderFoodCard from "./Main/OrderFoodCard";
 import OrderListComp from "./Main/orderListComp";
 import Dialog from "./Components/Dialog";
+import { formatPrice } from "./util";
 
 const CategoryContext = createContext();
 
@@ -85,24 +86,30 @@ function MainScreen() {
             }}
           >
             <div className={styles.confirmOrderCont}>
-              <p className={styles.confirmOrderText}>Order summary</p>
-              <div className={styles.priceCont}>
-                <p className={styles.totalText}>Total:</p>
-                <p className={styles.totalPrice}>
-                  $
-                  {orderList.reduce(
-                    (acc, item) => acc + item.price * item.amount,
-                    0
-                  )}
-                </p>
-                <span className={styles.taxInc}>{"(Tax included)"}</span>
+              <div className={styles.confirmOrderContTop}>
+                <div className={styles.confirmOrderContTopLeft}>
+                  <p className={styles.confirmOrderText}>Order summary</p>
+                  <div className={styles.priceCont}>
+                    <p className={styles.totalText}>Total:</p>
+                    <p className={styles.totalPrice}>
+                      {formatPrice(
+                        orderList.reduce(
+                          (acc, item) => acc + item.price * item.amount,
+                          0
+                        )
+                      )}
+                    </p>
+                    <span className={styles.taxInc}>{"(Tax included)"}</span>
+                  </div>{" "}
+                </div>
+                <div className={styles.orderListComp}>
+                  <OrderListComp isFinal={true} />
+                </div>
               </div>
 
-              <OrderListComp isFinal={true} />
-
-              <div className={styles.confirmOrderButtons}>
+              <div className={styles.actionButtons}>
                 <button
-                  className={styles.cancelOrderButton}
+                  className={styles.cancelButton}
                   onClick={() => {
                     setConfirmOrder(false);
                   }}
@@ -110,7 +117,7 @@ function MainScreen() {
                   Cancel
                 </button>
                 <button
-                  className={styles.confirmOrderButton}
+                  className={styles.addButton}
                   onClick={() => {
                     setConfirmOrder(false);
                     setScreen("orderConfirmed");
@@ -186,10 +193,11 @@ function MainScreen() {
                 <div className={styles.priceCont}>
                   <p className={styles.totalText}>Total:</p>
                   <p className={styles.totalPrice}>
-                    $
-                    {orderList.reduce(
-                      (acc, item) => acc + item.price * item.amount,
-                      0
+                    {formatPrice(
+                      orderList.reduce(
+                        (acc, item) => acc + item.price * item.amount,
+                        0
+                      )
                     )}
                   </p>
                   <span className={styles.taxInc}>{"(Tax included)"}</span>

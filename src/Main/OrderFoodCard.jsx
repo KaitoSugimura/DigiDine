@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./OrderFoodCard.module.css";
 import { useOrderContext } from "../App";
+import { formatPrice } from "../util";
 
 export default function OrderFoodCard({
   image,
@@ -13,6 +14,38 @@ export default function OrderFoodCard({
 }) {
   const { decrementOrder, incrementOrder, deleteOrder } = useOrderContext();
 
+  const getCustomizations = () => {
+    let hasCustoms = false;
+    const r = customizations?.map((custom, i) => (
+      <div key={i} className={styles.customSection}>
+        {custom.map((item, index) => {
+          if (i == 0 && item.selected === "Reg") return;
+          if (i == 1 && item.selected === "None") return;
+          hasCustoms = true;
+          return (
+            <div key={index} className={styles.customItem}>
+              <p>
+                {item.selected == "None" ? "No" : item.selected}{" "}
+                {item.title.toLowerCase()}
+              </p>
+            </div>
+          );
+        })}
+      </div>
+    ));
+
+    if (!r || !hasCustoms) {
+      return (
+        <div key={"No Custom"} className={styles.customSection}>
+          <div className={styles.customItem}>
+            <p>No customizations</p>
+          </div>
+        </div>
+      );
+    }
+    return r;
+  };
+
   return (
     <div className={styles.cardRoot}>
       <div className={styles.topSection}>
@@ -24,32 +57,8 @@ export default function OrderFoodCard({
         <div className={styles.contentMain}>
           <h1 className={styles.cardTitle}>{name}</h1>
           <div className={styles.middleSection}>
-            <div className={styles.cardListOfCustom}>
-              {customizations ? (
-                customizations.map((custom, i) => (
-                  <div key={i} className={styles.customSection}>
-                    {custom.map((item, index) => {
-                      if (item.selected === "Reg") return;
-                      return (
-                        <div key={index} className={styles.customItem}>
-                          <p>
-                            {item.selected == "None" ? "No" : item.selected}{" "}
-                            {item.title.toLowerCase()}
-                          </p>
-                        </div>
-                      );
-                    })}
-                  </div>
-                ))
-              ) : (
-                <div key={"No Custom"} className={styles.customSection}>
-                  <div className={styles.customItem}>
-                    <p>No customizations</p>
-                  </div>
-                </div>
-              )}
-            </div>
-            <p className={styles.cardPrice}>${price}</p>
+            <div className={styles.cardListOfCustom}>{getCustomizations()}</div>
+            <p className={styles.cardPrice}>{formatPrice(price * amount)}</p>
           </div>
         </div>
         {isFinal && <p className={styles.finalAmountText}>x{amount}</p>}

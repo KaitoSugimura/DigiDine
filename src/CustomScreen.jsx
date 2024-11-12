@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./CustomScreen.module.css";
 import { useOrderContext } from "./App";
 import { formatPrice, getPrice } from "./util";
@@ -40,6 +40,18 @@ export default function CustomScreen({
       }
     })()
   );
+
+  useEffect(() => {
+    let totalSum = foodItem.price;
+    if (customizations) {
+      customizations.forEach((custom) => {
+        custom.forEach((item) => {
+          totalSum += getPrice(item);
+        });
+      });
+    }
+    setPrice(totalSum);
+  }, [customizations]);
 
   const createCustomButton = (custom, i, index, type) => {
     return (
@@ -95,7 +107,7 @@ export default function CustomScreen({
         <div className={styles.priceCont}>
           <p className={styles.priceTotal}>Total: </p>
           <p className={styles.priceActual}>
-            ${parseFloat((foodItem.price * amountToAdd).toFixed(2))}
+            {formatPrice(price * amountToAdd)}
           </p>
           <span className={styles.priceTaxInc}>{" (Tax included)"}</span>
         </div>
@@ -143,7 +155,6 @@ export default function CustomScreen({
           <button
             className={styles.addButton}
             onClick={() => {
-              console.log("AAAAAAAAAAAAAAAA");
               if (edit) {
                 editOrder({
                   id: edit.id,

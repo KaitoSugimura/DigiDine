@@ -1,19 +1,18 @@
-import React from 'react'
+import React from "react";
 import styles from "./StartScreen.module.css";
-import { useScreenContext } from './App';
+import { useScreenContext } from "./App";
 
 export default function StartScreen() {
- const {setScreen} = useScreenContext();
-
+  const { setScreen } = useScreenContext();
 
   return (
-    <div 
-    className={styles.root}
-    onClick={()=>{
+    <div
+      className={styles.root}
+      onClick={() => {
         setScreen("main");
-    }}>
-        <img src="/start.png" alt="start" className={styles.image}/>
-        <img src="/startButton.png" alt="start" className={styles.imageLayer}/>
+      }}
+    >
+      <p>Start Screen</p>{" "}
     </div>
-  )
+  );
 }

@@ -1,23 +1,19 @@
 import React from "react";
 import { useOrderContext, useScreenContext } from "./App";
-import styles from "./OrderScreen.module.css";
+import styles from "./OrderConfirmedScreen.module.css";
+import OrderListComp from "./Main/orderListComp";
 
 export default function OrderConfirmedScreen() {
   const { setScreen } = useScreenContext();
-  const { orderList } = useOrderContext();
 
   return (
-    <div>
-      <div>
-        {orderList.map((item, i) => (
-          <p key={i}>
-            {item.name} x{item.amount}
-          </p>
-        ))}
-      </div>
+    <div className={styles.root}>
+      <h1 className={styles.title}>Your order has been confirmed</h1>
+
+      <OrderListComp isFinal={true} />
 
       <button
-        className={styles.backButton}
+        className={styles.doneButton}
         onClick={() => {
           setScreen("start");
         }}

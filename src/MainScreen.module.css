@@ -102,6 +102,8 @@
   font-weight: light;
   color: #121212;
   margin-bottom: 6px;
+
+  text-wrap: nowrap;
 }
 
 .bottomButton {
@@ -234,4 +236,68 @@
 .confirmOrderCont {
   background-color: #f3f3f3;
   padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  width: 600px;
+  height: 400px;
+}
+
+.confirmOrderContTop {
+  flex-grow: 1;
+  width: 100%;
+  overflow-y: auto;
+  display: flex;
+  gap: 48px;
+}
+
+.confirmOrderContTopLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.confirmOrderContTopRight {
+  flex-grow: 1;
+}
+
+.confirmOrderText {
+  font-size: 18px;
+  font-weight: light;
+  margin-top: 18px;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.cancelButton {
+  width: 200px;
+  height: 60px;
+
+  border: 1px solid #181818;
+  background-color: #4f4f4f;
+  border-radius: 8px;
+  color: white;
+  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.addButton {
+  flex-grow: 1;
+
+  border: 1px solid #181818;
+  background-color: #6f94bc;
+  border-radius: 8px;
+  color: white;
+  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  font-size: 20px;
+  font-weight: bold;
 }
