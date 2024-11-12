@@ -6,12 +6,13 @@ import OrderFoodCard from "./OrderFoodCard";
 export default function OrderListComp({
   setViewDetails = () => {},
   isFinal = false,
+  orderRef = null,
 }) {
   const { orderList, currentCategory } = useOrderContext();
 
   return (
     <div className={styles.orderListComp}>
-      <div className={styles.orderList}>
+      <div className={styles.orderList} ref={orderRef}>
         {orderList
           .slice()
           .reverse()

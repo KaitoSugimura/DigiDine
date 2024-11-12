@@ -11,6 +11,7 @@ export default function FoodCard({
   top,
   left,
   setViewDetails,
+  orderRef,
 }) {
   const { addOrder, orderList } = useOrderContext();
 
@@ -119,7 +120,7 @@ export default function FoodCard({
               });
               if (!isNew) {
                 const orderListReverse = orderList.slice().reverse();
-                let offSet = 0;
+                let moreOffSet = 0;
                 for (let i = 0; i < orderList.length; i++) {
                   let customizationOffset = 0;
                   let isCustomDefault = true;
@@ -136,10 +137,12 @@ export default function FoodCard({
                   if (isCustomDefault && orderListReverse[i].name == title) {
                     break;
                   } else {
-                    offSet += 100 + customizationOffset;
+                    moreOffSet += 100 + customizationOffset;
                   }
                 }
-                setOffSet(Math.min(offSet, 360));
+                const scrollOffset = orderRef.current.scrollTop;
+                moreOffSet -= scrollOffset;
+                setOffSet(Math.max(-60, Math.min(moreOffSet, 360)));
               }
               handleTogglePosition();
             }}

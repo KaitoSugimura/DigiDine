@@ -133,6 +133,7 @@ function MainScreen() {
                           setViewDetails={(item) => {
                             setViewDetails({ name: item, edit: undefined });
                           }}
+                          orderRef={orderRef}
                         />
                       );
                     }
@@ -168,8 +169,11 @@ function MainScreen() {
                   Call Staff
                 </button>
               </div>
-              <div className={styles.orderListComp} ref={orderRef}>
-                <OrderListComp setViewDetails={setViewDetails} />
+              <div className={styles.orderListComp}>
+                <OrderListComp
+                  setViewDetails={setViewDetails}
+                  orderRef={orderRef}
+                />
               </div>
 
               <div className={styles.bottomCont}>
