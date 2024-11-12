@@ -177,6 +177,13 @@
   margin-bottom: 24px;
 }
 
+.leftComp {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+
 .customItemTitle {
   font-size: 24px;
   font-weight: bold;
@@ -194,7 +201,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 24px;
+  gap: 8px;
 
   border-bottom: 1px solid #181818;
   padding: 4px;

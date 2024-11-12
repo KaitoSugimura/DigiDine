@@ -9,6 +9,7 @@ import BottomNavbar from "./Navigation/BottomNavbar";
 import CustomScreen from "./CustomScreen";
 import OrderFoodCard from "./Main/OrderFoodCard";
 import OrderListComp from "./Main/orderListComp";
+import Dialog from "./Components/Dialog";
 
 const CategoryContext = createContext();
 
@@ -32,6 +33,8 @@ function MainScreen() {
   const [pageNo, setPageNo] = useState(0);
 
   const [viewDetails, setViewDetails] = useState(undefined);
+
+  const [confirmOrder, setConfirmOrder] = useState(false);
 
   const setCurrentCategory = (category) => {
     _setCurrentCategory(category);
@@ -73,6 +76,51 @@ function MainScreen() {
               edit={viewDetails.edit}
             />
           </div>
+        )}
+
+        {confirmOrder && (
+          <Dialog
+            onClose={() => {
+              setConfirmOrder(false);
+            }}
+          >
+            <div className={styles.confirmOrderCont}>
+              <p className={styles.confirmOrderText}>Order summary</p>
+              <div className={styles.priceCont}>
+                <p className={styles.totalText}>Total:</p>
+                <p className={styles.totalPrice}>
+                  $
+                  {orderList.reduce(
+                    (acc, item) => acc + item.price * item.amount,
+                    0
+                  )}
+                </p>
+                <span className={styles.taxInc}>{"(Tax included)"}</span>
+              </div>
+
+              <OrderListComp isFinal={true} />
+
+              <div className={styles.confirmOrderButtons}>
+                <button
+                  className={styles.cancelOrderButton}
+                  onClick={() => {
+                    setConfirmOrder(false);
+                  }}
+                >
+                  Cancel
+                </button>
+                <button
+                  className={styles.confirmOrderButton}
+                  onClick={() => {
+                    setConfirmOrder(false);
+                    setScreen("orderConfirmed");
+                  }}
+                >
+                  Place Order
+                </button>
+              </div>
+            </div>
+          </Dialog>
         )}
 
         <div className={styles.mainRoot}>
@@ -131,7 +179,7 @@ function MainScreen() {
                 </button>
               </div>
               <div className={styles.orderListComp}>
-                <OrderListComp />
+                <OrderListComp setViewDetails={setViewDetails} />
               </div>
 
               <div className={styles.bottomCont}>
@@ -159,7 +207,10 @@ function MainScreen() {
                     className={styles.orderButton}
                     ref={orderRef}
                     onClick={() => {
-                      setScreen("order");
+                      if (orderList.length === 0) {
+                        return;
+                      }
+                      setConfirmOrder(true);
                     }}
                   >
                     Order

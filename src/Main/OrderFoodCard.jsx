@@ -9,6 +9,7 @@ export default function OrderFoodCard({
   amount,
   customizations,
   edit,
+  isFinal,
 }) {
   const { decrementOrder, incrementOrder, deleteOrder } = useOrderContext();
 
@@ -51,46 +52,49 @@ export default function OrderFoodCard({
             <p className={styles.cardPrice}>${price}</p>
           </div>
         </div>
+        {isFinal && <p className={styles.finalAmountText}>x{amount}</p>}
       </div>
-      <div className={styles.bottomSection}>
-        <div className={styles.bottomSectionButtons}>
-          <button onClick={edit} className={styles.editButton}>
-            Edit
-          </button>
-          <button
-            className={styles.removeButton}
-            onClick={() => {
-              deleteOrder(name);
-            }}
-          >
-            Remove
-          </button>
-        </div>
+      {!isFinal && (
+        <div className={styles.bottomSection}>
+          <div className={styles.bottomSectionButtons}>
+            <button onClick={edit} className={styles.editButton}>
+              Edit
+            </button>
+            <button
+              className={styles.removeButton}
+              onClick={() => {
+                deleteOrder(name);
+              }}
+            >
+              Remove
+            </button>
+          </div>
 
-        <div className={styles.sliderCont}>
-          <button
-            className={styles.sliderButtonLeft}
-            onClick={() => {
-              if (amount <= 1) {
-                return;
-              }
-              decrementOrder(name);
-            }}
-          >
-            -
-          </button>
-          <p className={styles.sliderText}>{amount}</p>
+          <div className={styles.sliderCont}>
+            <button
+              className={styles.sliderButtonLeft}
+              onClick={() => {
+                if (amount <= 1) {
+                  return;
+                }
+                decrementOrder(name);
+              }}
+            >
+              -
+            </button>
+            <p className={styles.sliderText}>{amount}</p>
 
-          <button
-            className={styles.sliderButtonRight}
-            onClick={() => {
-              incrementOrder(name);
-            }}
-          >
-            +
-          </button>
+            <button
+              className={styles.sliderButtonRight}
+              onClick={() => {
+                incrementOrder(name);
+              }}
+            >
+              +
+            </button>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

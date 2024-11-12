@@ -26,8 +26,6 @@ export default function App() {
         return <StartScreen />;
       case "main":
         return <MainScreen />;
-      case "order":
-        return <OrderScreen />;
       case "orderConfirmed":
         return <OrderConfirmedScreen />;
       default:

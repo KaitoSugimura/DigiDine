@@ -125,7 +125,7 @@
 
 .orderButton {
   background-color: #6f94bc;
-  border: 1px solid black;
+  border: 1px solid rgb(75, 75, 75);
 
   padding: 10px 0;
   border-radius: 8px;
@@ -229,4 +229,9 @@
   font-size: 24px;
   font-weight: light;
   margin-bottom: 5px;
+}
+
+.confirmOrderCont {
+  background-color: #f3f3f3;
+  padding: 20px;
 }

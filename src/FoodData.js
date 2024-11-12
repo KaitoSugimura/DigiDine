@@ -19,15 +19,24 @@ export default [
           "Spaghetti noodles in a sweet Filipino style spaghetti sauce with ground beef, hot dog slices, and shredded cheese.",
         customizations: [
           // Whats on it
+          // Prices here only take effect when user presses extra
           [
-            "Spaghetti sauce",
-            "Spaghetti noodles",
-            "Cheese",
-            "Hot dog slices",
-            "Ground beef",
+            { title: "Spaghetti sauce", price: 0 },
+            { title: "Spaghetti noodles", price: 1 },
+            { title: "Cheese", price: 0.25 },
+            { title: "Hot dog slices", price: 0.5 },
+            { title: "Ground beef", price: 0.5 },
           ],
           // Add-ons
-          ["Meatballs", "Hotdog", "Bacon", "Parmesan cheese", "Chilli flakes"],
+          // Prices here effect ALL amounts
+          // Each price stacks, for example if the price is 0.1, then
+          // its 0.1 for lite, 0.2 for reg, and 0.3 for extra
+          [
+            { title: "Meatballs", price: 0.5 },
+            { title: "Bacon", price: 0.25 },
+            { title: "Parmesan cheese", price: 0.1 },
+            { title: "Chilli flakes", price: 0.1 },
+          ],
         ],
       },
       {
@@ -253,15 +262,24 @@ export default [
           "Spaghetti noodles in a sweet Filipino style spaghetti sauce with ground beef, hot dog slices, and shredded cheese.",
         customizations: [
           // Whats on it
+          // Prices here only take effect when user presses extra
           [
-            "Spaghetti sauce",
-            "Spaghetti noodles",
-            "Cheese",
-            "Hot dog slices",
-            "Ground beef",
+            { title: "Spaghetti sauce", price: 0 },
+            { title: "Spaghetti noodles", price: 1 },
+            { title: "Cheese", price: 0.25 },
+            { title: "Hot dog slices", price: 0.5 },
+            { title: "Ground beef", price: 0.5 },
           ],
           // Add-ons
-          ["Meatballs", "Hotdog", "Bacon", "Parmesan cheese", "Chilli flakes"],
+          // Prices here effect ALL amounts
+          // Each price stacks, for example if the price is 0.1, then
+          // its 0.1 for lite, 0.2 for reg, and 0.3 for extra
+          [
+            { title: "Meatballs", price: 0.5 },
+            { title: "Bacon", price: 0.25 },
+            { title: "Parmesan cheese", price: 0.1 },
+            { title: "Chilli flakes", price: 0.1 },
+          ],
         ],
       },
     ],

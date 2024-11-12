@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./CustomScreen.module.css";
 import { useOrderContext } from "./App";
+import { formatPrice, getPrice } from "./util";
 
 export default function CustomScreen({
   title,
@@ -25,11 +26,13 @@ export default function CustomScreen({
             ...item,
           }))
         );
-      } else if (foodItem.customizations) {
-        return foodItem.customizations.map((custom) =>
+      } else if (foodItem?.customizations) {
+        return foodItem.customizations.map((custom, i) =>
           custom.map((item) => ({
-            title: item,
-            selected: "Reg",
+            title: item.title,
+            selected: i ? "None" : "Reg",
+            price: item.price,
+            priceType: i,
           }))
         );
       } else {
@@ -37,8 +40,6 @@ export default function CustomScreen({
       }
     })()
   );
-
-  console.log(customizations);
 
   const createCustomButton = (custom, i, index, type) => {
     return (
@@ -111,7 +112,12 @@ export default function CustomScreen({
                   <div key={i} className={styles.customItemList}>
                     {custom.map((item, index) => (
                       <div key={index} className={styles.itemCont}>
-                        <p className={styles.itemTitle}>{item.title}</p>
+                        <div className={styles.leftComp}>
+                          <p className={styles.itemTitle}>{item.title}</p>
+                          <div className={styles.extraPrice}>
+                            {formatPrice(getPrice(item), true)}
+                          </div>
+                        </div>
                         <div className={styles.customCont}>
                           {createCustomButton(item, i, index, "None")}
                           {createCustomButton(item, i, index, "Lite")}

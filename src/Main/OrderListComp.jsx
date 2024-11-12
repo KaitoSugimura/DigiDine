@@ -3,8 +3,11 @@ import styles from "./orderListComp.module.css";
 import { useOrderContext } from "../App";
 import OrderFoodCard from "./OrderFoodCard";
 
-export default function OrderListComp() {
-  const { orderList, setViewDetails, currentCategory } = useOrderContext();
+export default function OrderListComp({
+  setViewDetails = () => {},
+  isFinal = false,
+}) {
+  const { orderList, currentCategory } = useOrderContext();
 
   return (
     <div className={styles.orderList}>
@@ -16,6 +19,7 @@ export default function OrderListComp() {
             <OrderFoodCard
               key={`${currentCategory}-${item.name}-${i}`}
               {...item}
+              isFinal={isFinal}
               edit={() => {
                 setViewDetails({
                   name: item.name,
