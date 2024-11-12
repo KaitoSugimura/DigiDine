@@ -12,8 +12,8 @@ export default function StartScreen() {
         setScreen("main");
       }}
     >
-      <img src="startpage.png" alt="start" className={styles.image}></img>{" "}
-      <img src="pressstart.png" alt="start" className={styles.imagePress}></img>{" "}
+      <img src="startpage.png" alt="start" className={styles.image}></img>
+      <img src="pressstart.png" alt="start" className={styles.imagePress}></img>
     </div>
   );
 }
