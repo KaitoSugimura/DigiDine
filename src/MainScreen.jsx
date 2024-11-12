@@ -1,7 +1,7 @@
 import styles from "./MainScreen.module.css";
 import MainNavbar from "./Navigation/MainNavbar";
 import FoodCard from "./Main/FoodCard";
-import FoodData from "./FoodData";
+
 import { useRef, useState } from "react";
 import { createContext, useContext } from "react";
 import { useOrderContext, useScreenContext } from "./App";
@@ -19,41 +19,24 @@ const CallStaffAudio = new Audio("./CallStaff.mp3");
 export const useCategoryContext = () => useContext(CategoryContext);
 
 function MainScreen() {
-  const foodItems = FoodData.reduce(
-    (acc, item) => ({ ...acc, [item[0]]: item[1] }),
-    {}
-  );
-
   const { setScreen } = useScreenContext();
 
-  const [currentCategory, _setCurrentCategory] = useState("Featured");
   const orderRef = useRef(null);
 
-  const { orderList, resetOrder } = useOrderContext();
-
-  const [pageNo, setPageNo] = useState(0);
-
-  const [viewDetails, setViewDetails] = useState(undefined);
+  const {
+    foodItems,
+    orderList,
+    resetOrder,
+    currentCategory,
+    setCurrentCategory,
+    nextPage,
+    backPage,
+    viewDetails,
+    setViewDetails,
+    pageNo,
+  } = useOrderContext();
 
   const [confirmOrder, setConfirmOrder] = useState(false);
-
-  const setCurrentCategory = (category) => {
-    _setCurrentCategory(category);
-    setPageNo(0);
-    setViewDetails(undefined);
-  };
-
-  const nextPage = () => {
-    setPageNo((prev) => {
-      return prev + 1;
-    });
-  };
-
-  const backPage = () => {
-    setPageNo((prev) => {
-      return prev - 1;
-    });
-  };
 
   return (
     <div
@@ -185,7 +168,7 @@ function MainScreen() {
                   Call Staff
                 </button>
               </div>
-              <div className={styles.orderListComp}>
+              <div className={styles.orderListComp} ref={orderRef}>
                 <OrderListComp setViewDetails={setViewDetails} />
               </div>
 
@@ -213,7 +196,6 @@ function MainScreen() {
                   </button>
                   <button
                     className={styles.orderButton}
-                    ref={orderRef}
                     onClick={() => {
                       if (orderList.length === 0) {
                         return;

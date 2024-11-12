@@ -12,11 +12,12 @@ export default function FoodCard({
   left,
   setViewDetails,
 }) {
-  const { addOrder } = useOrderContext();
+  const { addOrder, orderList } = useOrderContext();
 
   const imageRef = useRef(null);
 
   const [objects, setObjects] = useState({});
+  const [offSet, setOffSet] = useState(0);
 
   const handleTogglePosition = () => {
     const indexKey = index++;
@@ -56,7 +57,7 @@ export default function FoodCard({
                 style={{
                   position: "fixed",
                   top: isTopRight
-                    ? top
+                    ? top + offSet
                     : imageRef.current?.getBoundingClientRect().top,
                   left: isTopRight
                     ? left
@@ -109,14 +110,38 @@ export default function FoodCard({
           <button
             className={styles.addButton}
             onClick={(event) => {
+              event.stopPropagation();
               const isNew = addOrder({
                 name: title,
                 image,
                 price,
                 customizations: null,
               });
+              if (!isNew) {
+                const orderListReverse = orderList.slice().reverse();
+                let offSet = 0;
+                for (let i = 0; i < orderList.length; i++) {
+                  let customizationOffset = 0;
+                  let isCustomDefault = true;
+                  if (orderListReverse[i].customizations) {
+                    orderListReverse[i].customizations.forEach((custom, i) =>
+                      custom.forEach((item) => {
+                        const toTest = i ? "None" : "Reg";
+                        if (item.selected == toTest) return;
+                        isCustomDefault = false;
+                        customizationOffset += 9;
+                      })
+                    );
+                  }
+                  if (isCustomDefault && orderListReverse[i].name == title) {
+                    break;
+                  } else {
+                    offSet += 100 + customizationOffset;
+                  }
+                }
+                setOffSet(Math.min(offSet, 360));
+              }
               handleTogglePosition();
-              event.stopPropagation();
             }}
           >
             +
