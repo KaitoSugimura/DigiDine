@@ -110,10 +110,10 @@ export default function App() {
     });
   };
 
-  const incrementOrder = (name) => {
+  const incrementOrder = (id) => {
     setOrderList((prev) => {
       prev.forEach((item, i) => {
-        if (item.name == name) {
+        if (item.id == id) {
           item.amount++;
         }
       });
@@ -121,11 +121,11 @@ export default function App() {
     });
   };
 
-  const decrementOrder = (name) => {
+  const decrementOrder = (id) => {
     setOrderList((prev) => {
       let done = false;
       prev.forEach((item, i) => {
-        if (item.name == name) {
+        if (item.id == id) {
           if (item.amount > 1) {
             item.amount--;
           } else {
@@ -151,6 +151,7 @@ export default function App() {
 
   const resetOrder = () => {
     setOrderList([]);
+    setCurrentCategory("Featured");
   };
 
   const setScreen = (screen) => {

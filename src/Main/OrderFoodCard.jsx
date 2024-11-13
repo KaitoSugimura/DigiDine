@@ -4,6 +4,7 @@ import { useOrderContext } from "../App";
 import { formatPrice } from "../util";
 
 export default function OrderFoodCard({
+  id,
   image,
   name,
   price,
@@ -86,7 +87,7 @@ export default function OrderFoodCard({
                 if (amount <= 1) {
                   return;
                 }
-                decrementOrder(name);
+                decrementOrder(id);
               }}
             >
               -
@@ -96,7 +97,7 @@ export default function OrderFoodCard({
             <button
               className={styles.sliderButtonRight}
               onClick={() => {
-                incrementOrder(name);
+                incrementOrder(id);
               }}
             >
               +
