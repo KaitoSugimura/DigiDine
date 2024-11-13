@@ -19,20 +19,27 @@
 }
 
 .imagePress {
-  width: 30%;
   position: absolute;
-  right: 4%;
-  animation: slideUpAndDown 2s infinite ease-in-out;
+  bottom: 6%;
+  left: 50%;
+  animation: textAnim 2s infinite ease-in-out;
+
+  transform: translate(-50%, 0);
+
+  color: white;
+  font-size: 18px;
+  font-family: "inter";
+  font-weight: light;
 }
 
-@keyframes slideUpAndDown {
+@keyframes textAnim {
   0% {
-    transform: translateY(0);
+    opacity: 0;
   }
   50% {
-    transform: translateY(-10px);
+    opacity: 0.8;
   }
   100% {
-    transform: translateY(0);
+    opacity: 0;
   }
 }

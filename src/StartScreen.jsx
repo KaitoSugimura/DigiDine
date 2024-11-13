@@ -13,7 +13,7 @@ export default function StartScreen() {
       }}
     >
       <img src="startpage.png" alt="start" className={styles.image}></img>
-      <img src="pressstart.png" alt="start" className={styles.imagePress}></img>
+      <p className={styles.imagePress}>Tap anywhere to start</p>
     </div>
   );
 }
