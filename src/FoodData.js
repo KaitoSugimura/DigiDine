@@ -93,6 +93,50 @@ export default [
           ],
         ],
       },
+      {
+        title: "Big Arch",
+        price: 5.99,
+        calories: 1030,
+        image: "Burgers/big-arch.jfif",
+        detail:
+          "Two quarter pound* 100% Canadian beef patties, layered with three slices of white processed cheese, and topped with crispy onions, slivered onions, pickles, lettuce and delicious Big Arch sauce, served on a toasted sesame and poppy seed bun.",
+        customizations: [
+          [
+            { title: "White processed cheese", price: 0.2 },
+            { title: "Crispy onions", price: 0.2 },
+            { title: "Slivered onions", price: 0.2 },
+            { title: "Pickles", price: 0.2 },
+            { title: "Lettuce", price: 0.2 },
+            { title: "Big Arch sauce", price: 0 },
+            { title: "Toasted bun", price: 0 },
+          ],
+          [
+            { title: "Bacon", price: 0.5 },
+            { title: "Tomato", price: 0.25 },
+            { title: "American cheese", price: 0.2 },
+          ],
+        ],
+        },
+        {
+        title: "Grilled Chicken",
+        price: 3.99,
+        calories: 390,
+        image: "Chicken/Grilled-Chicken-Sandwich.jpg",
+        detail:
+          "Made with tender and juicy 100% Canadian-raised grilled seasoned chicken. Topped with shredded lettuce, creamy mayo-style sauce and served on a soft potato bun for that WcD’s flavour you crave.",
+        customizations: [
+          [
+            { title: "Lettuce", price: 0.2 },
+            { title: "Mayo-style sauce", price: 0 },
+            { title: "Toasted Potato bun", price: 0 },
+          ],
+          [
+            { title: "Mayo", price: 0.2 },
+            { title: "Tomato", price: 0.2 },
+            { title: "Bacon", price: 0.5 },
+          ],
+        ],
+      }
     ],
   ],
   [
@@ -598,6 +642,85 @@ export default [
           ],
         ],
       },
+      {
+        title: "WcDonald's Fetuccine Alfredo",
+        price: 8.99,
+        calories: 700,
+        image: "Pasta/mcdonalds-pasta.webp",
+        detail:
+          "Fettuccine noodles in a creamy Alfredo sauce with grilled chicken, broccoli, and Parmesan cheese.",
+        customizations: [
+          [
+            { title: "Alfredo sauce", price: 0 },
+            { title: "Grilled chicken", price: 1 },
+            { title: "Broccoli", price: 0.5 },
+            { title: "Parmesan cheese", price: 0.25 },
+          ],
+          [
+            { title: "Bacon", price: 0.5 },
+            { title: "Chilli flakes", price: 0.1 },
+          ],
+        ],
+      },
+      {
+        title: "4 Cheese Lasagna",
+        price: 9.49,
+        calories: 850,
+        image: "Pasta/4-cheese-lasagna.jpg",
+        detail:
+          "Layers of lasagna noodles with a rich tomato sauce, ricotta, mozzarella, Parmesan, and Romano cheeses.",
+        customizations: [
+          [
+            { title: "Tomato sauce", price: 0 },
+            { title: "Ricotta cheese", price: 0.5 },
+            { title: "Mozzarella cheese", price: 0.5 },
+            { title: "Parmesan cheese", price: 0.25 },
+            { title: "Romano cheese", price: 0.25 },
+          ],
+          [
+            { title: "Meatballs", price: 0.5 },
+            { title: "Bacon", price: 0.25 },
+            { title: "Chilli flakes", price: 0.1 },
+          ],
+        ]
+      },
+      {
+        title: "Cacio e Pepe",
+        price: 8.99,
+        calories: 600,
+        image: "Pasta/Cacio-e-Pepe.jpg",
+        detail:
+          "Spaghetti noodles with a simple yet delicious sauce made from Pecorino Romano cheese and black pepper.",
+        customizations: [
+          [
+            { title: "Pecorino Romano cheese", price: 0.5 },
+            { title: "Black pepper", price: 0.1 },
+          ],
+          [
+            { title: "Parmesan cheese", price: 0.25 },
+            { title: "Chilli flakes", price: 0.1 },
+          ],
+        ]
+      },
+      {
+        title: "Pasta Alla Gricia",
+        price: 8.49,
+        calories: 750,
+        image: "Pasta/pasta-alla-gricia.jpg",
+        detail:
+          "Pasta Alla Gracia with a rich and creamy sauce made from Pecorino Romano cheese, black pepper, and crispy pancetta.",
+        customizations: [
+          [
+            { title: "Pecorino Romano cheese", price: 0.5 },
+            { title: "Black pepper", price: 0.1 },
+            { title: "Crispy pancetta", price: 0.5 },
+          ],
+          [
+            { title: "Parmesan cheese", price: 0.25 },
+            { title: "Chilli flakes", price: 0.1 },
+          ],
+        ],
+      }
     ],
   ],
   [
@@ -711,6 +834,26 @@ export default [
           ],
         ],
       },
+      {
+        title: "Cool Slaw Delight",
+        price: 3.49,
+        calories: 150,
+        image: "Salads/coleslaw.jpg",
+        detail: "A refreshing coleslaw salad with shredded cabbage, carrots, and a tangy dressing.",
+        customizations: [
+          [
+            { title: "Shredded cabbage", price: 0 },
+            { title: "Shredded carrots", price: 0 },
+            { title: "Tangy dressing", price: 0 },
+          ],
+          [
+            { title: "Bacon bits", price: 0.25 },
+            { title: "Raisins", price: 0.25 },
+            { title: "Pepper", price: 0 },
+            { title: "Salt", price: 0 },
+          ],
+        ],
+      },
     ],
   ],
   [
@@ -790,6 +933,22 @@ export default [
         detail:
           "Even when there's only 2 options, we'll still get your order wrong.",
       },
+      {
+          title: "Mini Mozzarella Sticks",
+          price: 4.99,
+          calories: 320,
+          image: "Sides/mozzarella-sticks.jpg",
+          detail: "Crispy breaded mozzarella sticks served with marinara sauce.",
+          customizations: [
+            [
+              { title: "Marinara sauce", price: 0 },
+            ],
+            [
+              { title: "Ranch dressing", price: 0.25 },
+              { title: "BBQ sauce", price: 0.25 },
+            ],
+          ],
+        }
     ],
   ],
   [
@@ -818,6 +977,30 @@ export default [
         detail:
           "Sweet and flaky Peach Mango Pie made with real Philippine Mangoes",
       },
+      {
+        title: "Classic Hot Fudge Sundae",
+        price: 2.99,
+        calories: 300,
+        image: "Dessert/hotfudgesundae.webp",
+        detail:
+          "Our classic sundae made with creamy vanilla soft serve and chocolate sauce.",
+      },
+      {
+        title: "WcDonald's Apple Pie",
+        price: 1.99,
+        calories: 250,
+        image: "Dessert/applepie.jpg",
+        detail:
+          "Our classic Apple Pie made with delicious apples, baked in a flaky crust.",
+      },
+      {
+        title: "WcDonald's Chocolate Chip Cookie",
+        price: 1.49,
+        calories: 160,
+        image: "Dessert/chocolatechipcookie.jpg",
+        detail:
+          "A soft and chewy cookie made with chocolate chips.",
+      }
     ],
   ],
   [
