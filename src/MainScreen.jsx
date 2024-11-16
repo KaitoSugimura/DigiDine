@@ -38,6 +38,9 @@ function MainScreen() {
 
   const [confirmOrder, setConfirmOrder] = useState(false);
 
+  const [showRestartDialog, setShowRestartDialog] = useState(false);
+  const [showNoOrderDialog, setShowNoOrderDialog] = useState(false);
+
   return (
     <div
       style={{
@@ -60,6 +63,66 @@ function MainScreen() {
               edit={viewDetails.edit}
             />
           </div>
+        )}
+
+        {showNoOrderDialog && (
+          <Dialog
+            onClose={() => {
+              setShowNoOrderDialog(false);
+            }}
+          >
+            <div className={styles.confirmOrderCont}>
+              <p className={styles.restartDialogText}>
+                Please add some items to the order before proceeding.
+              </p>
+              <div className={styles.actionButtons}>
+                <button
+                  className={styles.okButton}
+                  style={{
+                    margin: "auto",
+                  }}
+                  onClick={() => {
+                    setShowNoOrderDialog(false);
+                  }}
+                >
+                  OK
+                </button>
+              </div>
+            </div>
+          </Dialog>
+        )}
+
+        {showRestartDialog && (
+          <Dialog
+            onClose={() => {
+              setShowRestartDialog(false);
+            }}
+          >
+            <div className={styles.confirmOrderCont}>
+              <p className={styles.restartDialogText}>
+                Are you sure you want to restart the order?
+              </p>
+              <div className={styles.actionButtons}>
+                <button
+                  className={styles.cancelButton}
+                  onClick={() => {
+                    setShowRestartDialog(false);
+                  }}
+                >
+                  Cancel
+                </button>
+                <button
+                  className={styles.restartActionButton}
+                  onClick={() => {
+                    resetOrder();
+                    setShowRestartDialog(false);
+                  }}
+                >
+                  Restart
+                </button>
+              </div>
+            </div>
+          </Dialog>
         )}
 
         {confirmOrder && (
@@ -193,7 +256,7 @@ function MainScreen() {
                   <button
                     className={styles.restartButton}
                     onClick={() => {
-                      resetOrder();
+                      setShowRestartDialog(true);
                     }}
                   >
                     Restart
@@ -202,6 +265,7 @@ function MainScreen() {
                     className={styles.orderButton}
                     onClick={() => {
                       if (orderList.length === 0) {
+                        setShowNoOrderDialog(true);
                         return;
                       }
                       setConfirmOrder(true);

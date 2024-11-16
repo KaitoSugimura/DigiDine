@@ -126,7 +126,7 @@
 }
 
 .orderButton {
-  background-color: #6f94bc;
+  background-color: var(--color-action-button);
   border: 1px solid rgb(75, 75, 75);
 
   padding: 10px 0;
@@ -293,7 +293,44 @@
   flex-grow: 1;
 
   border: 1px solid #181818;
-  background-color: #6f94bc;
+  background-color: var(--color-action-button);
+  border-radius: 8px;
+  color: white;
+  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.restartActionButton {
+  flex-grow: 1;
+
+  border: 1px solid #181818;
+  background-color: #da2c2c;
+  border-radius: 8px;
+  color: white;
+  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.restartDialogText {
+  font-size: 24px;
+  font-weight: bold;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.okButton {
+  width: 200px;
+  height: 60px;
+
+  border: 1px solid #181818;
+  background-color: var(--color-action-button);
   border-radius: 8px;
   color: white;
   box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);

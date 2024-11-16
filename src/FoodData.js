@@ -4,7 +4,7 @@ export default [
     [
       {
         title: "Everything Burger",
-        price: 5.99,
+        price: 6.99,
         calories: 1030,
         image: "Burgers/everything.png",
         detail:
@@ -116,8 +116,8 @@ export default [
             { title: "American cheese", price: 0.2 },
           ],
         ],
-        },
-        {
+      },
+      {
         title: "Grilled Chicken",
         price: 3.99,
         calories: 390,
@@ -136,7 +136,7 @@ export default [
             { title: "Bacon", price: 0.5 },
           ],
         ],
-      }
+      },
     ],
   ],
   [
@@ -144,7 +144,7 @@ export default [
     [
       {
         title: "Everything Burger",
-        price: 5.99,
+        price: 6.99,
         calories: 1030,
         image: "Burgers/everything.png",
         detail:
@@ -682,7 +682,7 @@ export default [
             { title: "Bacon", price: 0.25 },
             { title: "Chilli flakes", price: 0.1 },
           ],
-        ]
+        ],
       },
       {
         title: "Cacio e Pepe",
@@ -700,7 +700,7 @@ export default [
             { title: "Parmesan cheese", price: 0.25 },
             { title: "Chilli flakes", price: 0.1 },
           ],
-        ]
+        ],
       },
       {
         title: "Pasta Alla Gricia",
@@ -720,7 +720,7 @@ export default [
             { title: "Chilli flakes", price: 0.1 },
           ],
         ],
-      }
+      },
     ],
   ],
   [
@@ -839,7 +839,8 @@ export default [
         price: 3.49,
         calories: 150,
         image: "Salads/coleslaw.jpg",
-        detail: "A refreshing coleslaw salad with shredded cabbage, carrots, and a tangy dressing.",
+        detail:
+          "A refreshing coleslaw salad with shredded cabbage, carrots, and a tangy dressing.",
         customizations: [
           [
             { title: "Shredded cabbage", price: 0 },
@@ -934,21 +935,19 @@ export default [
           "Even when there's only 2 options, we'll still get your order wrong.",
       },
       {
-          title: "Mini Mozzarella Sticks",
-          price: 4.99,
-          calories: 320,
-          image: "Sides/mozzarella-sticks.jpg",
-          detail: "Crispy breaded mozzarella sticks served with marinara sauce.",
-          customizations: [
-            [
-              { title: "Marinara sauce", price: 0 },
-            ],
-            [
-              { title: "Ranch dressing", price: 0.25 },
-              { title: "BBQ sauce", price: 0.25 },
-            ],
+        title: "Mini Mozzarella Sticks",
+        price: 4.99,
+        calories: 320,
+        image: "Sides/mozzarella-sticks.jpg",
+        detail: "Crispy breaded mozzarella sticks served with marinara sauce.",
+        customizations: [
+          [{ title: "Marinara sauce", price: 0 }],
+          [
+            { title: "Ranch dressing", price: 0.25 },
+            { title: "BBQ sauce", price: 0.25 },
           ],
-        }
+        ],
+      },
     ],
   ],
   [
@@ -998,9 +997,8 @@ export default [
         price: 1.49,
         calories: 160,
         image: "Dessert/chocolatechipcookie.jpg",
-        detail:
-          "A soft and chewy cookie made with chocolate chips.",
-      }
+        detail: "A soft and chewy cookie made with chocolate chips.",
+      },
     ],
   ],
   [
