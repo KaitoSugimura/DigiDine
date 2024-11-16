@@ -1,41 +1,145 @@
 .root {
   display: flex;
-  flex-direction: column;
 
   justify-content: center;
   align-items: center;
 
   width: 100%;
   height: 100%;
-  padding: 24px;
+  padding: 50px;
 
-  background-color: #ffffff;
+  background-color: #e1ebef;
+
+  gap: 60px;
+}
+
+.rightSide {
+  flex-grow: 1;
+
+  height: 500px;
+  position: relative;
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.topCont {
+  margin-bottom: 16px;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
 }
 
 .title {
   font-size: 36px;
   font-weight: bold;
   color: #121212;
-  margin-bottom: 16px;
-  margin-top: 8px;
+}
+
+.confirmList {
+  flex-grow: 1;
+  overflow-y: auto;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  margin-bottom: 8px;
+}
+
+.orderSum {
+  display: flex;
+  align-self: start;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 24px;
 }
 
 .doneButton {
-  width: 120px;
+  width: 180px;
   height: 60px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border-radius: 8px;
-
-  border: none;
 
   margin-top: 24px;
 
-  background-color: #4b88c9;
+  background-color: var(--color-action-button);
+  border: 1px solid rgb(75, 75, 75);
+
+  padding: 10px 0;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+
+  text-transform: uppercase;
   color: white;
 
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.priceCont {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  gap: 4px;
+  align-self: start;
+}
+
+.totalText {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.totalPrice {
+  font-size: 24px;
+}
+
+.taxInc {
+  font-size: 12px;
+  font-weight: light;
+  color: #121212;
+  margin-bottom: 6px;
+
+  text-wrap: nowrap;
+}
+
+.disclaim {
+  font-size: 12px;
+  font-weight: light;
+  color: #121212;
+  margin-bottom: 6px;
+
+  text-wrap: nowrap;
+  align-self: start;
+}
+
+.receipt {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: 0;
+}
+
+.imageTop {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 500px;
+  padding-top: 24px;
+  padding-bottom: 100px;
+  padding-left: 48px;
+  padding-right: 48px;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: 1;
 }

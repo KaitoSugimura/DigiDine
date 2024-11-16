@@ -177,6 +177,15 @@
   margin-bottom: 24px;
 }
 
+.customList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.customList::-webkit-scrollbar-thumb {
+  background-color: #9a9a9a;
+  border-radius: 4px;
+}
+
 .leftComp {
   flex-grow: 1;
   display: flex;
