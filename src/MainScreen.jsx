@@ -40,6 +40,7 @@ function MainScreen() {
 
   const [showRestartDialog, setShowRestartDialog] = useState(false);
   const [showNoOrderDialog, setShowNoOrderDialog] = useState(false);
+  const [showStaffDialog, setShowStaffDialog] = useState(false);
 
   return (
     <div
@@ -83,6 +84,33 @@ function MainScreen() {
                   }}
                   onClick={() => {
                     setShowNoOrderDialog(false);
+                  }}
+                >
+                  OK
+                </button>
+              </div>
+            </div>
+          </Dialog>
+        )}
+
+        {showStaffDialog && (
+          <Dialog
+            onClose={() => {
+              setShowStaffDialog(false);
+            }}
+          >
+            <div className={styles.confirmOrderCont}>
+              <p className={styles.restartDialogText}>
+                The Staff have been notified and will be with you shortly.
+              </p>
+              <div className={styles.actionButtons}>
+                <button
+                  className={styles.okButton}
+                  style={{
+                    margin: "auto",
+                  }}
+                  onClick={() => {
+                    setShowStaffDialog(false);
                   }}
                 >
                   OK
@@ -227,6 +255,7 @@ function MainScreen() {
                   onClick={() => {
                     CallStaffAudio.currentTime = 0;
                     CallStaffAudio.play();
+                    setShowStaffDialog(true);
                   }}
                 >
                   Call Staff

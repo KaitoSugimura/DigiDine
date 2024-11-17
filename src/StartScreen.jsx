@@ -12,7 +12,7 @@ export default function StartScreen() {
         setScreen("main");
       }}
     >
-      <img src="startpageBlue.png" alt="start" className={styles.image}></img>
+      <img src="startpage.png" alt="start" className={styles.image}></img>
       <p className={styles.imagePress}>Tap anywhere to start</p>
     </div>
   );

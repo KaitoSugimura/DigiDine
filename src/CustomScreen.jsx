@@ -11,9 +11,9 @@ export default function CustomScreen({
   edit,
 }) {
   // get current food item with the same name as title
-  const foodItem = foodItems[currentCategory].find(
-    (item) => item.title === title
-  );
+  const foodItem = Object.values(foodItems)
+    .flat()
+    .find((item) => item.title === title);
 
   const { addOrder, editOrder } = useOrderContext();
   const [amountToAdd, setAmountToAdd] = React.useState(edit ? edit.amount : 1);
