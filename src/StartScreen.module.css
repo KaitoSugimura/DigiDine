@@ -28,11 +28,11 @@
 
   color: white;
   font-size: 18px;
-  font-family: "inter";
+  font-family: "Inter";
   font-weight: light;
 }
 
-/* @keyframes textAnim {
+@keyframes textAnim {
   0% {
     opacity: 0;
   }
@@ -42,4 +42,4 @@
   100% {
     opacity: 0;
   }
-} */
+}
