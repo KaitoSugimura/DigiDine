@@ -17,16 +17,17 @@
   width: 100%;
   height: 100%;
   border-radius: 12px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
   position: relative;
   animation: fadeInPop 0.3s;
   animation-fill-mode: forwards;
+  background-color: rgb(253, 253, 253);
 
   -webkit-tap-highlight-color: transparent;
 
-  border: 1px solid #c3c3c3;
+  /* border: 1px solid #c3c3c363; */
 }
 
 .cardRoot:nth-child(1) {
@@ -141,7 +142,7 @@
   background-color: #f6f9ff;
   color: black;
   border: 1px solid #00000033;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); */
   border-radius: 50%;
   width: 36px;
   height: 36px;

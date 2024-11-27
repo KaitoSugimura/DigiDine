@@ -1,6 +1,7 @@
 .cardRoot {
   background-color: white;
-  border: 1px solid #4e4e4e;
+  /* border: 1px solid #4e4e4e; */
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 
   padding: 5px;
