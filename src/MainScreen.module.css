@@ -325,6 +325,32 @@
   text-align: center;
 }
 
+.removeDialogText {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.itemToRemove {
+  flex-grow: 1;
+  width: 400px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.itemToRemove::-webkit-scrollbar {
+  width: 6px;
+}
+
+.itemToRemove::-webkit-scrollbar-thumb {
+  background-color: #9a9a9a;
+  border-radius: 4px;
+}
+
 .okButton {
   width: 200px;
   height: 60px;

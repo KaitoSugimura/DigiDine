@@ -132,7 +132,7 @@ export default function CustomScreen({
                         </div>
                         <div className={styles.customCont}>
                           {createCustomButton(item, i, index, "None")}
-                          {createCustomButton(item, i, index, "Lite")}
+                          {createCustomButton(item, i, index, "Light")}
                           {createCustomButton(item, i, index, "Reg")}
                           {createCustomButton(item, i, index, "Extra")}
                         </div>

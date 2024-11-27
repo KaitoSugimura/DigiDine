@@ -3,7 +3,6 @@ import "./Reset.css";
 import MainScreen from "./MainScreen";
 import styles from "./App.module.css";
 import StartScreen from "./StartScreen";
-import OrderScreen from "./OrderScreen";
 import OrderConfirmedScreen from "./OrderConfirmedScreen";
 import { v4 as uuidv4 } from "uuid";
 import FoodData from "./FoodData";
@@ -138,10 +137,10 @@ export default function App() {
     });
   };
 
-  const deleteOrder = (name) => {
+  const deleteOrder = (id) => {
     setOrderList((prev) => {
       prev.forEach((item, i) => {
-        if (item.name == name) {
+        if (item.id == id) {
           prev.splice(i, 1);
         }
       });
@@ -150,13 +149,13 @@ export default function App() {
   };
 
   const resetOrder = () => {
-    setOrderList([]);
-    setCurrentCategory("Featured");
+    setScreen("start");
   };
 
   const setScreen = (screen) => {
     if (screen == "start") {
-      resetOrder();
+      setOrderList([]);
+      setCurrentCategory("Featured");
     }
     setCurrentScreen(screen);
   };
@@ -183,7 +182,13 @@ export default function App() {
         }}
       >
         <div className={styles.root}>
-          <div className={styles.app}>{getScreen()}</div>
+          <div className={styles.app}>
+            <div className={styles.powerButtonOnTop}></div>
+            <div className={styles.soundButtonOnTop}></div>
+            <div className={styles.cameraOnTop}></div>
+            <div className={styles.rim}></div>
+            <div className={styles.abs}>{getScreen()}</div>
+          </div>
         </div>
       </OrderContext.Provider>
     </ScreenContext.Provider>

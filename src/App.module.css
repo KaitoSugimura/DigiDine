@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   overflow: auto;
-  background-color: #1b2530;
+  background-color: #20262c;
 
   color: black;
 }
@@ -13,10 +13,107 @@
 .app {
   width: 1024px;
   height: 640px;
-  border: 20px solid rgb(36, 36, 36);
   position: relative;
-  border-radius: 10px;
-  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
-  background: white;
   margin: auto;
+}
+
+.abs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.powerButtonOnTop {
+  position: absolute;
+  top: -43px;
+  left: 70px;
+  margin: 10px;
+  width: 50px;
+  height: 10px;
+  background-color: rgb(81, 81, 81);
+  border-radius: 5px;
+  z-index: 0;
+  box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.soundButtonOnTop {
+  position: absolute;
+  top: -43px;
+  left: 155px;
+  margin: 10px;
+  width: 80px;
+  height: 10px;
+  background-color: rgb(81, 81, 81);
+  border-radius: 5px;
+  z-index: 0;
+  box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.soundButtonOnTop::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 10px;
+  height: 2px;
+  transform: translate(-50%, 0%);
+  font-size: 20px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: rgb(37, 37, 37);
+}
+
+.cameraOnTop {
+  position: absolute;
+  top: -21px;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  transform: translate(-50%, 0%);
+  z-index: 9;
+  border-radius: 100%;
+  background-color: #565656;
+  opacity: 0.6;
+}
+
+.cameraOnTop::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 54%;
+  width: 3px;
+  height: 3px;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  background-color: #8e849a;
+}
+
+.cameraOnTop::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 6px;
+  height: 4px;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  background-color: #303030;
+}
+
+.rim {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  bottom: -30px;
+  right: -30px;
+  z-index: 5;
+  border-radius: 22px;
+  background-color: #313131;
+  border: 2px solid #585858;
+  box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.2);
 }

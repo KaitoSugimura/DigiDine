@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./OrderFoodCard.module.css";
 import { useOrderContext } from "../App";
 import { formatPrice } from "../util";
+import { useMainContext } from "../MainScreen";
 
 export default function OrderFoodCard({
   id,
@@ -13,7 +14,9 @@ export default function OrderFoodCard({
   edit,
   isFinal,
 }) {
-  const { decrementOrder, incrementOrder, deleteOrder } = useOrderContext();
+  const { decrementOrder, incrementOrder } = useOrderContext();
+  const mainContext = useMainContext();
+  const setItemToRemoveAndDialog = mainContext?.setItemToRemoveAndDialog;
 
   const getCustomizations = () => {
     let hasCustoms = false;
@@ -73,7 +76,15 @@ export default function OrderFoodCard({
             <button
               className={styles.removeButton}
               onClick={() => {
-                deleteOrder(name);
+                if (setItemToRemoveAndDialog)
+                  setItemToRemoveAndDialog({
+                    name,
+                    id,
+                    image,
+                    customizations,
+                    price,
+                    amount,
+                  });
               }}
             >
               Remove
