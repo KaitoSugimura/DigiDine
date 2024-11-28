@@ -13,7 +13,7 @@
 .prevButton,
 .nextButton {
   color: black;
-  background-color: #ffffff;
+  background-color: #d4f4ff;
 
   display: flex;
   justify-content: center;
@@ -23,11 +23,19 @@
   font-size: 14px;
   height: 40px;
   width: 140px;
-  /* border: 1px solid #9ecdff; */
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  /* border: 1px solid #717171; */
+  box-shadow: rgba(0, 0, 0, 0.2) 4px 4px;
   cursor: pointer;
-  border-radius: 2px;;
+  border-radius: 2px;
 }
+
+/* .prevButton {
+  box-shadow: rgba(0, 0, 0, 0.2) 5px 5px;
+}
+
+.nextButton {
+  box-shadow: rgba(0, 0, 0, 0.2) -5px 5px;
+} */
 
 .prevButton:active,
 .nextButton:active {
@@ -46,9 +54,10 @@
 
 .prevButton:disabled,
 .nextButton:disabled {
-  background-color: #dedede;
+  background-color: #d3d3d3;
   box-shadow: none;
-  color: #b7b7b7;
+  border: none;
+  color: #7f7f7f;
   cursor: not-allowed;
 }
 
@@ -83,7 +92,7 @@
   /* border: 1px solid #181818; */
   border-radius: 100%;
 
-  background-color: #dbdbdb;
+  background-color: #ececec;
 }
 
 .activeCircle {
