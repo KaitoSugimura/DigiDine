@@ -47,12 +47,12 @@ function MainScreen() {
   const [showStaffDialog, setShowStaffDialog] = useState(false);
 
   return (
-    <div
-      style={{
-        width: "100%",
-        height: "100%",
-      }}
-    >
+    // <div
+    //   style={{
+    //     width: "100%",
+    //     height: "100%",
+    //   }}
+    // >
       <CategoryContext.Provider value={{ currentCategory, setCurrentCategory }}>
         <MainContext.Provider value={{ setItemToRemoveAndDialog }}>
           {viewDetails && (
@@ -354,7 +354,7 @@ function MainScreen() {
           </div>
         </MainContext.Provider>
       </CategoryContext.Provider>
-    </div>
+    // </div>
   );
 }
 

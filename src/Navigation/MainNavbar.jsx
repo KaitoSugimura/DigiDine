@@ -8,18 +8,20 @@ export default function MainNavbar() {
   const barRef = useRef(null);
   const listOfMenuItems = FoodData.map((item) => item[0]);
   const { currentCategory, setCurrentCategory } = useCategoryContext();
-  const [width, setWidth] = useState(0);
+  // const [width, setWidth] = useState(0);
 
-  useEffect(() => {
-    setWidth((barRef.current.offsetWidth - 80) / listOfMenuItems.length);
-    const handleResize = () => {
-      setWidth(barRef.current.offsetWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  // useEffect(() => {
+  //   setWidth((barRef.current.offsetWidth - 80) / listOfMenuItems.length);
+  //   const handleResize = () => {
+  //     setWidth(barRef.current.offsetWidth);
+  //   };
+  //   window.addEventListener("resize", handleResize);
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
+
+  // console.log(width);
 
   return (
     <div className={styles.root} ref={barRef}>
@@ -33,9 +35,9 @@ export default function MainNavbar() {
               className={`${styles.button} ${
                 currentCategory == item ? styles.active : ""
               }`}
-              style={{
-                width: width,
-              }}
+              // style={{
+              //   width: width,
+              // }}
             >
               {item}
             </button>

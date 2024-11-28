@@ -3,12 +3,12 @@
   height: 100%;
 
   display: flex;
-  background-color: #f3f3f3;
+  background-color: #f2f2f2;
 }
 
 .mainRootLeft {
   height: 100%;
-  flex-grow: 1;
+  width: 754px;
 }
 
 .mainRootRight {
@@ -42,9 +42,10 @@
   display: flex;
   flex-direction: column;
 
-  border-left: 1px solid #838383;
+  /* border-left: 1px solid #83838364; */
+  box-shadow: 0px 0px 3px 0px #0000002d;
   background-color: white;
-  padding: 0px 10px;
+  padding: 4px 8px;
 }
 
 .navBar {
@@ -127,10 +128,10 @@
 
 .orderButton {
   background-color: var(--color-action-button);
-  border: 1px solid rgb(75, 75, 75);
+  /* border: 1px solid rgb(75, 75, 75); */
 
   padding: 10px 0;
-  border-radius: 8px;
+  border-radius:6px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
@@ -138,7 +139,7 @@
   text-transform: uppercase;
   color: white;
 
-  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1);
 
   flex-grow: 1;
 }
@@ -187,6 +188,7 @@
   flex-grow: 1;
   width: 100%;
   overflow-y: auto;
+  margin-top: 6px;
 }
 
 .orderCont {
@@ -210,16 +212,16 @@
 }
 
 .callStaffButton {
-  background-color: #e51a1a;
+  background-color: #d43636;
   color: white;
   padding: 6px 14px;
-  border-radius: 8px;
-  border: 1px solid #575757;
+  border-radius: 6px;
+  /* border: 1px solid #575757; */
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
 
-  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .callStaffButton:active {
