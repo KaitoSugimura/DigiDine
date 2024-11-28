@@ -7,6 +7,7 @@ export default function CustomScreen({
   title,
   currentCategory,
   foodItems,
+  animCallback,
   close,
   edit,
 }) {
@@ -164,13 +165,16 @@ export default function CustomScreen({
                   customizations,
                 });
               } else {
-                addOrder({
-                  name: title,
-                  image: foodItem.image,
-                  price,
-                  amount: amountToAdd,
-                  customizations,
-                });
+                addOrder(
+                  {
+                    name: title,
+                    image: foodItem.image,
+                    price,
+                    amount: amountToAdd,
+                    customizations,
+                  },
+                  animCallback
+                );
               }
               close();
             }}

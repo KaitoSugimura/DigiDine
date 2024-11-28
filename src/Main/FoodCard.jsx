@@ -11,6 +11,7 @@ export default function FoodCard({
   top,
   left,
   setViewDetails,
+  animCallback,
   orderRef,
 }) {
   const { addOrder, orderList } = useOrderContext();
@@ -44,6 +45,39 @@ export default function FoodCard({
         return { ...prev };
       });
     }, 500);
+  };
+
+  const animHandle = (isNew, id) => {
+    if (!isNew) {
+      const orderListReverse = orderList.slice().reverse();
+      let moreOffSet = 0;
+      for (let i = 0; i < orderList.length; i++) {
+        let customizationOffset = 0;
+        let isCustomDefault = true;
+        if (orderListReverse[i].customizations) {
+          orderListReverse[i].customizations.forEach((custom, i) =>
+            custom.forEach((item) => {
+              const toTest = i ? "None" : "Reg";
+              if (item.selected == toTest) return;
+              isCustomDefault = false;
+              customizationOffset += 9;
+            })
+          );
+        }
+        if (orderListReverse[i].id == id) {
+          break;
+        }
+        if (isCustomDefault && orderListReverse[i].name == title) {
+          break;
+        } else {
+          moreOffSet += 100 + customizationOffset;
+        }
+      }
+      const scrollOffset = orderRef.current.scrollTop;
+      moreOffSet -= scrollOffset;
+      setOffSet(Math.max(-60, Math.min(moreOffSet, 360)));
+    }
+    handleTogglePosition();
   };
 
   return (
@@ -90,6 +124,7 @@ export default function FoodCard({
         className={styles.cardRoot}
         onClick={() => {
           setViewDetails(title);
+          animCallback.current = animHandle;
         }}
       >
         <div className={styles.imageParent}>
@@ -118,33 +153,7 @@ export default function FoodCard({
                 price,
                 customizations: null,
               });
-              if (!isNew) {
-                const orderListReverse = orderList.slice().reverse();
-                let moreOffSet = 0;
-                for (let i = 0; i < orderList.length; i++) {
-                  let customizationOffset = 0;
-                  let isCustomDefault = true;
-                  if (orderListReverse[i].customizations) {
-                    orderListReverse[i].customizations.forEach((custom, i) =>
-                      custom.forEach((item) => {
-                        const toTest = i ? "None" : "Reg";
-                        if (item.selected == toTest) return;
-                        isCustomDefault = false;
-                        customizationOffset += 9;
-                      })
-                    );
-                  }
-                  if (isCustomDefault && orderListReverse[i].name == title) {
-                    break;
-                  } else {
-                    moreOffSet += 100 + customizationOffset;
-                  }
-                }
-                const scrollOffset = orderRef.current.scrollTop;
-                moreOffSet -= scrollOffset;
-                setOffSet(Math.max(-60, Math.min(moreOffSet, 360)));
-              }
-              handleTogglePosition();
+              animHandle(isNew);
             }}
           >
             +

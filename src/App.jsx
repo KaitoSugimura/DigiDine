@@ -58,7 +58,10 @@ export default function App() {
     }
   };
 
-  const addOrder = ({ name, customizations, image, price, amount }) => {
+  const addOrder = (
+    { name, customizations, image, price, amount },
+    animCallback
+  ) => {
     let isNew = true;
     if (!customizations) {
       customizations = foodItems[currentCategory]
@@ -79,6 +82,9 @@ export default function App() {
       ) {
         item.amount += amount ?? 1;
         isNew = false;
+        if (animCallback) {
+          animCallback.current(false, item.id);
+        }
       }
     });
     if (isNew) {
@@ -90,6 +96,9 @@ export default function App() {
         customizations: customizations,
         id: uuidv4(),
       });
+      if (animCallback) {
+        animCallback.current(true);
+      }
     }
     setOrderList([...orderList]);
 
