@@ -78,8 +78,8 @@
 .bottomCont {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 16px 0;
+  gap: 12px;
+  padding: 18px 8px;
 }
 
 .priceCont {
@@ -87,22 +87,23 @@
   justify-content: start;
   align-items: end;
   gap: 4px;
+  font-family: "Inter", sans-serif;
 }
 
 .totalText {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
 }
 
 .totalPrice {
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .taxInc {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: light;
   color: #121212;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 
   text-wrap: nowrap;
 }
@@ -117,10 +118,10 @@
 .restartButton {
   color: #e51a1a;
   background-color: transparent;
-  padding: 6px 4px;
-  margin: 0 10px;
+  /* padding: 6px 4px; */
+  margin: 0 6px;
   border: none;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   cursor: pointer;
   text-decoration: underline;
@@ -196,11 +197,12 @@
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  padding: 5px 0;
+  padding: 4px 4px 2px 4px;
+  font-family: "Inter", sans-serif;
 }
 
 .orderText {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
 }
 
@@ -230,9 +232,9 @@
 }
 
 .orderLength {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: light;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 
 .confirmOrderCont {
@@ -281,11 +283,11 @@
   width: 200px;
   height: 60px;
 
-  border: 1px solid #181818;
+  /* border: 1px solid #181818; */
   background-color: #4f4f4f;
   border-radius: 8px;
   color: white;
-  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25); */
 
   font-size: 20px;
   font-weight: bold;
@@ -294,11 +296,11 @@
 .addButton {
   flex-grow: 1;
 
-  border: 1px solid #181818;
+  /* border: 1px solid #181818; */
   background-color: var(--color-action-button);
   border-radius: 8px;
   color: white;
-  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25); */
 
   font-size: 20px;
   font-weight: bold;
@@ -307,11 +309,11 @@
 .restartActionButton {
   flex-grow: 1;
 
-  border: 1px solid #181818;
+  /* border: 1px solid #181818; */
   background-color: #da2c2c;
   border-radius: 8px;
   color: white;
-  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25); */
 
   font-size: 20px;
   font-weight: bold;
@@ -357,11 +359,11 @@
   width: 200px;
   height: 60px;
 
-  border: 1px solid #181818;
+  /* border: 1px solid #181818; */
   background-color: var(--color-action-button);
   border-radius: 8px;
   color: white;
-  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25); */
 
   font-size: 20px;
   font-weight: bold;

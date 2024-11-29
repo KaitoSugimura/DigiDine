@@ -87,6 +87,30 @@
   position: relative;
 }
 
+.tagsCont {
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  padding: 4px;
+  background-color: #ffffffee;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  gap: 4px;
+}
+
+.tag {
+  font-size: 10px;
+  font-weight: bold;
+  width: 24px;
+  height: 24px;
+}
+
+.tagIMG {
+  width: 100%;
+  height: 100%;
+}
+
 .image {
   width: 100%;
   height: 100%;

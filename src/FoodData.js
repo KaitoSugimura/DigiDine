@@ -11,6 +11,8 @@ export default [
           "Made with tender 100% Canadian-raised grilled seasoned chicken and 100% Canadian beef patties. Layered with three slices of white processed cheese, topped slivered onions, pickles, tomato, lettuce and delicious Everything sauce, served on a toasted sesame seed bun.",
         customizations: [
           [
+            { title: "Beef patty", price: 1, required: true },
+            { title: "Toasted bun", price: 0, required: true },
             { title: "White processed cheese", price: 0.2 },
             { title: "Cheddar cheese", price: 0.2 },
             { title: "Onions", price: 0 },
@@ -19,9 +21,7 @@ export default [
             { title: "Lettuce", price: 0.2 },
             { title: "Crispy bacon", price: 0.5 },
             { title: "Grilled chicken", price: 1 },
-            { title: "Beef patty", price: 1 },
             { title: "Everything sauce", price: 0 },
-            { title: "Toasted bun", price: 0 },
           ],
           [
             { title: "Mustard", price: 0 },
@@ -151,6 +151,8 @@ export default [
           "Made with tender 100% Canadian-raised grilled seasoned chicken and 100% Canadian beef patties. Layered with three slices of white processed cheese, topped slivered onions, pickles, tomato, lettuce and delicious Everything sauce, served on a toasted sesame seed bun.",
         customizations: [
           [
+            { title: "Beef patty", price: 1, required: true },
+            { title: "Toasted bun", price: 0, required: true },
             { title: "White processed cheese", price: 0.2 },
             { title: "Cheddar cheese", price: 0.2 },
             { title: "Onions", price: 0 },
@@ -159,9 +161,7 @@ export default [
             { title: "Lettuce", price: 0.2 },
             { title: "Crispy bacon", price: 0.5 },
             { title: "Grilled chicken", price: 1 },
-            { title: "Beef patty", price: 1 },
             { title: "Everything sauce", price: 0 },
-            { title: "Toasted bun", price: 0 },
           ],
           [
             { title: "Mustard", price: 0 },
@@ -793,6 +793,8 @@ export default [
             { title: "Cheddar cheese", price: 0.25 },
           ],
         ],
+        allergens: ["Dairy", "Soy", "Wheat"],
+        tags: ["V", "GF"],
       },
       {
         title: "Bendy's Caesar Salad",

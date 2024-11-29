@@ -11,7 +11,7 @@ export default function CustomScreen({
   close,
   edit,
 }) {
-  // get current food item with the same name as title
+  // current food item with the same name as title
   const foodItem = Object.values(foodItems)
     .flat()
     .find((item) => item.title === title);
@@ -34,6 +34,7 @@ export default function CustomScreen({
             selected: i ? "None" : "Reg",
             price: item.price,
             priceType: i,
+            required: item.required,
           }))
         );
       } else {
@@ -67,6 +68,7 @@ export default function CustomScreen({
             return [...prev];
           });
         }}
+        disabled={custom.required && type === "None"}
       >
         {type}
       </button>
@@ -76,10 +78,20 @@ export default function CustomScreen({
   return (
     <div className={styles.root}>
       <div className={styles.leftSide}>
-        <h1>{title}</h1>
+        <h1 className={styles.title}>{title}</h1>
         <div className={styles.imageCont}>
           <img src={foodItem.image} className={styles.image} />
         </div>
+        {foodItem?.allergens && (
+          <div className={styles.allergens}>
+            Common allergens:
+            {foodItem.allergens.map((allergen, i) => (
+              <span key={i} className={styles.allergen}>
+                {` ${allergen}${i == foodItem.allergens.length - 1 ? "" : ","}`}
+              </span>
+            ))}
+          </div>
+        )}
         <p className={styles.description}>{foodItem.detail}</p>
         <div className={styles.sliderCont}>
           <button
@@ -179,7 +191,7 @@ export default function CustomScreen({
               close();
             }}
           >
-            Add to order
+            {edit ? "Edit order" : "Add to order"}
           </button>
         </div>
       </div>

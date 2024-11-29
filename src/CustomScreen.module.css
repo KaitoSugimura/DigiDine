@@ -83,10 +83,23 @@
   background-color: #688bb0;
 }
 
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #121212;
+  margin-bottom: 8px;
+}
+
 .description {
   flex-grow: 1;
   color: #5a4504;
   font-size: 14px;
+}
+
+.allergens {
+  color: #121212;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .sliderCont {
@@ -194,7 +207,7 @@
 }
 
 .customItemTitle {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   color: #121212;
   margin-bottom: 8px;

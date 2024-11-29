@@ -5,6 +5,7 @@ import { useOrderContext } from "../App";
 let index = 1000;
 
 export default function FoodCard({
+  tags = [],
   image,
   title,
   price,
@@ -134,6 +135,20 @@ export default function FoodCard({
             className={styles.image}
             ref={imageRef}
           />
+          {tags.length > 0 && (
+            <div className={styles.tagsCont}>
+              {tags.map((tag, i) => (
+                <p key={i} className={styles.tag}>
+                  {(() => {
+                    if (tag === "V")
+                      return <img src="./V.png" className={styles.tagIMG} />;
+                    if (tag === "GF")
+                      return <img src="./GF.png" className={styles.tagIMG} />;
+                  })()}
+                </p>
+              ))}
+            </div>
+          )}
         </div>
         <div className={styles.content}>
           <h3 className={styles.contentTitle}>{title}</h3>
