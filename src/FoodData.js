@@ -793,7 +793,7 @@ export default [
             { title: "Cheddar cheese", price: 0.25 },
           ],
         ],
-        allergens: ["Dairy", "Soy", "Wheat"],
+        allergens: ["Sesame"],
         tags: ["V", "GF"],
       },
       {
