@@ -44,6 +44,7 @@ export default [
             { title: "Pepper", price: 10 },
           ],
         ],
+        tags: ["GF"],
       },
       {
         title: "Classic Jorimee Pasta",
@@ -73,6 +74,7 @@ export default [
             { title: "Chilli flakes", price: 0.1 },
           ],
         ],
+        allergens: ["Dairy", "Gluten"],
       },
       {
         title: "Bendy's Tacos Caesar Salad",
@@ -94,7 +96,8 @@ export default [
             { title: "Croutons", price: 0.25 },
           ],
         ],
-        allergens: ["Dairy"]
+        allergens: ["Dairy"],
+        tags: ["V"],
       },
       {
         title: "Big Arch",
@@ -140,6 +143,7 @@ export default [
             { title: "Bacon", price: 0.5 },
           ],
         ],
+        allergens: ["Wheat", "Dairy"]
       },
     ],
   ],
@@ -172,7 +176,7 @@ export default [
             { title: "Crispy onion", price: 0.25 },
           ],
         ],
-        allergens: ["Sesame Seeds"]
+        allergens: ["Sesame Seeds", "Dairy"]
       },
       {
         title: "Big Arch",
@@ -197,6 +201,7 @@ export default [
             { title: "American cheese", price: 0.2 },
           ],
         ],
+        allergens: ["Sesame Seeds"]
       },
       {
         title: "Cheeseburger Deluxe",
@@ -222,6 +227,7 @@ export default [
             { title: "White processed cheese", price: 0.2 },
           ],
         ],
+        allergens: ["Wheat", "Dairy"]
       },
       {
         title: "Quarter Pounder with Cheese",
@@ -246,7 +252,7 @@ export default [
             { title: "Bacon", price: 0.5 },
           ],
         ],
-        allergens: ["Sesame Seeds"]
+        allergens: ["Sesame Seeds", "Wheat", "Dairy"]
       },
       {
         title: "Double Quarter Pounder",
@@ -272,6 +278,7 @@ export default [
             { title: "Bacon", price: 0.5 },
           ],
         ],
+        allergens: ["Wheat", "Dairy"]
       },
       {
         title: "WcDouble",
@@ -295,6 +302,7 @@ export default [
             { title: "White processed cheese", price: 0.2 },
           ],
         ],
+        allergens: ["Wheat", "Dairy"]
       },
       {
         title: "Cheeseburger",
@@ -318,6 +326,7 @@ export default [
             { title: "White processed cheese", price: 0.2 },
           ],
         ],
+        allergens: ["Wheat", "Dairy"]
       },
       {
         title: "Hamburger",
@@ -339,6 +348,7 @@ export default [
             { title: "American cheese", price: 0.2 },
           ],
         ],
+        allergens: ["Wheat"]
       },
       {
         title: "Double Cheeseburger",
@@ -362,6 +372,7 @@ export default [
             { title: "White processed cheese", price: 0.2 },
           ],
         ],
+        allergens: ["Wheat", "Dairy"]
       },
       {
         title: "Big Wac",
@@ -384,6 +395,7 @@ export default [
             { title: "Bacon", price: 0.5 },
           ],
         ],
+        allergens: ["Sesame seeds", "Wheat", "Dairy"]
       },
     ],
   ],
@@ -402,6 +414,7 @@ export default [
             { title: "Pepper", price: 10 },
           ],
         ],
+        tags: ["GF"],
       },
       {
         title: "Grilled Chicken",
@@ -422,6 +435,7 @@ export default [
             { title: "Bacon", price: 0.5 },
           ],
         ],
+        allergens: ["Wheat"],
       },
       {
         title: "Junior Chicken",
@@ -437,6 +451,7 @@ export default [
             { title: "Tomato", price: 0.2 },
           ],
         ],
+        allergens: ["Wheat"],
       },
       {
         title: "WcChicken",
@@ -457,7 +472,7 @@ export default [
             { title: "Bacon", price: 0.5 },
           ],
         ],
-        allergens: ["Sesame Seeds"],
+        allergens: ["Sesame Seeds", "Wheat"],
       },
       {
         title: "WcCrispy",
@@ -478,6 +493,7 @@ export default [
             { title: "Bacon", price: 0.5 },
           ],
         ],
+        allergens: ["Wheat"],
       },
       {
         title: "Sweet Chili Junior Chicken",
@@ -501,6 +517,7 @@ export default [
             { title: "Bacon", price: 0.5 },
           ],
         ],
+        allergens: ["Wheat"]
       },
       {
         title: "Firecracker WcCrispy 🌶️",
@@ -522,6 +539,7 @@ export default [
             { title: "Hot sauce", price: 0.2 },
           ],
         ],
+        allergens: ["Wheat", "Dairy"],
       },
       {
         title: "WcCrispy 🌶️",
@@ -542,6 +560,7 @@ export default [
             { title: "Bacon", price: 0.5 },
           ],
         ],
+        allergens: ["Wheat", "Dairy", "Mustard"],
       },
       {
         title: "Bacon Grilled Chicken 🌶️",
@@ -558,6 +577,7 @@ export default [
             { title: "Toasted Potato bun", price: 0 },
           ],
         ],
+        allergens: ["Wheat", "Dairy", "Mustard"],
       },
       {
         title: "Grilled Chicken 🌶️",
@@ -577,6 +597,7 @@ export default [
             { title: "Tomato", price: 0.2 },
           ],
         ],
+        allergens: ["Wheat", "Dairy", "Mustard"],
       },
       {
         title: "Habanero WcChicken 🌶️",
@@ -597,6 +618,7 @@ export default [
             { title: "Bacon", price: 0.5 },
           ],
         ],
+        allergens: ["Wheat", "Dairy", "Mustard", "Sesame Seeds"],
       },
     ],
   ],
@@ -625,6 +647,7 @@ export default [
             { title: "Chilli flakes", price: 0.1 },
           ],
         ],
+        allergens: ["Dairy", "Gluten"],
       },
       {
         title: "Classic Jorimee Pasta",
@@ -648,6 +671,7 @@ export default [
             { title: "Chilli flakes", price: 0.1 },
           ],
         ],
+        allergens: ["Dairy", "Gluten"],
       },
       {
         title: "WcDonald's Fetuccine Alfredo",
@@ -900,6 +924,8 @@ export default [
             { title: "Gravy", price: 0 },
           ],
         ],
+        tags: ["V", "GF"],
+
       },
       {
         title: "W&A Onion Rings",
@@ -917,6 +943,7 @@ export default [
             { title: "Ketchup", price: 0 },
           ],
         ],
+        tags: ["V", "GF"],
       },
       {
         title: "Big Caesers Rational Bread",
@@ -931,7 +958,8 @@ export default [
             { title: "Parmesan cheese", price: 0 },
           ],
         ],
-        allergens: ["Sesame Seeds"],
+        allergens: ["Dairy", "Gluten"],
+        tags: ["V"],
       },
       {
         title: "Bendy's Poutine",
@@ -950,6 +978,8 @@ export default [
             { title: "Salt", price: 0 },
           ],
         ],
+        allergens: ["Dairy"],
+        tags: ["V"],
       },
       {
         title: "Chicken or Beef",
@@ -973,6 +1003,7 @@ export default [
           ],
         ],
         allergens: ["Dairy"],
+        tags: ["V"],
       },
     ],
   ],
@@ -985,6 +1016,8 @@ export default [
         calories: 100,
         image: "Dessert/mcdonalds-vanilla-icecream.jpg",
         detail: "Our creamy vanilla soft serve in a crispy cone.",
+        allergens: ["Dairy"],
+        tags: ["GF", "V"],
       },
       {
         title: "Fairy King Oreo Blizzard",
@@ -993,6 +1026,8 @@ export default [
         image: "Dessert/OreoBlizzard.jpg",
         detail:
           "Our classic Blizzard made with Oreo cookie pieces and vanilla soft serve.",
+        allergens: ["Dairy", "Gluten"],
+        tags: ["V"],
       },
       {
         title: "Peach Mango Pie",
@@ -1001,6 +1036,8 @@ export default [
         image: "Dessert/peachmangopie.webp",
         detail:
           "Sweet and flaky Peach Mango Pie made with real Philippine Mangoes",
+        allergens: ["Wheat"],
+        tags: ["V"],
       },
       {
         title: "Classic Hot Fudge Sundae",
@@ -1009,6 +1046,8 @@ export default [
         image: "Dessert/hotfudgesundae.webp",
         detail:
           "Our classic sundae made with creamy vanilla soft serve and chocolate sauce.",
+        allergens: ["Dairy"],
+        tags: ["V"],
       },
       {
         title: "WcDonald's Apple Pie",
@@ -1017,6 +1056,8 @@ export default [
         image: "Dessert/applepie.jpg",
         detail:
           "Our classic Apple Pie made with delicious apples, baked in a flaky crust.",
+        allergens: ["Wheat"],
+        tags: ["V"],
       },
       {
         title: "WcDonald's Chocolate Chip Cookie",
@@ -1024,6 +1065,7 @@ export default [
         calories: 160,
         image: "Dessert/chocolatechipcookie.jpg",
         detail: "A soft and chewy cookie made with chocolate chips.",
+        allergens: ["Dairy", "Wheat"],
       },
     ],
   ],
