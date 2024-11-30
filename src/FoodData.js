@@ -27,7 +27,9 @@ export default [
             { title: "Mustard", price: 0 },
             { title: "Crispy onion", price: 0.25 },
           ],
+          
         ],
+        allergens: ["Gluten", "Sesame Seeds", "Soy"],
       },
       {
         title: "Raw Chicken",
@@ -92,6 +94,7 @@ export default [
             { title: "Croutons", price: 0.25 },
           ],
         ],
+        allergens: ["Dairy"]
       },
       {
         title: "Big Arch",
@@ -116,6 +119,7 @@ export default [
             { title: "American cheese", price: 0.2 },
           ],
         ],
+        allergens: ["Sesame Seeds"]
       },
       {
         title: "Grilled Chicken",
@@ -168,6 +172,7 @@ export default [
             { title: "Crispy onion", price: 0.25 },
           ],
         ],
+        allergens: ["Sesame Seeds"]
       },
       {
         title: "Big Arch",
@@ -241,6 +246,7 @@ export default [
             { title: "Bacon", price: 0.5 },
           ],
         ],
+        allergens: ["Sesame Seeds"]
       },
       {
         title: "Double Quarter Pounder",
@@ -451,6 +457,7 @@ export default [
             { title: "Bacon", price: 0.5 },
           ],
         ],
+        allergens: ["Sesame Seeds"],
       },
       {
         title: "WcCrispy",
@@ -661,6 +668,8 @@ export default [
             { title: "Chilli flakes", price: 0.1 },
           ],
         ],
+        allergens: ["Gluten", "Dairy"],
+        tags: ["V"],
       },
       {
         title: "4 Cheese Lasagna",
@@ -683,6 +692,8 @@ export default [
             { title: "Chilli flakes", price: 0.1 },
           ],
         ],
+        allergens: ["Dairy"],
+        tags: ["V"],
       },
       {
         title: "Cacio e Pepe",
@@ -701,6 +712,8 @@ export default [
             { title: "Chilli flakes", price: 0.1 },
           ],
         ],
+        allergens: ["Dairy"],
+        tags: ["V","GF"],
       },
       {
         title: "Pasta Alla Gricia",
@@ -720,6 +733,8 @@ export default [
             { title: "Chilli flakes", price: 0.1 },
           ],
         ],
+        allergens: ["Dairy"],
+        tags: ["GF"],
       },
     ],
   ],
@@ -748,6 +763,8 @@ export default [
             { title: "Salt", price: 0 },
           ],
         ],
+        allergens: ["Dairy", "Gluten"],
+        tags: ["V"],
       },
       {
         title: "WcDonald Classic Salad",
@@ -814,6 +831,8 @@ export default [
             { title: "Parmesan cheese", price: 0.25 },
           ],
         ],
+        allergens: ["Egg"],
+        tags: ["V"],
       },
       {
         title: "Bendy's Tacos Caesar Salad",
@@ -835,6 +854,8 @@ export default [
             { title: "Croutons", price: 0.25 },
           ],
         ],
+        allergens: ["Mustard"],
+        tags: ["V"],
       },
       {
         title: "Cool Slaw Delight",
@@ -856,6 +877,7 @@ export default [
             { title: "Salt", price: 0 },
           ],
         ],
+        tags: ["V", "GF"],
       },
     ],
   ],
@@ -909,6 +931,7 @@ export default [
             { title: "Parmesan cheese", price: 0 },
           ],
         ],
+        allergens: ["Sesame Seeds"],
       },
       {
         title: "Bendy's Poutine",
@@ -949,6 +972,7 @@ export default [
             { title: "BBQ sauce", price: 0.25 },
           ],
         ],
+        allergens: ["Dairy"],
       },
     ],
   ],
