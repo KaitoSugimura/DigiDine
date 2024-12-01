@@ -82,16 +82,19 @@ export default function CustomScreen({
         <div className={styles.imageCont}>
           <img src={foodItem.image} className={styles.image} />
         </div>
-        {foodItem?.allergens && (
-          <div className={styles.allergens}>
-            Common allergens:
-            {foodItem.allergens.map((allergen, i) => (
+        <div className={styles.allergens}>
+          Common allergens:
+          {foodItem.allergens ? (
+            foodItem.allergens.map((allergen, i) => (
               <span key={i} className={styles.allergen}>
                 {` ${allergen}${i == foodItem.allergens.length - 1 ? "" : ","}`}
               </span>
-            ))}
-          </div>
-        )}
+            ))
+          ) : (
+            <span className={styles.allergen}> None</span>
+          )}
+        </div>
+
         <p className={styles.description}>{foodItem.detail}</p>
         <div className={styles.sliderCont}>
           <button

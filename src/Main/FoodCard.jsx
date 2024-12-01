@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import styles from "./FoodCard.module.css";
 import { useOrderContext } from "../App";
+import backgroundImage from "/backgroundImage.png";
 
 let index = 1000;
 
@@ -21,6 +22,7 @@ export default function FoodCard({
 
   const [objects, setObjects] = useState({});
   const [offSet, setOffSet] = useState(0);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   const handleTogglePosition = () => {
     const indexKey = index++;
@@ -129,10 +131,20 @@ export default function FoodCard({
         }}
       >
         <div className={styles.imageParent}>
+          {imageLoaded && (
+            <>
+              <img
+                src={backgroundImage}
+                alt={title}
+                className={styles.backgroundImage}
+              />
+            </>
+          )}
           <img
             src={image}
             alt={title}
             className={styles.image}
+            onLoad={() => setImageLoaded(true)}
             ref={imageRef}
           />
           {tags.length > 0 && (

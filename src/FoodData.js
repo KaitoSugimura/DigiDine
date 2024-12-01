@@ -27,9 +27,8 @@ export default [
             { title: "Mustard", price: 0 },
             { title: "Crispy onion", price: 0.25 },
           ],
-          
         ],
-        allergens: ["Gluten", "Sesame Seeds", "Soy"],
+        allergens: ["Gluten", "Sesame Seeds", "Soy", "Poultry"],
       },
       {
         title: "Raw Chicken",
@@ -44,6 +43,34 @@ export default [
             { title: "Pepper", price: 10 },
           ],
         ],
+        allergens: ["Poultry"],
+        tags: ["GF"],
+      },
+      {
+        title: "Beyond the Meat Burger",
+        price: 7.99,
+        calories: 1030,
+        image: "Burgers/beyond-the-meat.jpg",
+        detail:
+          "A plant-based patty topped with lettuce, tomato, onion, pickles, ketchup, and mustard on a toasted sesame seed bun.",
+        customizations: [
+          [
+            { title: "Lettuce", price: 0.2 },
+            { title: "Tomato", price: 0.2 },
+            { title: "Onions", price: 0.2 },
+            { title: "Pickles", price: 0.2 },
+            { title: "Ketchup", price: 0 },
+            { title: "Mustard", price: 0 },
+            { title: "Toasted bun", price: 0 },
+          ],
+          [
+            { title: "American cheese", price: 0.2 },
+            { title: "White processed cheese", price: 0.2 },
+            { title: "Bacon", price: 0.5 },
+          ],
+        ],
+        allergens: ["Sesame Seeds", "Soy"],
+        tags: ["V"],
       },
       {
         title: "Classic Jorimee Pasta",
@@ -75,26 +102,27 @@ export default [
         ],
       },
       {
-        title: "Bendy's Tacos Caesar Salad",
-        price: 7.99,
-        calories: 520,
-        image: "Salads/wendys-taco-salad.png",
+        title: "West Side Wario's Salad",
+        price: 5.99,
+        calories: 150,
+        image: "Salads/Marios-salad.jpg",
         detail:
-          "Our classic Bendy's Caesar Salad with a mix of taco seasoned beef, shredded cheddar cheese, and tortilla strips.",
+          "A house style salad with mixed greens, grape tomatoes, cucumbers, and onions.",
         customizations: [
           [
-            { title: "Romaine lettuce", price: 0 },
-            { title: "Tortilla strips", price: 0.2 },
-            { title: "Taco seasoned beef", price: 0 },
-            { title: "Shredded cheddar cheese", price: 0.25 },
-            { title: "Caesar dressing", price: 0 },
+            { title: "Mixed greens", price: 0 },
+            { title: "Grape tomatoes", price: 0 },
+            { title: "Cucumbers", price: 0 },
+            { title: "Onions", price: 0 },
           ],
           [
             { title: "Bacon bits", price: 0.25 },
             { title: "Croutons", price: 0.25 },
+            { title: "Cheddar cheese", price: 0.25 },
           ],
         ],
-        allergens: ["Dairy"]
+        allergens: ["Sesame"],
+        tags: ["V", "GF"],
       },
       {
         title: "Big Arch",
@@ -119,7 +147,7 @@ export default [
             { title: "American cheese", price: 0.2 },
           ],
         ],
-        allergens: ["Sesame Seeds"]
+        allergens: ["Sesame Seeds"],
       },
       {
         title: "Grilled Chicken",
@@ -140,6 +168,7 @@ export default [
             { title: "Bacon", price: 0.5 },
           ],
         ],
+        allergens: ["Poultry"],
       },
     ],
   ],
@@ -172,7 +201,33 @@ export default [
             { title: "Crispy onion", price: 0.25 },
           ],
         ],
-        allergens: ["Sesame Seeds"]
+        allergens: ["Sesame Seeds"],
+      },
+      {
+        title: "Beyond the Meat Burger",
+        price: 7.99,
+        calories: 1030,
+        image: "Burgers/beyond-the-meat.jpg",
+        detail:
+          "A plant-based patty topped with lettuce, tomato, onion, pickles, ketchup, and mustard on a toasted sesame seed bun.",
+        customizations: [
+          [
+            { title: "Lettuce", price: 0.2 },
+            { title: "Tomato", price: 0.2 },
+            { title: "Onions", price: 0.2 },
+            { title: "Pickles", price: 0.2 },
+            { title: "Ketchup", price: 0 },
+            { title: "Mustard", price: 0 },
+            { title: "Toasted bun", price: 0 },
+          ],
+          [
+            { title: "American cheese", price: 0.2 },
+            { title: "White processed cheese", price: 0.2 },
+            { title: "Bacon", price: 0.5 },
+          ],
+        ],
+        allergens: ["Sesame Seeds", "Soy"],
+        tags: ["V"],
       },
       {
         title: "Big Arch",
@@ -246,7 +301,7 @@ export default [
             { title: "Bacon", price: 0.5 },
           ],
         ],
-        allergens: ["Sesame Seeds"]
+        allergens: ["Sesame Seeds"],
       },
       {
         title: "Double Quarter Pounder",
@@ -402,6 +457,7 @@ export default [
             { title: "Pepper", price: 10 },
           ],
         ],
+        allergens: ["Poultry"],
       },
       {
         title: "Grilled Chicken",
@@ -422,6 +478,7 @@ export default [
             { title: "Bacon", price: 0.5 },
           ],
         ],
+        allergens: ["Poultry"],
       },
       {
         title: "Junior Chicken",
@@ -437,6 +494,7 @@ export default [
             { title: "Tomato", price: 0.2 },
           ],
         ],
+        allergens: ["Poultry"],
       },
       {
         title: "WcChicken",
@@ -457,7 +515,7 @@ export default [
             { title: "Bacon", price: 0.5 },
           ],
         ],
-        allergens: ["Sesame Seeds"],
+        allergens: ["Sesame Seeds", "Poultry"],
       },
       {
         title: "WcCrispy",
@@ -478,6 +536,7 @@ export default [
             { title: "Bacon", price: 0.5 },
           ],
         ],
+        allergens: ["Poultry"],
       },
       {
         title: "Sweet Chili Junior Chicken",
@@ -501,6 +560,7 @@ export default [
             { title: "Bacon", price: 0.5 },
           ],
         ],
+        allergens: ["Poultry"],
       },
       {
         title: "Firecracker WcCrispy 🌶️",
@@ -522,6 +582,7 @@ export default [
             { title: "Hot sauce", price: 0.2 },
           ],
         ],
+        allergens: ["Poultry"],
       },
       {
         title: "WcCrispy 🌶️",
@@ -542,6 +603,7 @@ export default [
             { title: "Bacon", price: 0.5 },
           ],
         ],
+        allergens: ["Poultry"],
       },
       {
         title: "Bacon Grilled Chicken 🌶️",
@@ -558,6 +620,7 @@ export default [
             { title: "Toasted Potato bun", price: 0 },
           ],
         ],
+        allergens: ["Poultry"],
       },
       {
         title: "Grilled Chicken 🌶️",
@@ -577,6 +640,7 @@ export default [
             { title: "Tomato", price: 0.2 },
           ],
         ],
+        allergens: ["Poultry"],
       },
       {
         title: "Habanero WcChicken 🌶️",
@@ -597,6 +661,7 @@ export default [
             { title: "Bacon", price: 0.5 },
           ],
         ],
+        allergens: ["Sesame", "Poultry"],
       },
     ],
   ],
@@ -625,6 +690,7 @@ export default [
             { title: "Chilli flakes", price: 0.1 },
           ],
         ],
+        allergens: ["Dairy", "Egg", "Gluten"],
       },
       {
         title: "Classic Jorimee Pasta",
@@ -648,25 +714,22 @@ export default [
             { title: "Chilli flakes", price: 0.1 },
           ],
         ],
+        allergens: ["Dairy", "Gluten"],
       },
       {
-        title: "WcDonald's Fetuccine Alfredo",
+        title: "Soy Fetuccine Alfredo",
         price: 8.99,
         calories: 700,
         image: "Pasta/mcdonalds-pasta.webp",
         detail:
-          "Fettuccine noodles in a creamy Alfredo sauce with grilled chicken, broccoli, and Parmesan cheese.",
+          "Fettuccine noodles in a creamy Soy Alfredo sauce with grilled chicken, broccoli, and Parmesan cheese.",
         customizations: [
           [
             { title: "Alfredo sauce", price: 0 },
             { title: "Grilled chicken", price: 1 },
             { title: "Broccoli", price: 0.5 },
-            { title: "Parmesan cheese", price: 0.25 },
           ],
-          [
-            { title: "Bacon", price: 0.5 },
-            { title: "Chilli flakes", price: 0.1 },
-          ],
+          [{ title: "Chilli flakes", price: 0.1 }],
         ],
         allergens: ["Gluten", "Dairy"],
         tags: ["V"],
@@ -692,8 +755,7 @@ export default [
             { title: "Chilli flakes", price: 0.1 },
           ],
         ],
-        allergens: ["Dairy"],
-        tags: ["V"],
+        allergens: ["Dairy", "Gluten"],
       },
       {
         title: "Cacio e Pepe",
@@ -701,7 +763,7 @@ export default [
         calories: 600,
         image: "Pasta/Cacio-e-Pepe.jpg",
         detail:
-          "Spaghetti noodles with a simple yet delicious sauce made from Pecorino Romano cheese and black pepper.",
+          "Gluten-Free spaghetti noodles with a simple yet delicious daily free sauce made from Pecorino Romano cheese and black pepper.",
         customizations: [
           [
             { title: "Pecorino Romano cheese", price: 0.5 },
@@ -712,8 +774,7 @@ export default [
             { title: "Chilli flakes", price: 0.1 },
           ],
         ],
-        allergens: ["Dairy"],
-        tags: ["V","GF"],
+        tags: ["V", "GF"],
       },
       {
         title: "Pasta Alla Gricia",
@@ -721,7 +782,7 @@ export default [
         calories: 750,
         image: "Pasta/pasta-alla-gricia.jpg",
         detail:
-          "Pasta Alla Gracia with a rich and creamy sauce made from Pecorino Romano cheese, black pepper, and crispy pancetta.",
+          "Gluten-Free Pasta Alla Gracia with a rich and creamy sauce made from Pecorino Romano cheese, black pepper, and crispy pancetta.",
         customizations: [
           [
             { title: "Pecorino Romano cheese", price: 0.5 },
@@ -789,30 +850,9 @@ export default [
             { title: "Italian dressing", price: 0 },
           ],
         ],
+        allergens: ["Gluten", "Poultry"],
       },
-      {
-        title: "West Side Wario's Salad",
-        price: 5.99,
-        calories: 150,
-        image: "Salads/Marios-salad.jpg",
-        detail:
-          "A house style salad with mixed greens, grape tomatoes, cucumbers, and onions.",
-        customizations: [
-          [
-            { title: "Mixed greens", price: 0 },
-            { title: "Grape tomatoes", price: 0 },
-            { title: "Cucumbers", price: 0 },
-            { title: "Onions", price: 0 },
-          ],
-          [
-            { title: "Bacon bits", price: 0.25 },
-            { title: "Croutons", price: 0.25 },
-            { title: "Cheddar cheese", price: 0.25 },
-          ],
-        ],
-        allergens: ["Sesame"],
-        tags: ["V", "GF"],
-      },
+
       {
         title: "Bendy's Caesar Salad",
         price: 6.99,
@@ -931,7 +971,7 @@ export default [
             { title: "Parmesan cheese", price: 0 },
           ],
         ],
-        allergens: ["Sesame Seeds"],
+        allergens: ["Dairy"],
       },
       {
         title: "Bendy's Poutine",
@@ -950,6 +990,7 @@ export default [
             { title: "Salt", price: 0 },
           ],
         ],
+        allergens: ["Dairy"],
       },
       {
         title: "Chicken or Beef",
@@ -958,6 +999,7 @@ export default [
         image: "Sides/westjet.webp",
         detail:
           "Even when there's only 2 options, we'll still get your order wrong.",
+        allergens: ["Poultry"],
       },
       {
         title: "Mini Mozzarella Sticks",
