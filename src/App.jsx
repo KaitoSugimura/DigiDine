@@ -6,6 +6,7 @@ import StartScreen from "./StartScreen";
 import OrderConfirmedScreen from "./OrderConfirmedScreen";
 import { v4 as uuidv4 } from "uuid";
 import FoodData from "./FoodData";
+import { toPng } from "html-to-image";
 
 const ScreenContext = createContext();
 
@@ -43,6 +44,18 @@ export default function App() {
     setPageNo((prev) => {
       return prev - 1;
     });
+  };
+
+  const downloadAsImage = () => {
+    const element = document.getElementById("capture");
+    if (element) {
+      toPng(element).then((dataUrl) => {
+        const link = document.createElement("a");
+        link.download = "screenshot.png";
+        link.href = dataUrl;
+        link.click();
+      });
+    }
   };
 
   const getScreen = () => {
@@ -191,13 +204,32 @@ export default function App() {
         }}
       >
         <div className={styles.root}>
-          <div className={styles.app}>
-            <div className={styles.powerButtonOnTop}></div>
-            <div className={styles.soundButtonOnTop}></div>
-            <div className={styles.cameraOnTop}></div>
-            <div className={styles.rim}></div>
-            <div className={styles.abs}>{getScreen()}</div>
+          <div className={styles.all} id="capture">
+            <div className={styles.app}>
+              <div className={styles.powerButtonOnTop}></div>
+              <div className={styles.soundButtonOnTop}></div>
+              <div className={styles.cameraOnTop}></div>
+              <div className={styles.rim}></div>
+              <div className={styles.abs}>{getScreen()}</div>
+            </div>
           </div>
+          <button
+            onClick={downloadAsImage}
+            style={{
+              position: "fixed",
+              bottom: "10px",
+              right: "10px",
+              zIndex: 1000,
+              padding: "10px",
+              borderRadius: "10px",
+              backgroundColor: "white",
+              color: "black",
+              border: "none",
+              cursor: "pointer",
+            }}
+          >
+            Download as Image
+          </button>
         </div>
       </OrderContext.Provider>
     </ScreenContext.Provider>

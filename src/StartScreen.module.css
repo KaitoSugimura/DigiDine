@@ -22,7 +22,7 @@
   position: absolute;
   bottom: 6%;
   left: 50%;
-  animation: textAnim 2s infinite ease-in-out;
+  /* animation: textAnim 2s infinite ease-in-out; */
 
   transform: translate(-50%, 0);
 
