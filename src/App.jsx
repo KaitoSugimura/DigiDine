@@ -49,7 +49,9 @@ export default function App() {
   const downloadAsImage = () => {
     const element = document.getElementById("capture");
     if (element) {
-      toPng(element).then((dataUrl) => {
+      toPng(element, {
+        pixelRatio: 2,
+      }).then((dataUrl) => {
         const link = document.createElement("a");
         link.download = "screenshot.png";
         link.href = dataUrl;
@@ -213,7 +215,7 @@ export default function App() {
               <div className={styles.abs}>{getScreen()}</div>
             </div>
           </div>
-          <button
+          {/* <button
             onClick={downloadAsImage}
             style={{
               position: "fixed",
@@ -229,7 +231,7 @@ export default function App() {
             }}
           >
             Download as Image
-          </button>
+          </button> */}
         </div>
       </OrderContext.Provider>
     </ScreenContext.Provider>
