@@ -57,8 +57,8 @@ export default [
           // Whats on it
           // Prices here only take effect when user presses extra
           [
-            { title: "Spaghetti sauce", price: 0 },
-            { title: "Spaghetti noodles", price: 1 },
+            { title: "Spaghetti sauce", price: 0, required: true },
+            { title: "Spaghetti noodles", price: 1, required: true },
             { title: "Cheese", price: 0.25 },
             { title: "Hot dog slices", price: 0.5 },
             { title: "Ground beef", price: 0.5 },
@@ -85,11 +85,11 @@ export default [
           "Our classic Bendy's Caesar Salad with a mix of taco seasoned beef, shredded cheddar cheese, and tortilla strips.",
         customizations: [
           [
-            { title: "Romaine lettuce", price: 0 },
+            { title: "Romaine lettuce", price: 0, required: true },
             { title: "Tortilla strips", price: 0.2 },
             { title: "Taco seasoned beef", price: 0 },
             { title: "Shredded cheddar cheese", price: 0.25 },
-            { title: "Caesar dressing", price: 0 },
+            { title: "Caesar dressing", price: 0, required: true },
           ],
           [
             { title: "Bacon bits", price: 0.25 },
@@ -113,8 +113,8 @@ export default [
             { title: "Slivered onions", price: 0.2 },
             { title: "Pickles", price: 0.2 },
             { title: "Lettuce", price: 0.2 },
-            { title: "Big Arch sauce", price: 0 },
-            { title: "Toasted bun", price: 0 },
+            { title: "Big Arch sauce", price: 0, required: true },
+            { title: "Toasted bun", price: 0, required: true },
           ],
           [
             { title: "Bacon", price: 0.5 },
@@ -135,7 +135,7 @@ export default [
           [
             { title: "Lettuce", price: 0.2 },
             { title: "Mayo-style sauce", price: 0 },
-            { title: "Toasted Potato bun", price: 0 },
+            { title: "Toasted Potato bun", price: 0, required: true },
           ],
           [
             { title: "Mayo", price: 0.2 },
@@ -192,8 +192,8 @@ export default [
             { title: "Slivered onions", price: 0.2 },
             { title: "Pickles", price: 0.2 },
             { title: "Lettuce", price: 0.2 },
-            { title: "Big Arch sauce", price: 0 },
-            { title: "Toasted bun", price: 0 },
+            { title: "Big Arch sauce", price: 0, required: true },
+            { title: "Toasted bun", price: 0, required: true },
           ],
           [
             { title: "Bacon", price: 0.5 },
@@ -212,7 +212,7 @@ export default [
           "Your favourite cheeseburger is now made deluxe! A slice of processed cheddar cheese on a juicy, 100% Canadian beef patty with pickles and onions, ketchup, mustard, mayo style sauce, tomato, and shredded lettuce on a toasted bun.",
         customizations: [
           [
-            { title: "American cheese", price: 0.2 },
+            { title: "American cheese", price: 0.2, required: true },
             { title: "Pickles", price: 0.2 },
             { title: "Onions", price: 0.2 },
             { title: "Ketchup", price: 0 },
@@ -220,7 +220,7 @@ export default [
             { title: "Mayo style sauce", price: 0 },
             { title: "Tomato", price: 0.2 },
             { title: "Lettuce", price: 0.2 },
-            { title: "Toasted bun", price: 0 },
+            { title: "Toasted bun", price: 0, required: true },
           ],
           [
             { title: "Bacon", price: 0.5 },
@@ -238,12 +238,12 @@ export default [
           "A quarter pound* of 100% Canadian beef and two slices of melty processed cheese on a toasted sesame seed bun.",
         customizations: [
           [
-            { title: "American cheese", price: 0.2 },
+            { title: "American cheese", price: 0.2, required: true },
             { title: "Pickles", price: 0.2 },
             { title: "Onions", price: 0.2 },
             { title: "Ketchup", price: 0 },
             { title: "Mustard", price: 0 },
-            { title: "Toasted bun", price: 0 },
+            { title: "Toasted bun", price: 0, required: true },
           ],
           [
             { title: "White processed cheese", price: 0.2 },
@@ -268,7 +268,7 @@ export default [
             { title: "Onions", price: 0.2 },
             { title: "Ketchup", price: 0 },
             { title: "Mustard", price: 0 },
-            { title: "Toasted bun", price: 0 },
+            { title: "Toasted bun", price: 0, required: true },
           ],
           // Add-ons
           [
@@ -294,7 +294,7 @@ export default [
             { title: "Onions", price: 0.2 },
             { title: "Ketchup", price: 0 },
             { title: "Mustard", price: 0 },
-            { title: "Toasted bun", price: 0 },
+            { title: "Toasted bun", price: 0, required: true },
           ],
           [
             { title: "Lettuce", price: 0.2 },
@@ -313,12 +313,12 @@ export default [
           "A slice of melted processed cheese on a juicy, 100% Canadian beef patty with tangy pickles and onions, ketchup and mustard on a freshly-toasted bun.",
         customizations: [
           [
-            { title: "American cheese", price: 0.2 },
+            { title: "American cheese", price: 0.2, required: true },
             { title: "Pickles", price: 0.2 },
             { title: "Onions", price: 0.2 },
             { title: "Ketchup", price: 0 },
             { title: "Mustard", price: 0 },
-            { title: "Toasted bun", price: 0 },
+            { title: "Toasted bun", price: 0, required: true },
           ],
           [
             { title: "Lettuce", price: 0.2 },
@@ -341,7 +341,7 @@ export default [
             { title: "Onions", price: 0.2 },
             { title: "Ketchup", price: 0 },
             { title: "Mustard", price: 0 },
-            { title: "Toasted bun", price: 0 },
+            { title: "Toasted bun", price: 0, required: true },
           ],
           [
             { title: "White processed cheese", price: 0.2 },
@@ -359,12 +359,12 @@ export default [
           "We make it like we always have: two slices of processed cheese with two 100% Canadian beef patties, pickles, onions, ketchup and mustard on a freshly toasted bun.",
         customizations: [
           [
-            { title: "American cheese", price: 0.2 },
+            { title: "American cheese", price: 0.2, required: true },
             { title: "Pickles", price: 0.2 },
             { title: "Onions", price: 0.2 },
             { title: "Ketchup", price: 0 },
             { title: "Mustard", price: 0 },
-            { title: "Toasted bun", price: 0 },
+            { title: "Toasted bun", price: 0, required: true },
           ],
           [
             { title: "Lettuce", price: 0.2 },
@@ -387,7 +387,7 @@ export default [
             { title: "Pickles", price: 0.2 },
             { title: "Onions", price: 0.2 },
             { title: "Lettuce", price: 0.2 },
-            { title: "Toasted bun", price: 0 },
+            { title: "Toasted bun", price: 0, required: true },
           ],
           [
             { title: "White processed cheese", price: 0.2 },
@@ -427,7 +427,7 @@ export default [
           [
             { title: "Lettuce", price: 0.2 },
             { title: "Mayo-style sauce", price: 0 },
-            { title: "Toasted Potato bun", price: 0 },
+            { title: "Toasted Potato bun", price: 0, required: true },
           ],
           [
             { title: "Mayo", price: 0.2 },
@@ -464,7 +464,7 @@ export default [
           [
             { title: "Lettuce", price: 0.2 },
             { title: "Mayo-style sauce", price: 0 },
-            { title: "Toasted Potato bun", price: 0 },
+            { title: "Toasted Potato bun", price: 0, required: true },
           ],
           [
             { title: "Mayo", price: 0.2 },
@@ -485,7 +485,7 @@ export default [
           [
             { title: "Lettuce", price: 0.2 },
             { title: "Mayo-style sauce", price: 0 },
-            { title: "Toasted Potato bun", price: 0 },
+            { title: "Toasted Potato bun", price: 0, required: true },
           ],
           [
             { title: "Mayo", price: 0.2 },
@@ -505,9 +505,9 @@ export default [
         customizations: [
           [
             { title: "Lettuce", price: 0.2 },
-            { title: "Sweet chili sauce", price: 0 },
+            { title: "Sweet chili sauce", price: 0, required: true },
             { title: "Mayo-style sauce", price: 0 },
-            { title: "Toasted Potato bun", price: 0 },
+            { title: "Toasted Potato bun", price: 0, required: true },
           ],
           [
             { title: "Ketchup", price: 0 },
@@ -530,8 +530,8 @@ export default [
           [
             { title: "Crispy jalapenos", price: 0.2 },
             { title: "Lettuce", price: 0.2 },
-            { title: "Sweet and spicy sauce", price: 0 },
-            { title: "Toasted Potato bun", price: 0 },
+            { title: "Sweet and spicy sauce", price: 0, required: true },
+            { title: "Toasted Potato bun", price: 0, required: true },
           ],
           [
             { title: "Smoked Bacon", price: 0.5 },
@@ -551,8 +551,8 @@ export default [
         customizations: [
           [
             { title: "Lettuce", price: 0.2 },
-            { title: "Habanero sauce", price: 0 },
-            { title: "Toasted Potato bun", price: 0 },
+            { title: "Habanero sauce", price: 0, required: true },
+            { title: "Toasted Potato bun", price: 0, required: true },
           ],
           [
             { title: "Mayo", price: 0.2 },
@@ -572,9 +572,9 @@ export default [
         customizations: [
           [
             { title: "Lettuce", price: 0.2 },
-            { title: "Habanero sauce", price: 0 },
-            { title: "Smoked Bacon", price: 0.5 },
-            { title: "Toasted Potato bun", price: 0 },
+            { title: "Habanero sauce", price: 0, required: true },
+            { title: "Smoked Bacon", price: 0.5, required: true },
+            { title: "Toasted Potato bun", price: 0, required: true },
           ],
         ],
         allergens: ["Wheat", "Dairy", "Mustard"],
@@ -589,8 +589,8 @@ export default [
         customizations: [
           [
             { title: "Lettuce", price: 0.2 },
-            { title: "Habanero sauce", price: 0 },
-            { title: "Toasted Potato bun", price: 0 },
+            { title: "Habanero sauce", price: 0, required: true },
+            { title: "Toasted Potato bun", price: 0, required: true },
           ],
           [
             { title: "Mayo", price: 0.2 },
@@ -609,8 +609,8 @@ export default [
         customizations: [
           [
             { title: "Lettuce", price: 0.2 },
-            { title: "Habanero sauce", price: 0 },
-            { title: "Toasted Potato bun", price: 0 },
+            { title: "Habanero sauce", price: 0, required: true },
+            { title: "Toasted Potato bun", price: 0, required: true },
           ],
           [
             { title: "Mayo", price: 0.2 },
@@ -635,10 +635,10 @@ export default [
         customizations: [
           // Whats on it
           [
-            { title: "Alfredo sauce", price: 0 },
+            { title: "Alfredo sauce", price: 0, required: true },
             { title: "Bacon", price: 0.5 },
             { title: "Roasted garlic", price: 0.25 },
-            { title: "Italian seasoning", price: 0.1 },
+            { title: "Italian seasoning", price: 0.1, required: true },
             { title: "Parmesan cheese", price: 0.25 },
           ],
           // Add-ons
@@ -658,8 +658,8 @@ export default [
           "Spaghetti noodles in a sweet Filipino style spaghetti sauce with ground beef, hot dog slices, and shredded cheese.",
         customizations: [
           [
-            { title: "Spaghetti sauce", price: 0 },
-            { title: "Spaghetti noodles", price: 1 },
+            { title: "Spaghetti sauce", price: 0, required: true },
+            { title: "Spaghetti noodles", price: 1, required: true },
             { title: "Cheese", price: 0.25 },
             { title: "Hot dog slices", price: 0.5 },
             { title: "Ground beef", price: 0.5 },
@@ -682,7 +682,7 @@ export default [
           "Fettuccine noodles in a creamy Alfredo sauce with grilled chicken, broccoli, and Parmesan cheese.",
         customizations: [
           [
-            { title: "Alfredo sauce", price: 0 },
+            { title: "Alfredo sauce", price: 0, required: true },
             { title: "Grilled chicken", price: 1 },
             { title: "Broccoli", price: 0.5 },
             { title: "Parmesan cheese", price: 0.25 },
@@ -693,7 +693,6 @@ export default [
           ],
         ],
         allergens: ["Gluten", "Dairy"],
-        tags: ["V"],
       },
       {
         title: "4 Cheese Lasagna",
@@ -704,11 +703,11 @@ export default [
           "Layers of lasagna noodles with a rich tomato sauce, ricotta, mozzarella, Parmesan, and Romano cheeses.",
         customizations: [
           [
-            { title: "Tomato sauce", price: 0 },
-            { title: "Ricotta cheese", price: 0.5 },
-            { title: "Mozzarella cheese", price: 0.5 },
-            { title: "Parmesan cheese", price: 0.25 },
-            { title: "Romano cheese", price: 0.25 },
+            { title: "Tomato sauce", price: 0, required: true },
+            { title: "Ricotta cheese", price: 0.5, required: true },
+            { title: "Mozzarella cheese", price: 0.5, required: true },
+            { title: "Parmesan cheese", price: 0.25, required: true },
+            { title: "Romano cheese", price: 0.25, required: true },
           ],
           [
             { title: "Meatballs", price: 0.5 },
@@ -728,7 +727,7 @@ export default [
           "Spaghetti noodles with a simple yet delicious sauce made from Pecorino Romano cheese and black pepper.",
         customizations: [
           [
-            { title: "Pecorino Romano cheese", price: 0.5 },
+            { title: "Pecorino Romano cheese", price: 0.5, required: true },
             { title: "Black pepper", price: 0.1 },
           ],
           [
@@ -748,7 +747,7 @@ export default [
           "Pasta Alla Gracia with a rich and creamy sauce made from Pecorino Romano cheese, black pepper, and crispy pancetta.",
         customizations: [
           [
-            { title: "Pecorino Romano cheese", price: 0.5 },
+            { title: "Pecorino Romano cheese", price: 0.5, required: true },
             { title: "Black pepper", price: 0.1 },
             { title: "Crispy pancetta", price: 0.5 },
           ],
@@ -774,7 +773,7 @@ export default [
           "Macaroni noodles in a creamy dressing with shredded carrots, celery, and onions.",
         customizations: [
           [
-            { title: "Macaroni noodles", price: 0.25 },
+            { title: "Macaroni noodles", price: 0.25, required: true },
             { title: "Creamy dressing", price: 0 },
             { title: "Shredded carrots", price: 0.25 },
             { title: "Celery", price: 0.25 },
@@ -799,7 +798,7 @@ export default [
           "A blend of premium lettuces, grape tomatoes, shaved carrots, real cheddar cheese, and slices of crispy chicken strips on top.",
         customizations: [
           [
-            { title: "Lettuce", price: 0 },
+            { title: "Lettuce", price: 0, required: true },
             { title: "Grape tomatoes", price: 0 },
             { title: "Shaved carrots", price: 0 },
             { title: "Cheddar cheese", price: 0 },
@@ -823,8 +822,8 @@ export default [
           "A house style salad with mixed greens, grape tomatoes, cucumbers, and onions.",
         customizations: [
           [
-            { title: "Mixed greens", price: 0 },
-            { title: "Grape tomatoes", price: 0 },
+            { title: "Mixed greens", price: 0, required: true },
+            { title: "Grape tomatoes", price: 0, required: true },
             { title: "Cucumbers", price: 0 },
             { title: "Onions", price: 0 },
           ],
@@ -846,9 +845,9 @@ export default [
           "A classic caesar salad with romaine lettuce and big crispy croutons.",
         customizations: [
           [
-            { title: "Romaine lettuce", price: 0 },
+            { title: "Romaine lettuce", price: 0, required: true },
             { title: "Croutons", price: 0.25 },
-            { title: "Caesar dressing", price: 0 },
+            { title: "Caesar dressing", price: 0, required: true },
           ],
           [
             { title: "Bacon bits", price: 0.25 },
@@ -867,11 +866,11 @@ export default [
           "Our classic Bendy's Caesar Salad with a mix of taco seasoned beef, shredded cheddar cheese, and tortilla strips.",
         customizations: [
           [
-            { title: "Romaine lettuce", price: 0 },
+            { title: "Romaine lettuce", price: 0, required: true },
             { title: "Tortilla strips", price: 0.2 },
             { title: "Taco seasoned beef", price: 0 },
             { title: "Shredded cheddar cheese", price: 0.25 },
-            { title: "Caesar dressing", price: 0 },
+            { title: "Caesar dressing", price: 0, required: true },
           ],
           [
             { title: "Bacon bits", price: 0.25 },
@@ -890,9 +889,9 @@ export default [
           "A refreshing coleslaw salad with shredded cabbage, carrots, and a tangy dressing.",
         customizations: [
           [
-            { title: "Shredded cabbage", price: 0 },
-            { title: "Shredded carrots", price: 0 },
-            { title: "Tangy dressing", price: 0 },
+            { title: "Shredded cabbage", price: 0, required: true },
+            { title: "Shredded carrots", price: 0, required: true },
+            { title: "Tangy dressing", price: 0, required: true },
           ],
           [
             { title: "Bacon bits", price: 0.25 },
@@ -996,7 +995,7 @@ export default [
         image: "Sides/mozzarella-sticks.jpg",
         detail: "Crispy breaded mozzarella sticks served with marinara sauce.",
         customizations: [
-          [{ title: "Marinara sauce", price: 0 }],
+          [{ title: "Marinara sauce", price: 0, required: true }],
           [
             { title: "Ranch dressing", price: 0.25 },
             { title: "BBQ sauce", price: 0.25 },
