@@ -294,6 +294,7 @@ function MainScreen() {
                   className={styles.callStaffButton}
                   onClick={() => {
                     CallStaffAudio.currentTime = 0;
+                    CallStaffAudio.volume = 0.15;
                     CallStaffAudio.play();
                     setShowStaffDialog(true);
                   }}
