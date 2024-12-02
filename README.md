@@ -9,4 +9,4 @@
 *Locating the top directory of the React application:
 <br/>If you downloaded from github directly, it may look like `somePath\DigiDine-main\DigiDine-main`
 <br/>If you cloned the repository, it may look like `somePath\DigiDine\DigiDine`
-In both cases, you should be in the directory where you see the `public` and `src` directories  
+<br/> In both cases, you should be in the directory where you see the `public` and `src` directories  
