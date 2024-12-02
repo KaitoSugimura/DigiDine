@@ -8,6 +8,6 @@
 <br/>
 *Locating the top directory of the React application:
 <br/>If you downloaded from github directly, you may run a command like
-<br/> ```cd somePath\DigiDine-main\DigiDine-main```
+<br/> `cd somePath\DigiDine-main\DigiDine-main`
 <br/>If you cloned the repository, you may run a command like
-<br/> ```cd somePath\DigiDine\DigiDine```
+<br/> `cd somePath\DigiDine\DigiDine`
