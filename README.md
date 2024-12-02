@@ -8,7 +8,7 @@ To view the application, you can visit the following link: https://kaitosugimura
 > To simulate a tablet, you may use your browsers development features and set the dimensions to at minimum: 1120 x 720
 
 > [!TIP]
-> Depending on your computer/laptops screens resolution, the tablet may look too small or too big.
+> Depending on your computer/laptops screen resolution, the tablet may look too small or too big.
 > This problem should be resolved if you use your bowsers development features and set the dimensions to the ones specified in the note above.
 > Otherwise, you may simply use your browsers zoom feature to zoom in and out (Ctrl + or Ctrl -)
 
