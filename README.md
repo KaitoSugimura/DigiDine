@@ -1,15 +1,16 @@
-# Viewing the deployed website
+# DigiDine - A tablet food ordering application
+## Viewing the deployed website
 To view the application, you can visit the following link: https://kaitosugimura.github.io/DigiDine/
 > [!NOTE]  
 > Please note this website is intended only to mimic a tablet application.
 > You may experience a lack of mouse events or mouse hover actions because of it.
 > To simulate a tablet, you may use your browsers development features and set the dimensions to at minimum: 1120 x 720
 
-# Link to the source code (GitHub)
+## Link to the source code (GitHub)
 If you are viewing this README on GitHub, you are already here!
 Otherwise, visit the following link: https://github.com/KaitoSugimura/DigiDine
 
-# How to run the program
+## How to run the program
 1. Download or clone the repository and make sure you are on the main branch
 2. Extract the files if you downloaded from github directly
 3. *Locate to top directory of the React application
