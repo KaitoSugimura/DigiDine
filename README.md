@@ -7,6 +7,11 @@ To view the application, you can visit the following link: https://kaitosugimura
 > You may experience a lack of mouse events or mouse hover actions because of it.
 > To simulate a tablet, you may use your browsers development features and set the dimensions to at minimum: 1120 x 720
 
+> [!TIP]
+> Depending on your computer/laptops screens resolution, the tablet may look too small or too big.
+> This problem should be resolved if you use your bowsers development features and set the dimensions to the ones specified in the note above.
+> Otherwise, you may simply use your browsers zoom feature to zoom in and out (Ctrl + or Ctrl -)
+
 ## Link to the source code (GitHub)
 If you are viewing this README on GitHub, you are already here!
 Otherwise, visit the following link: https://github.com/KaitoSugimura/DigiDine
