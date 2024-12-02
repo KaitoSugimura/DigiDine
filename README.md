@@ -1,6 +1,6 @@
 # DigiDine - Tablet food ordering application
 ## Group members
-<br/> Nezla Annaisha (UCID: 30123223) / nezla.annaisha@ucalgary.ca
+Nezla Annaisha (UCID: 30123223) / nezla.annaisha@ucalgary.ca
 <br/> Kaito Sugimura (UCID: 30093204) / kaito.sugimura@ucalgary.ca 
 <br/> Aoi Ueki (UCID: 30179305) / aoi.ueki@ucalgary.ca
 <br/> Mohamed Ebdalla (UCID: 30103938) / mohamed.ebdalla@ucalgary.ca
