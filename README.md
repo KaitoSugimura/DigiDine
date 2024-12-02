@@ -15,7 +15,6 @@ To view the application, you can visit the following link: https://kaitosugimura
 <br/>
 
 > [!TIP]
-> *To locate the top directory of the React application:
+> *To locate the top directory of the React application, you should be in the directory where you see both the `public` and `src` directories.
 > If you downloaded from github directly, it may look like `somePath\DigiDine-main\DigiDine-main`.
 > If you cloned the repository, it may look like `somePath\DigiDine\DigiDine`.
-> In both cases, you should be in the directory where you see the `public` and `src` directories.
