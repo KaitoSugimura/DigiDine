@@ -13,8 +13,9 @@ To view the application, you can visit the following link: https://kaitosugimura
 6. run `npm run dev` to start a new local host
 7. Navigate to the link provided to view the website (Typically http://localhost:5174/)
 <br/>
+
 > [!TIP]
 > *To locating the top directory of the React application:
-> <br/>If you downloaded from github directly, it may look like `somePath\DigiDine-main\DigiDine-main`
-> <br/>If you cloned the repository, it may look like `somePath\DigiDine\DigiDine`
-> <br/> In both cases, you should be in the directory where you see the `public` and `src` directories  
+> If you downloaded from github directly, it may look like `somePath\DigiDine-main\DigiDine-main`
+> If you cloned the repository, it may look like `somePath\DigiDine\DigiDine`
+> In both cases, you should be in the directory where you see the `public` and `src` directories  
