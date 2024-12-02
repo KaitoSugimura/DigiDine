@@ -5,7 +5,7 @@
 5. run `npm install` to install all the dependencies 
 6. run `npm run dev` to start a new local host
 7. Navigate to the link provided to view the website (Typically http://localhost:5174/)
-
+<br/>
 *To locate yourself to the top directory of the React application:
-If you downloaded from github directly it would look something like `cd somePath\DigiDine-main\DigiDine-main`
-If you cloned the repository, it would look something like `cd somePath\DigiDine\DigiDine`
+<br/>If you downloaded from github directly it would look something like `cd somePath\DigiDine-main\DigiDine-main`
+<br/>If you cloned the repository, it would look something like `cd somePath\DigiDine\DigiDine`
