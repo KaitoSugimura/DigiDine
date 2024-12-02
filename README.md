@@ -1,4 +1,4 @@
-# DigiDine - A tablet food ordering application
+# DigiDine - Tablet food ordering application
 ## Viewing the deployed website
 To view the application, you can visit the following link: https://kaitosugimura.github.io/DigiDine/
 > [!NOTE]  
