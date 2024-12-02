@@ -3,7 +3,7 @@ To view the application, you can visit the following link: https://kaitosugimura
 > [!NOTE]  
 > Please note this website is intended only to mimic a tablet application.
 > You may experience a lack of mouse events or mouse hover actions because of it.
-> To simulate a tablet, you may use your browsers development features and set the dimensions to at least 1180 x 820 to view the entire application
+> To simulate a tablet, you may use your browsers development features and set the dimensions to 1180 x 820
 
 # How to run the program
 1. Download or clone the repository and make sure you are on the main branch
