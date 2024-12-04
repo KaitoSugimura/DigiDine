@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   overflow: auto;
-  /* background-color: #20262c; */
+  background-color: #20262c;
 
   color: black;
   position: relative;
@@ -39,7 +39,7 @@
   background-color: rgb(81, 81, 81);
   border-radius: 5px;
   z-index: 0;
-  /* box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.2); */
+  box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 .soundButtonOnTop {
@@ -52,7 +52,7 @@
   background-color: rgb(81, 81, 81);
   border-radius: 5px;
   z-index: 0;
-  /* box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.2); */
+  box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 .soundButtonOnTop::after {
@@ -116,5 +116,5 @@
   border-radius: 22px;
   background-color: #313131;
   border: 2px solid #585858;
-  /* box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.2); */
+  box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.2);
 }
