@@ -28,7 +28,7 @@ export default [
             { title: "Crispy onion", price: 0.25 },
           ],
         ],
-        allergens: ["Gluten", "Sesame Seeds", "Soy", "Poultry"],
+        allergens: ["Gluten", "Sesame Seeds", "Poultry"],
       },
       {
         title: "Raw Chicken",
@@ -204,7 +204,7 @@ export default [
             { title: "Crispy onion", price: 0.25 },
           ],
         ],
-        allergens: ["Sesame Seeds"],
+        allergens: ["Gluten", "Sesame Seeds", "Poultry"],
       },
       {
         title: "Beyond the Meat Burger",
