@@ -61,7 +61,7 @@ export default function CustomScreen({
         key={type}
         className={`${styles.customButton} ${
           custom.selected == type ? styles.selected : ""
-        }`}
+        } ${custom.required && type === "None" ? styles.disabled : ""}`}
         onClick={() => {
           setCustomizations((prev) => {
             prev[i][index].selected = type;
