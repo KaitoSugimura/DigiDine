@@ -5,6 +5,8 @@ Nezla Annaisha (UCID: 30123223) / nezla.annaisha@ucalgary.ca
 <br/> Aoi Ueki (UCID: 30179305) / aoi.ueki@ucalgary.ca
 <br/> Mohamed Ebdalla (UCID: 30103938) / mohamed.ebdalla@ucalgary.ca
 
+## Video demo
+The video demo can be viewed on https://youtu.be/IVY41XypkAw?si=YG6r7RZUY9xWTesc
 
 ## Viewing the deployed website
 To view the application, you can visit the following link: https://kaitosugimura.github.io/DigiDine/
